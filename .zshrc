@@ -16,7 +16,6 @@ esac
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/local/share/npm/bin:$PATH
 export MANPATH=/usr/local/share/man:/usr/local/man:$MANPATH
 export NODE_PATH=/usr/local/lib/node
-export EDITOR=vi
 #MacVim-kaoriyaで、Terminal上でsyntax colorが付かないのを修正
 export TERMINFO=/usr/share/terminfo
 #alias

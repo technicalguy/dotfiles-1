@@ -1,3 +1,17 @@
+" Vundleの設定
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/vundle.git/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+Bundle 'Shougo/neocomplcache' 
+Bundle 'Shougo/unite.vim'
+Bundle 'thinca/vim-ref'
+Bundle 'thinca/vim-quickrun'
+Bundle 'taglist.vim'
+filetype plugin indent on
+
 set sessionoptions+=resize,tabpages " 行・列を設定する
 " ステータスライン
 set laststatus=2 " 常にステータスラインを表示

@@ -6,10 +6,34 @@ set rtp+=~/.vim/vundle.git/
 call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'Shougo/neocomplcache' 
+Bundle 'Shougo/vimshell' 
+Bundle 'Shougo/vimproc' 
+Bundle 'Shougo/vimfiler' 
 Bundle 'Shougo/unite.vim'
 Bundle 'thinca/vim-ref'
 Bundle 'thinca/vim-quickrun'
 Bundle 'taglist.vim'
+Bundle 'matchit.zip'
+Bundle 'skk.vim'
+Bundle 'surround.vim'
+Bundle 'vcscommand.vim'
+Bundle 'YankRing.vim'
+Bundle 'ZenCoding.vim'
+Bundle 'jQuery'
+Bundle 'Simple-Javascript-Indenter'
+Bundle 'css.vim'
+Bundle 'css.vim--Streppone'
+Bundle 'css3'
+Bundle 'jsonvim'
+Bundle 'html5.vim'
+Bundle 'EnhCommentify.vim'
+Bundle 'unicode.vim'
+Bundle 'RubySinatra'
+Bundle 'Javascript-syntax-with-Ajax-Support'
+Bundle 'pep8'
+Bundle 'w3cvalidator'
+Bundle 'jslint.vim'
+Bundle 'tidy'
 filetype plugin indent on
 
 set sessionoptions+=resize,tabpages " 行・列を設定する
@@ -150,22 +174,6 @@ let g:yankring_history_dir = '$VIM'
 
 " acp.vim
 let g:acp_enableAtStartup = 0
-" let g:acp_mappingDriven = 1 
-" let g:acp_ignorecaseOption = 1 
-" let g:acp_completeOption = '.,w,b,k'
-" let g:acp_completeoptPreview = 0 
-" let g:acp_behaviorUserDefinedPattern = '\k$'
-" let g:acp_behaviorKeywordCommand = "\<C-n>"
-" let g:acp_behaviorKeywordLength = 2 
-" let g:acp_behaviorFileLength = 0 
-" let g:acp_behaviorRubyOmniMethodLength = 0 
-" let g:acp_behaviorRubyOmniSymbolLength = 1 
-" let g:acp_behaviorPythonOmniLength = 0 
-" let g:acp_behaviorXmlOmniLength = 0 
-" let g:acp_behaviorHtmlOmniLength = 0 
-" let g:acp_behaviorCssOmniPropertyLength = 1 
-" let g:acp_behaviorCssOmniValueLength = 0 
-" let g:acp_behaviorSnipmateLength=1
 
 " Use neocomplcache.
 let g:neocomplcache_enable_at_startup = 1

@@ -1,0 +1,146 @@
+"3.0 (created: 2011/03/06 22:51:04)
+
+set toolbars=none,tabs
+" ヒントの文字列をアルファベットに
+set hintchars=hjklasdfgyuiopqwertnmzxcvb
+colorscheme vimpwhite
+cmap <C-n> <Tab>
+cmap <C-p> <S-Tab>
+cmap <C-f> <Right>
+command! -nargs=+ lazy autocmd VimperatorEnter .* <args>
+imap <C-f> <Right>
+imap <C-n> <Down>
+imap <C-p> <Up>
+map <C-r> :source<Space>~/.vimperatorrc<Return>
+map ,r :restart<Return>
+map ,c :stop<Return>
+map <C-h> <BS>
+map sf :subscldr<Space>-rate<Space>
+nnoremap > :tabmove! +1
+nnoremap <lt> :tabmove! -1
+" tomblrのreblog用
+nnoremap <Leader>r :tombloo ReBlog\ -\ Tumblr<CR>
+nnoremap  <Leader>t :mb pinned-or-current-node\ |\ Tombloo::Reblog\ |\ clear-pin<CR>
+vnoremap <Leader>q :tombloo Quote<CR>
+set "editor=/usr/local/bin/mvim -f"
+set runtimepath=/Users/Satoru/.vimperator
+source! /Users/Satoru/.vimperatorrc.local
+" ldrize_cooperation.js
+let g:ldrc_captureMappings = "['j','k','p','o','?']"
+"let g:ldrc_intelligence_bind = "true"
+"let g:ldrc_skip = "0
+"nnoremap Q :toggleldrc<CR>
+" migemo_hint.js
+set hintmatching=custom
+
+" Hatena::Bookmark
+javascript if (typeof hBookmark != 'undefined') liberator.loadScript('chrome://hatenabookmark/content/vimperator/plugin/hatenabookmark.js', {__proto__: this});
+" feedSomeKeys_3.js
+command! -nargs=+ lazy autocmd VimperatorEnter .* <args>
+lazy fmaps -u='mail\.google\.com/mail' c / j k n p o u e x s r a # [ ] ? gi gs gt gd ga gc
+lazy fmaps -u='mail\.google\.com/.*/.*$' c / j,n k,p n,j p,k o u e x s r a # [ ] ? gi gs gt gd ga gc
+lazy fmaps -u='www\.google\.co\.jp/reader' -events=vkeypress j k n p m s v A r S N P X O gh ga gs gt gu u / ? J K
+lazy fmaps -u='(fastladder|livedoor)\.com/reader' j k s a p o v r c i,p <Space> <S-Space> z <S-z> b < > q w e,g
+lazy fmaps -u='https?://www\.rememberthemilk\.com/home/' j k m i c t ? d F,f G,g S,s L,l Y,y H,h M,m <Del> <C-S-Left> <C-S-Right>
+lazy fmaps -u='http://code.google.com/p/vimperator-labs/issues/list' o j k
+lazy fmaps -u='http://code.google.com/p/vimperator-labs/issues/detail' u 
+lazy fmaps -u='b\.hatena\.ne\.jp/' j k o e b p @
+" URLの正規表現を「"」でなくて、「'」で括るのが密かなポイントです。" (「"」の場合、エスケープを \\ のように二重にしなくてはいけなくなります。) 
+" Greasemonkey 0.9.1でwindowを共通にする。（必要性は一時的？"
+js <<EOM
+autocommands.add('VimperatorEnter', '.*',
+  function() {
+    let gm = Components.classes['@greasemonkey.mozdev.org/greasemonkey-service;1'];
+    if (gm) {
+      gm = gm.getService().wrappedJSObject;
+      if (gm.injectScripts.toSource().search('sharedWindow') == -1) {
+          gm.injectScripts = liberator.eval(
+              gm.injectScripts.toSource()
+                  .replace(/(?=var firebugConsole)/,
+                          'var sharedWindow = {};' +
+                          'sharedWindow.window = sharedWindow;' +
+                          'sharedWindow.__proto__ = new XPCNativeWrapper(unsafeContentWin);')
+                  .replace(/(?=sandbox\.__proto__)/, ' sandbox.window = sharedWindow;'),
+              gm.injectScripts);
+      }
+    }
+  });
+EOM
+" タブ順序変更
+nnoremap < :tabmove! -1<CR><Esc>
+nnoremap > :tabmove! +1<CR><Esc>
+" アクセスキーを無効に
+set! ui.key.generalAccessKey=0
+" リンクをバックグランドで開く
+set! browser.tabs.loadDivertedInBackground=false
+" qmark go + ○ でアクセス
+qmark c http://www.google.com/calendar/render
+qmark g http://mail.google.com/
+qmark r http://www.google.co.jp/reader/view/
+qmark l http://reader.livedoor.com/reader/
+" ページロード時にテキストボックスにフォーカスするのを防ぐ
+set focuscontent
+" ページのエンコーディングを変更
+nnoremap ,es :set encoding=Shift_JIS<CR>
+nnoremap ,ec :set encoding=EUC-JP<CR>
+nnoremap ,eu :set encoding=UTF-8<CR>
+nnoremap ,ei :set encodeing=ISO-2022-JP<CR>
+" カレンダーを表示
+command cal :js liberator.echo(<datepicker type="grid" xmlns={XUL}/>)
+" Firefoxのタブを開く位置をデフォで現在のタブの右隣にする（※ gBrowser.addTabの改造）
+" cf.http://d.hatena.ne.jp/wlt/20110112/1294859530
+js <<EOM
+gBrowser.addTab = liberator.eval(
+    '(' +    gBrowser.addTab.toSource()
+            .replace(/var aRelatedToCurrent;/, 'var aRelatedToCurrent = true;')
+            .replace(/aRelatedToCurrent = params\.relatedToCurrent;/, 'aRelatedToCurrent = params.relatedToCurrent === undefined ? true : params.relatedToCurrent;') +    ')',
+    gBrowser.addTab);
+EOM
+" stella.js
+js <<EOM
+function addLocalMappings(buffer, maps) {
+  maps.forEach(
+    function (map) {
+      let [cmd, action, extra] = map;
+      let actionFunc = action;
+      extra || (extra = {});
+
+      if (typeof action == "string") {
+        if (action.charAt(0) == ':')
+          actionFunc = extra.open ? function () commandline.open("", action, modes.EX)
+                                  : function () liberator.execute(action);
+        else
+          actionFunc = function () events.feedkeys(action, extra.noremap, true);
+      }
+      extra.matchingUrls = buffer;
+      mappings.addUserMap(
+        [modes.NORMAL],
+        [cmd],
+        "Local mapping for " + buffer,
+        actionFunc,
+        extra
+      );
+    }
+  );
+}
+addLocalMappings(
+  /^(http:\/\/(es|www).nicovideo.jp\/(watch|playlist\/mylist)|http:\/\/(jp|www)\.youtube\.com\/watch|http:\/\/(www\.)?vimeo\.com\/(channels\/(hd)?#)?\d+)/,
+  [
+    ['<C-g>', ':pageinfo S',      ],
+    ['p',     ':stplay',          ],
+    ['m',     ':stmute',          ],
+    [',c',    ':stcomment',       ],
+    ['zz',    ':stlarge',         ],
+    ['r',     ':strepeat',        ],
+    ['+',     ':stvolume! 10',    ],
+    ['-',     ':stvolume! -10',   ],
+    ['<',     ':stseek! -10',     ],
+    ['>',     ':stseek! 10',      ],
+    ['v',     ':stvolume ',       {open: true}],
+    ['V',     ':stvolume! ',      {open: true}],
+    ['o',     ':strelations ',    {open: true}],
+    ['O',     ':strelations! ',   {open: true}],
+  ]
+);
+EOM
+" vim: set ft=vimperator:

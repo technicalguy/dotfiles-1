@@ -21,7 +21,6 @@ Bundle 'YankRing.vim'
 Bundle 'ZenCoding.vim'
 Bundle 'jQuery'
 Bundle 'Simple-Javascript-Indenter'
-Bundle 'css.vim'
 Bundle 'css.vim--Streppone'
 Bundle 'css3'
 Bundle 'JSON.vim'
@@ -34,6 +33,7 @@ Bundle 'pep8'
 Bundle 'w3cvalidator'
 Bundle 'jslint.vim'
 Bundle 'tidy'
+Bundle 'Markdown'
 filetype plugin indent on
 
 set sessionoptions+=resize,tabpages " 行・列を設定する

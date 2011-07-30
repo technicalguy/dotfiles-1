@@ -34,6 +34,7 @@ Bundle 'w3cvalidator'
 Bundle 'jslint.vim'
 Bundle 'tidy'
 Bundle 'Markdown'
+Bundle 'fugitive.vim'
 filetype plugin indent on
 
 set sessionoptions+=resize,tabpages " 行・列を設定する

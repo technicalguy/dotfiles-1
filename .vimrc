@@ -161,10 +161,6 @@ autocmd FileType css :compiler css
 autocmd FileType javascript :compiler javascriptlint
 
 "for skk.vim
-" for Mac OS Snow Leopard path
-" let skk_jisyo = "~/Library/AquaSKK/skk-jisyo.utf8"
-" let skk_large_jisyo = "~/Library/AquaSKK/SKK-JISYO.L" 
-" for Mac OS Lion path
 let skk_jisyo = "~/Library/Application\ Support/AquaSKK/skk-jisyo.utf8"
 let skk_large_jisyo = "~/Library/Application\ Support/AquaSKK/SKK-JISYO.L" 
 let g:skk_auto_save_jisyo = 1

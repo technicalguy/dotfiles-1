@@ -40,7 +40,7 @@ filetype plugin indent on
 set sessionoptions+=resize,tabpages " 行・列を設定する
 " ステータスライン
 set laststatus=2 " 常にステータスラインを表示
-set statusline=%<%F\ %r%h%w%y%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%4v(ASCII=%03.3b,HEX=%02.2B)\ %l/%L(%P)%m
+set statusline=%<%F\ %r%h%w%y%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%{fugitive#statusline()}%=%4v(ASCII=%03.3b,HEX=%02.2B)\ %l/%L(%P)%m
 " コマンドをステータスラインに表示する
 set showcmd
 set cmdheight=1            " コマンドラインの高さ
@@ -161,8 +161,12 @@ autocmd FileType css :compiler css
 autocmd FileType javascript :compiler javascriptlint
 
 "for skk.vim
-let skk_jisyo = "~/Library/AquaSKK/skk-jisyo.utf8"
-let skk_large_jisyo = "~/Library/AquaSKK/SKK-JISYO.L" 
+" for Mac OS Snow Leopard path
+" let skk_jisyo = "~/Library/AquaSKK/skk-jisyo.utf8"
+" let skk_large_jisyo = "~/Library/AquaSKK/SKK-JISYO.L" 
+" for Mac OS Lion path
+let skk_jisyo = "~/Library/Application\ Support/AquaSKK/skk-jisyo.utf8"
+let skk_large_jisyo = "~/Library/Application\ Support/AquaSKK/SKK-JISYO.L" 
 let g:skk_auto_save_jisyo = 1
 let g:skk_remap_lang_mode = 1
 

@@ -35,6 +35,7 @@ Bundle 'jslint.vim'
 Bundle 'tidy'
 Bundle 'Markdown'
 Bundle 'fugitive.vim'
+Bundle 'motemen/hatena-vim'
 filetype plugin indent on
 
 set sessionoptions+=resize,tabpages " 行・列を設定する
@@ -328,3 +329,7 @@ let g:unite_source_file_mru_filename_format = ''
 
 " Javascript indent
 let g:SimpleJsIndenter_BriefMode = 1
+
+" for Hatena.vim
+ :set runtimepath+=$HOME/.vim/hatena
+ :let g:hatena_user='Layzie'

@@ -81,19 +81,19 @@ set backspace=2
 
 " 全角スペースをハイライト
 if has("syntax")
-    syntax on
-    function! ActivateInvisibleIndicator()
-        syntax match InvisibleJISX0208Space "　" display containedin=ALL
-        highlight InvisibleJISX0208Space term=underline ctermbg=Cyan guibg=Cyan
-"        syntax match InvisibleTrailedSpace "[ \t]\+$" display containedin=ALL
-"        highlight InvisibleTrailedSpace term=underline ctermbg=Red guibg=Red
-"        syntax match InvisibleTab "\t" display containedin=ALL
-"        highlight InvisibleTab term=underline ctermbg=Cyan guibg=Cyan
-    endf
-    augroup invisible
-        autocmd! invisible
-        autocmd BufNew,BufRead * call ActivateInvisibleIndicator()
-    augroup END
+	syntax on
+	function! ActivateInvisibleIndicator()
+		syntax match InvisibleJISX0208Space "　" display containedin=ALL
+		highlight InvisibleJISX0208Space term=underline ctermbg=Cyan guibg=Cyan
+		"syntax match InvisibleTrailedSpace "[ \t]\+$" display containedin=ALL
+		"highlight InvisibleTrailedSpace term=underline ctermbg=Red guibg=Red
+		"syntax match InvisibleTab "\t" display containedin=ALL
+		"highlight InvisibleTab term=underline ctermbg=Cyan guibg=Cyan
+	endf
+	augroup invisible
+		autocmd! invisible
+		autocmd BufNew,BufRead * call ActivateInvisibleIndicator()
+	augroup END
 endif
 
 " やんくをクリップボードへ送り込む
@@ -117,9 +117,9 @@ set directory=~/Documents/vimbackup
 " let $RUBY_DLL = "/opt/local/lib/libruby.dylib"
 
 augroup BufferAu
-		autocmd!
-"     カレントディレクトリを自動的に移動
-		autocmd BufNewFile,BufRead,BufEnter * if isdirectory(expand("%:p:h")) && bufname("%") !~ "NERD_tree" | cd %:p:h | endif
+	autocmd!
+	"カレントディレクトリを自動的に移動
+	autocmd BufNewFile,BufRead,BufEnter * if isdirectory(expand("%:p:h")) && bufname("%") !~ "NERD_tree" | cd %:p:h | endif
 augroup END
 
 "タブ幅をリセット
@@ -191,14 +191,14 @@ let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
 
 " Define dictionary.
 let g:neocomplcache_dictionary_filetype_lists = {
-		\ 'default' : '',
-		\ 'vimshell' : $HOME.'/.vimshell_hist',
-		\ 'scheme' : $HOME.'/.gosh_completions'
-				\ }
+	\ 'default' : '',
+	\ 'vimshell' : $HOME.'/.vimshell_hist',
+	\ 'scheme' : $HOME.'/.gosh_completions'
+\ }
 
 " Define keyword.
 if !exists('g:neocomplcache_keyword_patterns')
-		let g:neocomplcache_keyword_patterns = {}
+	let g:neocomplcache_keyword_patterns = {}
 endif
 let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
 
@@ -256,17 +256,17 @@ let g:vimshell_right_prompt = 'vimshell#vcs#info("(%s)-[%b]", "(%s)-[%b|%a]")'
 let g:vimshell_enable_smart_case = 1
 
 if has('win32') || has('win64') 
-		" Display user name on Windows.
-		let g:vimshell_prompt = $USERNAME."% "
+	" Display user name on Windows.
+	let g:vimshell_prompt = $USERNAME."% "
 else
-		" Display user name on Linux.
-		let g:vimshell_prompt = $USER."% "
+	" Display user name on Linux.
+	let g:vimshell_prompt = $USER."% "
 
-		call vimshell#set_execute_file('bmp,jpg,png,gif', 'gexe eog')
-		call vimshell#set_execute_file('mp3,m4a,ogg', 'gexe amarok')
-		let g:vimshell_execute_file_list['zip'] = 'zipinfo'
-		call vimshell#set_execute_file('tgz,gz', 'gzcat')
-		call vimshell#set_execute_file('tbz,bz2', 'bzcat')
+	call vimshell#set_execute_file('bmp,jpg,png,gif', 'gexe eog')
+	call vimshell#set_execute_file('mp3,m4a,ogg', 'gexe amarok')
+	let g:vimshell_execute_file_list['zip'] = 'zipinfo'
+	call vimshell#set_execute_file('tgz,gz', 'gzcat')
+	call vimshell#set_execute_file('tbz,bz2', 'bzcat')
 endif
 
 autocmd FileType vimshell
@@ -310,14 +310,14 @@ nnoremap  [unite]f  :<C-u>Unite source<CR>
 
 autocmd FileType unite call s:unite_my_settings()
 function! s:unite_my_settings()"{{{
-  " Overwrite settings.
+	" Overwrite settings.
 
-  nmap <buffer> <ESC>      <Plug>(unite_exit)
-  imap <buffer> jj      <Plug>(unite_insert_leave)
-  "imap <buffer> <C-w>     <Plug>(unite_delete_backward_path)
+	nmap <buffer> <ESC>      <Plug>(unite_exit)
+	imap <buffer> jj      <Plug>(unite_insert_leave)
+	"imap <buffer> <C-w>     <Plug>(unite_delete_backward_path)
 
-  " Start insert.
-  "let g:unite_enable_start_insert = 1
+	" Start insert.
+	"let g:unite_enable_start_insert = 1
 endfunction"}}}
 
 let g:unite_source_file_mru_limit = 200
@@ -331,5 +331,5 @@ let g:unite_source_file_mru_filename_format = ''
 let g:SimpleJsIndenter_BriefMode = 1
 
 " for Hatena.vim
- :set runtimepath+=$HOME/.vim/hatena
- :let g:hatena_user='Layzie'
+set runtimepath+=$HOME/.vim/hatena
+let g:hatena_user='Layzie'

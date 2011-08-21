@@ -31,7 +31,7 @@ Bundle 'RubySinatra'
 Bundle 'Javascript-syntax-with-Ajax-Support'
 Bundle 'pep8'
 Bundle 'w3cvalidator'
-Bundle 'jslint.vim'
+Bundle 'basyura/jslint.vim'
 Bundle 'tidy'
 Bundle 'Markdown'
 Bundle 'fugitive.vim'
@@ -158,9 +158,6 @@ autocmd FileType xhtml :setlocal makeprg=tidy\ -raw\ -quiet\ -errors\ --gnu-emac
 
 " CSS tidy
 autocmd FileType css :compiler css
-
-" Javascript lint
-autocmd FileType javascript :compiler javascriptlint
 
 "for skk.vim
 let skk_jisyo = "~/Library/Application\ Support/AquaSKK/skk-jisyo.utf8"
@@ -334,3 +331,10 @@ let g:SimpleJsIndenter_BriefMode = 1
 " for Hatena.vim
 set runtimepath+=$HOME/.vim/hatena
 let g:hatena_user='Layzie'
+" jslint.vim
+function! s:javascript_filetype_settings()
+	autocmd BufLeave     <buffer> call jslint#clear()
+	autocmd BufWritePost <buffer> call jslint#check()
+	autocmd CursorMoved  <buffer> call jslint#message()
+endfunction
+autocmd FileType javascript call s:javascript_filetype_settings()

@@ -37,6 +37,7 @@ Bundle 'Markdown'
 Bundle 'fugitive.vim'
 Bundle 'motemen/hatena-vim'
 Bundle 'Gist.vim'
+Bundle 'vim-coffee-script'
 filetype plugin indent on
 
 set sessionoptions+=resize,tabpages " 行・列を設定する

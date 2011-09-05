@@ -32,12 +32,12 @@ Bundle 'pep8'
 Bundle 'w3cvalidator'
 Bundle 'basyura/jslint.vim'
 Bundle 'tidy'
-Bundle 'Markdown'
 Bundle 'fugitive.vim'
 Bundle 'motemen/hatena-vim'
 Bundle 'Gist.vim'
 Bundle 'vim-coffee-script'
 Bundle 'AutoClose'
+Bundle 'hallison/vim-markdown'
 filetype plugin indent on
 
 set sessionoptions+=resize,tabpages " 行・列を設定する

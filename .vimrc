@@ -141,6 +141,9 @@ au BufRead,BufNewFile *.css set ft=css syntax=css3
 "for JSON syntax
 au! BufRead,BufNewFile *.json setfiletype json 
 
+"for Markdown
+autocmd BufNewFile,BufRead *.{md,mkd,mkdn,mark*} set filetype=markdown
+
 " .pyでタブ幅を変更・スペースでインデントに変更
 au BufNewFile,BufRead *.py setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
 

@@ -40,6 +40,7 @@ Bundle 'AutoClose'
 Bundle 'hallison/vim-markdown'
 Bundle 'thinca/vim-ref'
 Bundle 'pekepeke/titanium-vim'
+Bundle 'SudoEdit.vim'
 filetype plugin indent on
 
 set sessionoptions+=resize,tabpages " 行・列を設定する

@@ -41,6 +41,7 @@ Bundle 'hallison/vim-markdown'
 Bundle 'thinca/vim-ref'
 Bundle 'pekepeke/titanium-vim'
 Bundle 'SudoEdit.vim'
+Bundle 'matchit.zip'
 filetype plugin indent on
 
 set sessionoptions+=resize,tabpages " 行・列を設定する

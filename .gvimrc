@@ -9,7 +9,7 @@ set showcmd
 set fuopt+=maxhorz
 "色系の指定=======================================
 "とりあえずscheme指定でザックリ指定
-colorscheme torte
+colorscheme solarized
 "透明度の設定
 set transparency=25
 "vi互換の動きにしない

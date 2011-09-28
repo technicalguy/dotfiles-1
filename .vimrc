@@ -56,6 +56,7 @@ set cmdheight=1            " コマンドラインの高さ
 "とりあえずscheme指定でザックリ指定
 syntax on
 set t_Co=256
+set background=dark
 colorscheme solarized
 "vi互換の動きにしない
 set nocompatible

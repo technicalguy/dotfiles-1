@@ -348,6 +348,18 @@ let g:unite_abbr_highlight = 'TabLine'
 " For optimize.
 let g:unite_source_file_mru_filename_format = ''
 
+" for vimfiler
+call vimfiler#set_execute_file('vim', 'vim')
+call vimfiler#set_execute_file('txt', 'notepad')
+
+" Edit file by tabedit.
+let g:vimfiler_edit_action = 'tabopen'
+
+let g:vimfiler_as_default_explorer = 1
+
+" Enable file operation commands.
+"let g:vimfiler_safe_mode_by_default = 0
+
 " Javascript indent
 let g:SimpleJsIndenter_BriefMode = 1
 

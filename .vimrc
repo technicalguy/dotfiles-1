@@ -51,6 +51,7 @@ Bundle 'unite-font'
 Bundle 'unite-colorscheme'
 Bundle 'Indent-Guides'
 Bundle 'Align'
+Bundle 'proton'
 filetype plugin indent on
 
 set sessionoptions+=resize,tabpages " 行・列を設定する

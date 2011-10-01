@@ -52,6 +52,7 @@ Bundle 'unite-colorscheme'
 Bundle 'Indent-Guides'
 Bundle 'Align'
 Bundle 'proton'
+Bundle 'str2numchar.vim'
 filetype plugin indent on
 
 set sessionoptions+=resize,tabpages " 行・列を設定する
@@ -190,9 +191,9 @@ let skk_large_jisyo = "~/Library/Application\ Support/AquaSKK/SKK-JISYO.L"
 let g:skk_auto_save_jisyo = 1
 let g:skk_remap_lang_mode = 1
 
-" str2htmlentityキーマップ設定
-vmap <silent> sx :Str2HtmlEntity<cr>
-vmap <silent> sr :Entity2HtmlString<cr>
+" str2numcharキーマップ設定
+vmap <silent> sn :Str2NumChar<CR> 
+vmap <silent> sh :Str2HexLiteral<CR> 
 
 " yankring_historyのディレクトリ設定
 let g:yankring_history_dir = '$VIM'

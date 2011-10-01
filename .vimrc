@@ -50,6 +50,7 @@ Bundle 'molokai'
 Bundle 'unite-font'
 Bundle 'unite-colorscheme'
 Bundle 'Indent-Guides'
+Bundle 'Align'
 filetype plugin indent on
 
 set sessionoptions+=resize,tabpages " 行・列を設定する
@@ -370,3 +371,7 @@ autocmd FileType javascript call s:javascript_filetype_settings()
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_color_change_percent = 30
 let g:indent_guides_guide_size = 1
+
+" for Align
+let g:Align_xstrlen = 3 "for Javanese String
+let g:DrChipTopLvlMenu = '' "remove 'DrChip' menu

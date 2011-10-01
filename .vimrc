@@ -121,6 +121,9 @@ set hidden
 set ruler
 set title
 
+" highlightサーチをEsc2回で消去
+nnoremap <Esc><Esc> :nohlsearch<CR>
+
 "バックアップの場所
 set backupdir=~/Documents/vimbackup
 "swpファイルの場所

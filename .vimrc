@@ -175,10 +175,6 @@ au BufNewFile,BufRead *.py setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandt
 "javascript tab
 au BufNewFile,BufRead *.js set tabstop=4 shiftwidth=4
 
-" MRU.vim
-let MRU_Max_Entries = 20
-let MRU_Add_Menu = 0
-
 " HTML Tidy
 autocmd FileType html :compiler tidy
 autocmd FileType html :setlocal makeprg=tidy\ -raw\ -quiet\ -errors\ --gnu-emacs\ yes\ \"%\" 
@@ -200,9 +196,6 @@ vmap <silent> sr :Entity2HtmlString<cr>
 
 " yankring_historyのディレクトリ設定
 let g:yankring_history_dir = '$VIM'
-
-" acp.vim
-let g:acp_enableAtStartup = 0
 
 " Use neocomplcache.
 let g:neocomplcache_enable_at_startup = 1

@@ -46,6 +46,7 @@ Bundle 'Solarized'
 Bundle 'Wombat'
 Bundle 'newspaper.vim'
 Bundle 'pyte'
+Bundle 'molokai'
 filetype plugin indent on
 
 set sessionoptions+=resize,tabpages " 行・列を設定する

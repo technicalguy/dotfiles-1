@@ -11,6 +11,7 @@ set fuopt+=maxhorz
 "とりあえずscheme指定でザックリ指定
 set background=dark
 colorscheme solarized
+syntax on
 "透明度の設定
 set transparency=25
 "vi互換の動きにしない

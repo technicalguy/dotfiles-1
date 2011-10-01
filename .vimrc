@@ -49,6 +49,7 @@ Bundle 'pyte'
 Bundle 'molokai'
 Bundle 'unite-font'
 Bundle 'unite-colorscheme'
+Bundle 'Indent-Guides'
 filetype plugin indent on
 
 set sessionoptions+=resize,tabpages " 行・列を設定する
@@ -364,3 +365,8 @@ function! s:javascript_filetype_settings()
 	autocmd CursorMoved  <buffer> call jslint#message()
 endfunction
 autocmd FileType javascript call s:javascript_filetype_settings()
+
+" for indent-guideline
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_color_change_percent = 30
+let g:indent_guides_guide_size = 1

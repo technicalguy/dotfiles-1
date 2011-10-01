@@ -65,7 +65,7 @@ set cmdheight=1            " コマンドラインの高さ
 "とりあえずscheme指定でザックリ指定
 set t_Co=256
 set background=dark
-colorscheme newspaper
+colorscheme proton
 syntax on
 "vi互換の動きにしない
 set nocompatible

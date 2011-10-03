@@ -200,7 +200,8 @@ vmap <silent> sn :Str2NumChar<CR>
 vmap <silent> sh :Str2HexLiteral<CR> 
 
 " yankring_historyのディレクトリ設定
-let g:yankring_history_dir = '$VIM'
+let g:yankring_history_dir = expand('$HOME')
+let g:yankring_history_file = '.yankring_history'
 
 " Use neocomplcache.
 let g:neocomplcache_enable_at_startup = 1

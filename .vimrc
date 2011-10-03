@@ -372,12 +372,12 @@ let g:SimpleJsIndenter_BriefMode = 1
 set runtimepath+=$HOME/.vim/hatena
 let g:hatena_user='Layzie'
 " jslint.vim
+autocmd FileType javascript call s:javascript_filetype_settings()
 function! s:javascript_filetype_settings()
 	autocmd BufLeave     <buffer> call jslint#clear()
 	autocmd BufWritePost <buffer> call jslint#check()
 	autocmd CursorMoved  <buffer> call jslint#message()
 endfunction
-autocmd FileType javascript call s:javascript_filetype_settings()
 
 " for indent-guideline
 let g:indent_guides_enable_on_vim_startup = 1

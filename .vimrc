@@ -56,6 +56,7 @@ Bundle 'str2numchar.vim'
 Bundle 'jade.vim'
 Bundle 'express.vim'
 Bundle 'ack.vim'
+Bundle 'rainbow.zip'
 filetype plugin indent on
 
 set sessionoptions+=resize,tabpages " 行・列を設定する

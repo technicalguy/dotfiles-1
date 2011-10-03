@@ -384,3 +384,7 @@ let g:indent_guides_enable_on_vim_startup = 1
 " for Align
 let g:Align_xstrlen = 3 "for Javanese String
 let g:DrChipTopLvlMenu = '' "remove 'DrChip' menu
+
+" for Gist.vim
+let gist_show_privates = 1
+let gist_put_url_to_clipboard_after_post = 1

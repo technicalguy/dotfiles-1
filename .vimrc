@@ -399,7 +399,7 @@ let g:user_zen_settings = {
 \		'flash': "<object data=\"${cursor}\""
 \				 ." type=\"application/x-shockwave-flash\""
 \				 ." id=\"\" width=\"\" height=\"\">"
-\				 ." <param name\"movie\" value\"\" />\n</object>",
+\				 ." <param name=\"movie\" value=\"\" />\n</object>",
 \		},
 \	},
 \	'css': {

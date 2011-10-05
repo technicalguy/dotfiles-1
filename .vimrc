@@ -389,3 +389,25 @@ let g:DrChipTopLvlMenu = '' "remove 'DrChip' menu
 " for Gist.vim
 let gist_show_privates = 1
 let gist_put_url_to_clipboard_after_post = 1
+
+" for ZenCoding.vim
+let g:user_zen_settings = {
+\	'lang': 'ja',
+\	'indentation': '\t',
+\	'html': {
+\		'snippets': {
+\		'flash': "<object data=\"${cursor}\""
+\				 ." type=\"application/x-shockwave-flash\""
+\				 ." id=\"\" width=\"\" height=\"\">"
+\				 ." <param name\"movie\" value\"\" />\n</object>",
+\		},
+\	},
+\	'css': {
+\		'filters': 'fc',
+\	},
+\	'php': {
+\		'extends': 'html',
+\		'filters': 'html,c',
+\	},
+\}
+let g:use_zen_complete_tag = 1

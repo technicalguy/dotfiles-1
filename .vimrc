@@ -2,8 +2,11 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/vundle.git/
+set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
 Bundle 'Shougo/neocomplcache' 
 Bundle 'Shougo/vimshell' 
 Bundle 'Shougo/vimproc' 

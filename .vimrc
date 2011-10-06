@@ -408,7 +408,6 @@ let gist_put_url_to_clipboard_after_post = 1
 " for ZenCoding.vim
 let g:user_zen_settings = {
 \	'lang': 'ja',
-\	'indentation': '\t',
 \	'html': {
 \		'snippets': {
 \		'flash': "<object data=\"${cursor}\""

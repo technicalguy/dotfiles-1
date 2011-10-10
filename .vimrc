@@ -142,13 +142,6 @@ set backupdir=~/Documents/vimbackup
 "swpファイルの場所
 set directory=~/Documents/vimbackup
 
-"コマンドラインをtcshスタイルに
-cnoremap <C-A> <Home>
-cnoremap <C-F> <Right>
-cnoremap <C-B> <Left>
-cnoremap <Esc>b <S-Left>
-cnoremap <Esc>f <S-Right>
-
 " let $PERL_DLL = "/opt/local/lib/perl5/5.10.0/darwin-2level/CORE/libperl.dylib"
 " let $PYTHON_DLL = "/opt/local/lib/libpython2.6.dylib"
 " let $RUBY_DLL = "/opt/local/lib/libruby.dylib"

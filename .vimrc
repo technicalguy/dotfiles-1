@@ -60,8 +60,6 @@ Bundle 'jade.vim'
 Bundle 'express.vim'
 Bundle 'ack.vim'
 Bundle 'rainbow.zip'
-Bundle 'mikewest/vimroom'
-Bundle 'emacscommandline'
 filetype plugin indent on
 
 set sessionoptions+=resize,tabpages " 行・列を設定する
@@ -141,6 +139,13 @@ nnoremap <Esc><Esc> :nohlsearch<CR>
 set backupdir=~/Documents/vimbackup
 "swpファイルの場所
 set directory=~/Documents/vimbackup
+
+"コマンドラインをtcshスタイルに
+cnoremap <C-A> <Home>
+cnoremap <C-F> <Right>
+cnoremap <C-B> <Left>
+cnoremap <Esc>b <S-Left>
+cnoremap <Esc>f <S-Right>
 
 " let $PERL_DLL = "/opt/local/lib/perl5/5.10.0/darwin-2level/CORE/libperl.dylib"
 " let $PYTHON_DLL = "/opt/local/lib/libpython2.6.dylib"

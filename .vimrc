@@ -60,6 +60,7 @@ Bundle 'jade.vim'
 Bundle 'express.vim'
 Bundle 'ack.vim'
 Bundle 'rainbow.zip'
+Bundle 'mikewest/vimroom'
 filetype plugin indent on
 
 set sessionoptions+=resize,tabpages " 行・列を設定する

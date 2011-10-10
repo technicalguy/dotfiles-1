@@ -61,6 +61,7 @@ Bundle 'express.vim'
 Bundle 'ack.vim'
 Bundle 'rainbow.zip'
 Bundle 'mikewest/vimroom'
+Bundle 'emacscommandline'
 filetype plugin indent on
 
 set sessionoptions+=resize,tabpages " 行・列を設定する

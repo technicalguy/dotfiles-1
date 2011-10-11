@@ -346,7 +346,7 @@ let g:tlist_javascript_settings = 'javascript;c:class;m:method;f:function'
 "unite.vim
 " The prefix key.
 nnoremap    [unite]   <Nop>
-nmap    <Leader>f [unite]
+nmap    <Space>f [unite]
 
 nnoremap <silent> [unite]c  :<C-u>UniteWithCurrentDir -buffer-name=files buffer file_mru bookmark file<CR>
 nnoremap <silent> [unite]b  :<C-u>UniteWithBufferDir -buffer-name=files -prompt=%\  buffer file_mru bookmark file<CR>

@@ -163,9 +163,9 @@ augroup END
 au BufNewFile,BufRead * set tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 
 ".rhtmlと.rbと.ymlでタブ幅を変更
-au BufNewFile,BufRead *.rhtml set tabstop=2 shiftwidth=2
-au BufNewFile,BufRead *.rb set tabstop=2 shiftwidth=2
-au BufNewFile,BufRead *.yml set tabstop=2 shiftwidth=2
+au BufNewFile,BufRead *.rhtml set tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+au BufNewFile,BufRead *.rb set tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+au BufNewFile,BufRead *.yml set tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 
 "for jquery syntax
 au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery

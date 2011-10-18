@@ -160,7 +160,7 @@ augroup BufferAu
 augroup END
 
 "タブ幅をリセット
-au BufNewFile,BufRead * set tabstop=4 shiftwidth=4
+au BufNewFile,BufRead * set tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 
 ".rhtmlと.rbと.ymlでタブ幅を変更
 au BufNewFile,BufRead *.rhtml set tabstop=2 shiftwidth=2
@@ -183,7 +183,7 @@ autocmd BufNewFile,BufRead *.{md,mkd,mkdn,mark*} set filetype=markdown
 au BufNewFile,BufRead *.py setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
 
 "javascript tab
-au BufNewFile,BufRead *.js set tabstop=4 shiftwidth=4
+au BufNewFile,BufRead *.js set tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 
 " HTML Tidy
 autocmd FileType html :compiler tidy

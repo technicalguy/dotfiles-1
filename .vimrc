@@ -62,6 +62,7 @@ Bundle 'ack.vim'
 Bundle 'rainbow.zip'
 Bundle 'mikewest/vimroom'
 Bundle 'Lokaltog/vim-easymotion'
+Bundle 'thinca/vim-auto_source'
 filetype plugin indent on
 
 set sessionoptions+=resize,tabpages " 行・列を設定する

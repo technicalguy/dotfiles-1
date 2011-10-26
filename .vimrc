@@ -439,4 +439,4 @@ let g:use_zen_complete_tag = 1
 
 " for vim-ref
 let g:ref_alc_cmd = 'lynx -dump -nonumbers -display_charset=' .&encoding . ' %s'
-let g:ref_alc_encoding = 'utf-8'
+let g:ref_alc_encoding = 'termencoding'

@@ -24,7 +24,7 @@ Bundle 'ZenCoding.vim'
 Bundle 'jQuery'
 Bundle 'Simple-Javascript-Indenter'
 Bundle 'css.vim--Streppone'
-Bundle 'css3'
+Bundle 'hail2u/vim-css3-syntax'
 Bundle 'JSON.vim'
 Bundle 'html5.vim'
 Bundle 'EnhCommentify.vim'
@@ -170,9 +170,6 @@ au BufNewFile,BufRead *.yml set tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 
 "for jquery syntax
 au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
-
-"for CSS3 syntax
-au BufRead,BufNewFile *.css set ft=css syntax=css3 
 
 "for JSON syntax
 au! BufRead,BufNewFile *.json setfiletype json 

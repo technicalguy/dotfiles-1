@@ -65,6 +65,7 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'thinca/vim-auto_source'
 Bundle 'thinca/vim-auto_source'
 Bundle 'css_color.vim'
+Bundle 'hokaccha/vim-html5validator'
 filetype plugin indent on
 
 set sessionoptions+=resize,tabpages " 行・列を設定する

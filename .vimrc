@@ -66,6 +66,7 @@ Bundle 'thinca/vim-auto_source'
 Bundle 'thinca/vim-auto_source'
 Bundle 'css_color.vim'
 Bundle 'hokaccha/vim-html5validator'
+Bundle 'The-NERD-tree'
 filetype plugin indent on
 
 set sessionoptions+=resize,tabpages " 行・列を設定する
@@ -440,3 +441,7 @@ let g:use_zen_complete_tag = 1
 " for vim-ref
 let g:ref_alc_cmd = 'lynx -dump -nonumbers -display_charset=' .&encoding . ' %s'
 let g:ref_alc_encoding = 'termencoding'
+
+" for Nerd-Tree
+nmap <Space>t :NERDTreeToggle<CR>
+nmap <Space>T :NERDTree<CR>

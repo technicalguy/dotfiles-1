@@ -296,6 +296,13 @@ let g:EnhCommentifyPretty = 'Yes'
 let g:EnhCommentifyRespectIndent = 'Yes'
 let g:EnhCommentifyMultiPartBlocks = 'yes'
 let g:EnhCommentifyUseSyntax = 'yes'
+function EnhCommentifyCallback(ft)
+  if a:ft == 'coffee'
+    let b:ECcommentOpen = '#'
+    let b:ECcommentClose = ''
+  endif
+endfunction
+let g:EnhCommentifyCallbackExists = 'Yes'
 
 "for Vimshell.vim
 let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'

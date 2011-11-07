@@ -67,6 +67,7 @@ Bundle 'css_color.vim'
 Bundle 'hokaccha/vim-html5validator'
 Bundle 'The-NERD-tree'
 Bundle 'kakkyz81/evervim'
+Bundle 'mrtazz/simplenote'
 filetype plugin indent on
 
 set sessionoptions+=resize,tabpages " 行・列を設定する

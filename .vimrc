@@ -453,7 +453,7 @@ let g:ref_alc_encoding = 'termencoding'
 " for Nerd-Tree
 nmap <Space>t :NERDTreeToggle<CR>
 nmap <Space>T :NERDTree<CR>
-
+let g:NERDTreeHijackNetrw = 0
 "for vim-coffee-script
 au BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
 au BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw!

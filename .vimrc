@@ -459,3 +459,8 @@ au BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
 au BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw!
 let g:quickrun_config = {}
 let g:quickrun_config['coffee'] = {'command' : 'coffee', 'exec' : ['%c -cbp %s']}
+
+" for simplenote.vim
+if filereadable(expand('~/.simplenoterc'))
+  source ~/.simplenoterc
+endif

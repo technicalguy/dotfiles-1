@@ -429,6 +429,7 @@ let gist_put_url_to_clipboard_after_post = 1
 let g:user_zen_settings = {
 \	'lang': 'ja',
 \	'html': {
+\       'indentation' : '  ',
 \		'snippets': {
 \		'flash': "<object data=\"${cursor}\""
 \				 ." type=\"application/x-shockwave-flash\""

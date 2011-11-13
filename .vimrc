@@ -71,7 +71,9 @@ Bundle 'mrtazz/simplenote.vim'
 filetype plugin indent on
 
 " PATHの設定
-let $PATH = '/usr/local/Cellar/ruby/1.9.2-p290/bin:/usr/local/sbin:/usr/local/bin:/usr/local/share/npm/bin:' . $PATH
+if has('gui_running')
+  let $PATH = '/usr/local/Cellar/ruby/1.9.2-p290/bin:/usr/local/sbin:/usr/local/bin:/usr/local/share/npm/bin:' . $PATH
+endif
 set sessionoptions+=resize,tabpages " 行・列を設定する
 " ステータスライン
 set laststatus=2 " 常にステータスラインを表示

@@ -68,6 +68,7 @@ Bundle 'hokaccha/vim-html5validator'
 Bundle 'The-NERD-tree'
 Bundle 'kakkyz81/evervim'
 Bundle 'mrtazz/simplenote.vim'
+Bundle 'groenewege/vim-less'
 filetype plugin indent on
 
 " PATHの設定

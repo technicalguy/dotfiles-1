@@ -69,6 +69,7 @@ Bundle 'The-NERD-tree'
 Bundle 'kakkyz81/evervim'
 Bundle 'mrtazz/simplenote.vim'
 Bundle 'groenewege/vim-less'
+Bundle 'scrooloose/syntastic'
 filetype plugin indent on
 
 " PATHの設定
@@ -79,6 +80,10 @@ set sessionoptions+=resize,tabpages " 行・列を設定する
 " ステータスライン
 set laststatus=2 " 常にステータスラインを表示
 set statusline=%<%F\ %r%h%w%y%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%{fugitive#statusline()}%=%4v(ASCII=%03.3b,HEX=%02.2B)\ %l/%L(%P)%m
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
 " コマンドをステータスラインに表示する
 set showcmd
 set cmdheight=1            " コマンドラインの高さ

@@ -70,6 +70,7 @@ Bundle 'kakkyz81/evervim'
 Bundle 'mrtazz/simplenote.vim'
 Bundle 'groenewege/vim-less'
 Bundle 'scrooloose/syntastic'
+Bundle 'juvenn/mustache.vim'
 filetype plugin indent on
 
 " PATHの設定

@@ -71,6 +71,7 @@ Bundle 'mrtazz/simplenote.vim'
 Bundle 'groenewege/vim-less'
 Bundle 'scrooloose/syntastic'
 Bundle 'juvenn/mustache.vim'
+Bundle 'jpo/vim-railscasts-theme'
 filetype plugin indent on
 
 " PATHの設定

@@ -72,6 +72,7 @@ Bundle 'groenewege/vim-less'
 Bundle 'scrooloose/syntastic'
 Bundle 'juvenn/mustache.vim'
 Bundle 'jpo/vim-railscasts-theme'
+Bundle 'mlen/vim-scala'
 filetype plugin indent on
 
 " PATHの設定

@@ -73,6 +73,7 @@ Bundle 'jpo/vim-railscasts-theme'
 Bundle 'mlen/vim-scala'
 Bundle 'tyru/caw.vim'
 Bundle 'majutsushi/tagbar'
+Bundle 'mattn/learn-vimscript'
 filetype plugin indent on
 
 " PATHの設定

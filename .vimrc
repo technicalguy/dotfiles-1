@@ -27,7 +27,6 @@ Bundle 'css.vim--Streppone'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'JSON.vim'
 Bundle 'othree/html5.vim'
-Bundle 'EnhCommentify.vim'
 Bundle 'unicode.vim'
 Bundle 'RubySinatra'
 Bundle 'Javascript-syntax-with-Ajax-Support'
@@ -306,19 +305,6 @@ let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
 let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
 "Define snippets directory
 let g:neocomplcache_snippets_dir = $HOME.'/.vim/snippets'
-
-"Enhancedcommentify.vim設定
-let g:EnhCommentifyPretty = 'Yes'
-let g:EnhCommentifyRespectIndent = 'Yes'
-let g:EnhCommentifyMultiPartBlocks = 'yes'
-let g:EnhCommentifyUseSyntax = 'yes'
-function EnhCommentifyCallback(ft)
-  if a:ft == 'coffee'
-    let b:ECcommentOpen = '#'
-    let b:ECcommentClose = ''
-  endif
-endfunction
-let g:EnhCommentifyCallbackExists = 'Yes'
 
 "for Vimshell.vim
 let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'

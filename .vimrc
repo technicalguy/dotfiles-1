@@ -446,3 +446,6 @@ let g:quickrun_config['markdown'] = {'command' : 'bluecloth', 'exec' : ['%c -f %
 if filereadable(expand('~/.simplenoterc'))
   source ~/.simplenoterc
 endif
+
+" for tagbar.vim
+nnoremap <silent> <F9> :TagbarToggle<CR>

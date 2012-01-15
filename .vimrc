@@ -14,7 +14,6 @@ Bundle 'Shougo/vimfiler'
 Bundle 'Shougo/unite.vim'
 Bundle 'thinca/vim-ref'
 Bundle 'thinca/vim-quickrun'
-Bundle 'taglist.vim'
 Bundle 'matchit.zip'
 Bundle 'tyru/skk.vim'
 Bundle 'tpope/vim-surround'
@@ -73,6 +72,7 @@ Bundle 'juvenn/mustache.vim'
 Bundle 'jpo/vim-railscasts-theme'
 Bundle 'mlen/vim-scala'
 Bundle 'tyru/caw.vim'
+Bundle 'majutsushi/tagbar'
 filetype plugin indent on
 
 " PATHの設定
@@ -349,9 +349,6 @@ function! g:my_preexec(cmdline, context)
 	call vimshell#execute('echo "preexec"')
 	return a:cmdline
 endfunction
-
-"taglist.vim for javascript
-let g:tlist_javascript_settings = 'javascript;c:class;m:method;f:function'
 
 "unite.vim
 " The prefix key.

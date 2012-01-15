@@ -202,15 +202,6 @@ au BufNewFile,BufRead *.py setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandt
 "javascript tab
 au BufNewFile,BufRead *.js set tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 
-" HTML Tidy
-autocmd FileType html :compiler tidy
-autocmd FileType html :setlocal makeprg=tidy\ -raw\ -quiet\ -errors\ --gnu-emacs\ yes\ \"%\" 
-autocmd FileType xhtml :compiler tidy
-autocmd FileType xhtml :setlocal makeprg=tidy\ -raw\ -quiet\ -errors\ --gnu-emacs\ yes\ \"%\" 
-
-" CSS tidy
-autocmd FileType css :compiler css
-
 "for skk.vim
 let skk_jisyo = "~/Library/Application\ Support/AquaSKK/skk-jisyo.utf8"
 let skk_large_jisyo = "~/Library/Application\ Support/AquaSKK/SKK-JISYO.L" 
@@ -400,17 +391,6 @@ let g:SimpleJsIndenter_BriefMode = 1
 " for Hatena.vim
 set runtimepath+=$HOME/.vim/hatena
 let g:hatena_user='Layzie'
-" jslint.vim
-augroup MyGroup
-	autocmd! MyGroup
-	autocmd FileType javascript call s:javascript_filetype_settings()
-augroup END
-
-function! s:javascript_filetype_settings()
-	autocmd BufLeave     <buffer> call jslint#clear()
-	autocmd BufWritePost <buffer> call jslint#check()
-	autocmd CursorMoved  <buffer> call jslint#message()
-endfunction
 
 " for indent-guideline
 let g:indent_guides_enable_on_vim_startup = 1
@@ -456,11 +436,12 @@ nmap <Space>T :NERDTree<CR>
 let g:NERDTreeHijackNetrw = 0
 "for vim-coffee-script
 au BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
-" au BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw!
+"
 " for quickrun.vim
 let g:quickrun_config = {}
 let g:quickrun_config['coffee'] = {'command' : 'coffee', 'exec' : ['%c -cbp %s']}
 let g:quickrun_config['markdown'] = {'command' : 'bluecloth', 'exec' : ['%c -f %s']}
+
 " for simplenote.vim
 if filereadable(expand('~/.simplenoterc'))
   source ~/.simplenoterc

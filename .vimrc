@@ -74,6 +74,7 @@ Bundle 'mlen/vim-scala'
 Bundle 'tyru/caw.vim'
 Bundle 'majutsushi/tagbar'
 Bundle 'mattn/learn-vimscript'
+Bundle 'Lokaltog/vim-powerline'
 filetype plugin indent on
 
 " PATHの設定
@@ -449,3 +450,6 @@ endif
 
 " for tagbar.vim
 nnoremap <silent> <F9> :TagbarToggle<CR>
+
+" for vim-powerline
+let g:Powerline_symbols = 'unicode'

@@ -170,6 +170,20 @@ cnoremap <C-B> <Left>
 cnoremap <Esc>b <S-Left>
 cnoremap <Esc>f <S-Right>
 
+" コーディングスタイル切り替え
+let s:coding_styles = {}
+let s:coding_styles['Default'] = 'setl tabstop=4 shiftwidth=4 shiftwidth=4 softtabstop=4 noexpandtab'
+let s:coding_styles['ShortExpandStyle'] = 'setl tabstop=2 shiftwidth=2 shiftwidth=2 softtabstop=2 expandtab'
+
+command!
+      \	-bar -nargs=1 -complete=customlist,s:coding_style_complete
+      \	CodingStyle
+      \	execute get(s:coding_styles, <f-args>, '')
+
+function! s:coding_style_complete(...) "{{{
+  return keys(s:coding_styles)
+endfunction "}}}
+
 " let $PERL_DLL = "/opt/local/lib/perl5/5.10.0/darwin-2level/CORE/libperl.dylib"
 " let $PYTHON_DLL = "/opt/local/lib/libpython2.6.dylib"
 " let $RUBY_DLL = "/opt/local/lib/libruby.dylib"

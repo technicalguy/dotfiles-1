@@ -15,7 +15,7 @@ esac
 #export
 export PATH=/usr/local/Cellar/ruby/1.9.2-p290/bin:/usr/local/sbin:/usr/local/bin:/usr/local/share/npm/bin:$PATH
 export MANPATH=/usr/local/share/man:/usr/local/man:$MANPATH
-export NODE_PATH=/usr/local/lib/node
+export NODE_PATH=/usr/local/lib/node_modules
 #MacVim-kaoriyaで、Terminal上でsyntax colorが付かないのを修正
 export TERMINFO=/usr/share/terminfo
 #alias

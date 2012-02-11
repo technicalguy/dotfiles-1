@@ -72,6 +72,7 @@ Bundle 'tyru/caw.vim'
 Bundle 'majutsushi/tagbar'
 Bundle 'mattn/learn-vimscript'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'Shougo/neocomplcache-snippets-complete'
 filetype plugin indent on
 
 " PATHの設定

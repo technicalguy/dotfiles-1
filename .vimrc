@@ -466,4 +466,4 @@ endif
 nnoremap <silent> <F9> :TagbarToggle<CR>
 
 " for vim-powerline
-let g:Powerline_symbols = 'unicode'
+let g:Powerline_symbols = 'compatible'

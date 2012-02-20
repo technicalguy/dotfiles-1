@@ -73,6 +73,7 @@ Bundle 'majutsushi/tagbar'
 Bundle 'mattn/learn-vimscript'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'Shougo/neocomplcache-snippets-complete'
+Bundle 'honza/snipmate-snippets'
 filetype plugin indent on
 
 " PATHの設定
@@ -310,7 +311,7 @@ let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
 let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
 "Define snippets directory
-let g:neocomplcache_snippets_dir = $HOME.'/.vim/snippets'
+let g:neocomplcache_snippets_dir = $HOME.'/.vim/bundle/snipmate-snippets/snippets/'
 
 "for Vimshell.vim
 let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'

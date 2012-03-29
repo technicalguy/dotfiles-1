@@ -78,7 +78,7 @@ filetype plugin indent on
 
 " PATHの設定
 if has('gui_running')
-  let $PATH = '/usr/local/Cellar/ruby/1.9.2-p290/bin:/usr/local/sbin:/usr/local/bin:/usr/local/share/npm/bin:' . $PATH
+  let $PATH = '/usr/local/Cellar/ruby/1.9.3-p125//bin:/usr/local/sbin:/usr/local/bin:/usr/local/share/npm/bin:' . $PATH
 endif
 set sessionoptions+=resize,tabpages " 行・列を設定する
 " ステータスライン

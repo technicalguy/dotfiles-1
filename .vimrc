@@ -388,6 +388,19 @@ let g:unite_source_history_yank_enable = 1
 " For optimize.
 let g:unite_source_file_mru_filename_format = ''
 
+" For unite-session.
+" Save session automatically.
+"let g:unite_source_session_enable_auto_save = 1
+" Load session automatically.
+"autocmd VimEnter * UniteSessionLoad
+
+" For ack.
+if executable('ack-grep')
+  let g:unite_source_grep_command = 'ack-grep'
+  let g:unite_source_grep_default_opts = '--no-heading --no-color -a'
+  let g:unite_source_grep_recursive_opt = ''
+endif
+
 " for vimfiler
 call vimfiler#set_execute_file('vim', 'vim')
 call vimfiler#set_execute_file('txt', 'notepad')

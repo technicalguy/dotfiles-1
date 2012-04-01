@@ -464,7 +464,8 @@ nmap <Space>T :NERDTree<CR>
 let g:NERDTreeHijackNetrw = 0
 "for vim-coffee-script
 au BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
-"
+au BufWritePost *.coffee silent CoffeeMake!
+
 " for quickrun.vim
 let g:quickrun_config = {}
 let g:quickrun_config['coffee'] = {'command' : 'coffee', 'exec' : ['%c -cbp %s']}

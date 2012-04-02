@@ -232,7 +232,7 @@ function rprompt-git-current-branch {
         else
                  color=%F{red}
          fi
-              
+
         echo "$color$name$action%f%b "
 }
 

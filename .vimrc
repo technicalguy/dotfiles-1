@@ -128,19 +128,19 @@ set backspace=2
 
 " 全角スペースをハイライト
 if has("syntax")
-	syntax on
-	function! ActivateInvisibleIndicator()
-		syntax match InvisibleJISX0208Space "　" display containedin=ALL
-		highlight InvisibleJISX0208Space term=underline ctermbg=Cyan guibg=Cyan
-		"syntax match InvisibleTrailedSpace "[ \t]\+$" display containedin=ALL
-		"highlight InvisibleTrailedSpace term=underline ctermbg=Red guibg=Red
-		"syntax match InvisibleTab "\t" display containedin=ALL
-		"highlight InvisibleTab term=underline ctermbg=Cyan guibg=Cyan
-	endf
-	augroup invisible
-		autocmd! invisible
-		autocmd BufNew,BufRead * call ActivateInvisibleIndicator()
-	augroup END
+  syntax on
+  function! ActivateInvisibleIndicator()
+    syntax match InvisibleJISX0208Space "　" display containedin=ALL
+    highlight InvisibleJISX0208Space term=underline ctermbg=Cyan guibg=Cyan
+    "syntax match InvisibleTrailedSpace "[ \t]\+$" display containedin=ALL
+    "highlight InvisibleTrailedSpace term=underline ctermbg=Red guibg=Red
+    "syntax match InvisibleTab "\t" display containedin=ALL
+    "highlight InvisibleTab term=underline ctermbg=Cyan guibg=Cyan
+  endf
+  augroup invisible
+    autocmd! invisible
+    autocmd BufNew,BufRead * call ActivateInvisibleIndicator()
+  augroup END
 endif
 
 " やんくをクリップボードへ送り込む
@@ -175,9 +175,9 @@ let s:coding_styles['Default'] = 'setl tabstop=4 shiftwidth=4 shiftwidth=4 softt
 let s:coding_styles['ShortExpandStyle'] = 'setl tabstop=2 shiftwidth=2 shiftwidth=2 softtabstop=2 expandtab'
 
 command!
-      \	-bar -nargs=1 -complete=customlist,s:coding_style_complete
-      \	CodingStyle
-      \	execute get(s:coding_styles, <f-args>, '')
+      \ -bar -nargs=1 -complete=customlist,s:coding_style_complete
+      \ CodingStyle
+      \ execute get(s:coding_styles, <f-args>, '')
 
 function! s:coding_style_complete(...) "{{{
   return keys(s:coding_styles)
@@ -188,9 +188,9 @@ endfunction "}}}
 " let $RUBY_DLL = "/opt/local/lib/libruby.dylib"
 
 augroup BufferAu
-	autocmd!
-	"カレントディレクトリを自動的に移動
-	autocmd BufNewFile,BufRead,BufEnter * if isdirectory(expand("%:p:h")) && bufname("%") !~ "NERD_tree" | cd %:p:h | endif
+  autocmd!
+  "カレントディレクトリを自動的に移動
+  autocmd BufNewFile,BufRead,BufEnter * if isdirectory(expand("%:p:h")) && bufname("%") !~ "NERD_tree" | cd %:p:h | endif
 augroup END
 
 "タブ幅をリセット
@@ -246,15 +246,15 @@ let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
 
 " Define dictionary.
 let g:neocomplcache_dictionary_filetype_lists = {
-	\ 'default' : '',
-	\ 'vimshell' : $HOME.'/.vimshell_hist',
-	\ 'scheme' : $HOME.'/.gosh_completions',
-	\ 'scala' : $HOME.'/.vim/dict/scala.dict'
-		\ }
+  \ 'default' : '',
+  \ 'vimshell' : $HOME.'/.vimshell_hist',
+  \ 'scheme' : $HOME.'/.gosh_completions',
+  \ 'scala' : $HOME.'/.vim/dict/scala.dict'
+    \ }
 
 " Define keyword.
 if !exists('g:neocomplcache_keyword_patterns')
-	let g:neocomplcache_keyword_patterns = {}
+  let g:neocomplcache_keyword_patterns = {}
 endif
 let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
 
@@ -303,7 +303,7 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 " Enable heavy omni completion.
 if !exists('g:neocomplcache_omni_patterns')
-	let g:neocomplcache_omni_patterns = {}
+  let g:neocomplcache_omni_patterns = {}
 endif
 let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\h\w*\|\h\w*::'
 "autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
@@ -319,17 +319,17 @@ let g:vimshell_right_prompt = 'vimshell#vcs#info("(%s)-[%b]", "(%s)-[%b|%a]")'
 let g:vimshell_enable_smart_case = 1
 
 if has('win32') || has('win64') 
-	" Display user name on Windows.
-	let g:vimshell_prompt = $USERNAME."% "
+  " Display user name on Windows.
+  let g:vimshell_prompt = $USERNAME."% "
 else
-	" Display user name on Linux.
-	let g:vimshell_prompt = $USER."% "
+  " Display user name on Linux.
+  let g:vimshell_prompt = $USER."% "
 
-	call vimshell#set_execute_file('bmp,jpg,png,gif', 'gexe eog')
-	call vimshell#set_execute_file('mp3,m4a,ogg', 'gexe amarok')
-	let g:vimshell_execute_file_list['zip'] = 'zipinfo'
-	call vimshell#set_execute_file('tgz,gz', 'gzcat')
-	call vimshell#set_execute_file('tbz,bz2', 'bzcat')
+  call vimshell#set_execute_file('bmp,jpg,png,gif', 'gexe eog')
+  call vimshell#set_execute_file('mp3,m4a,ogg', 'gexe amarok')
+  let g:vimshell_execute_file_list['zip'] = 'zipinfo'
+  call vimshell#set_execute_file('tgz,gz', 'gzcat')
+  call vimshell#set_execute_file('tbz,bz2', 'bzcat')
 endif
 
 autocmd FileType vimshell
@@ -343,18 +343,18 @@ autocmd FileType vimshell
 \| call vimshell#hook#set('preexec', ['g:my_preexec'])
 
 function! g:my_chpwd(args, context)
-	call vimshell#execute('echo "chpwd"')
+  call vimshell#execute('echo "chpwd"')
 endfunction
 function! g:my_emptycmd(cmdline, context)
-	call vimshell#execute('echo "emptycmd"')
-	return a:cmdline
+  call vimshell#execute('echo "emptycmd"')
+  return a:cmdline
 endfunction
 " function! g:my_preprompt(args, context)
-	" call vimshell#execute('echo "preprompt"')
+  " call vimshell#execute('echo "preprompt"')
 " endfunction
 function! g:my_preexec(cmdline, context)
-	call vimshell#execute('echo "preexec"')
-	return a:cmdline
+  call vimshell#execute('echo "preexec"')
+  return a:cmdline
 endfunction
 
 "unite.vim
@@ -370,13 +370,13 @@ nnoremap  [unite]f  :<C-u>Unite source<CR>
 
 autocmd FileType unite call s:unite_my_settings()
 function! s:unite_my_settings()"{{{
-	" Overwrite settings.
+  " Overwrite settings.
 
-	nmap <buffer> <ESC>      <Plug>(unite_exit)
-	imap <buffer> jj      <Plug>(unite_insert_leave)
+  nmap <buffer> <ESC>      <Plug>(unite_exit)
+  imap <buffer> jj      <Plug>(unite_insert_leave)
   imap <buffer> <C-w>     <Plug>(unite_delete_backward_path)
 
-	" Start insert.
+  " Start insert.
   let g:unite_enable_start_insert = 1
 endfunction"}}}
 
@@ -434,23 +434,23 @@ let gist_detect_filetype = 1
 
 " for ZenCoding.vim
 let g:user_zen_settings = {
-\	'lang': 'ja',
-\	'html': {
+\ 'lang': 'ja',
+\ 'html': {
 \       'indentation' : '  ',
-\		'snippets': {
-\		'flash': "<object data=\"${cursor}\""
-\				 ." type=\"application/x-shockwave-flash\""
-\				 ." id=\"\" width=\"\" height=\"\">"
-\				 ." <param name=\"movie\" value=\"\" />\n</object>",
-\		},
-\	},
-\	'css': {
-\		'filters': 'fc',
-\	},
-\	'php': {
-\		'extends': 'html',
-\		'filters': 'html,c',
-\	},
+\   'snippets': {
+\   'flash': "<object data=\"${cursor}\""
+\        ." type=\"application/x-shockwave-flash\""
+\        ." id=\"\" width=\"\" height=\"\">"
+\        ." <param name=\"movie\" value=\"\" />\n</object>",
+\   },
+\ },
+\ 'css': {
+\   'filters': 'fc',
+\ },
+\ 'php': {
+\   'extends': 'html',
+\   'filters': 'html,c',
+\ },
 \}
 let g:use_zen_complete_tag = 1
 

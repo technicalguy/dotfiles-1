@@ -6,6 +6,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 " let Vundle manage Vundle
 " required! 
+Bundle 'gmarik/vundle'
 Bundle 'Align'
 Bundle 'AutoClose'
 Bundle 'Indent-Guides'
@@ -33,7 +34,6 @@ Bundle 'css_color.vim'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'express.vim'
 Bundle 'fugitive.vim'
-Bundle 'gmarik/vundle'
 Bundle 'groenewege/vim-less'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'hallison/vim-markdown'

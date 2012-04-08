@@ -33,7 +33,9 @@ Bundle 'css.vim--Streppone'
 Bundle 'css_color.vim'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'express.vim'
+Bundle 'fuenor/qfixgrep.git'
 Bundle 'fugitive.vim'
+Bundle 'glidenote/memolist.vim'
 Bundle 'groenewege/vim-less'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'hallison/vim-markdown'
@@ -484,3 +486,9 @@ nnoremap <silent> <F9> :TagbarToggle<CR>
 
 " for vim-powerline
 let g:Powerline_symbols = 'compatible'
+
+" for memolist.vim
+let g:memolist_qfixgrep = 1
+map <Leader>ml  :MemoList<CR>
+map <Leader>mn  :MemoNew<CR>
+map <Leader>mg  :MemoGrep<CR>

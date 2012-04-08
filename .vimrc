@@ -149,7 +149,7 @@ if has("syntax")
 endif
 
 " やんくをクリップボードへ送り込む
-set clipboard+=unnamedplus,unnamed
+set clipboard=unnamed
 
 "バッファ関連
 "編集中でもバッファを切り替えれるようにしておく

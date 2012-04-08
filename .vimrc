@@ -500,3 +500,6 @@ let g:memolist_prompt_categories = 1
 map <Leader>ml  :MemoList<CR>
 map <Leader>mn  :MemoNew<CR>
 map <Leader>mg  :MemoGrep<CR>
+
+" for jscomplete-vim
+let g:jscomplete_use = ['dom', 'moz']

@@ -489,8 +489,12 @@ let g:Powerline_symbols = 'compatible'
 
 " for memolist.vim
 let g:memolist_qfixgrep = 1
-let g:memolist_memo_suffix = "markdown"
+let g:memolist_memo_suffix = "md"
 let g:memolist_template_dir_path = "~/.vim/template/memolist"
+let g:memolist_path = "~/Documents/memo"
+let g:memolist_vimfiler = 1
+let g:memolist_prompt_tags = 1
+let g:memolist_prompt_categories = 1
 map <Leader>ml  :MemoList<CR>
 map <Leader>mn  :MemoNew<CR>
 map <Leader>mg  :MemoGrep<CR>

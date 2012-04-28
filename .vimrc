@@ -36,6 +36,7 @@ Bundle 'express.vim'
 Bundle 'fuenor/qfixgrep.git'
 Bundle 'fugitive.vim'
 Bundle 'glidenote/memolist.vim'
+Bundle 'gregsexton/gitv'
 Bundle 'groenewege/vim-less'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'hallison/vim-markdown'
@@ -502,3 +503,6 @@ map <Leader>mg  :MemoGrep<CR>
 
 " for jscomplete-vim
 let g:jscomplete_use = ['dom', 'moz']
+
+" for Gitv
+autocmd FileType git :setlocal foldlevel=99

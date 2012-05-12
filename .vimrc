@@ -501,3 +501,24 @@ let g:jscomplete_use = ['dom', 'moz']
 
 " for Gitv
 autocmd FileType git :setlocal foldlevel=99
+
+" for vim-ref
+let g:ref_source_webdict_sites = {
+\   'alc': {
+\     'url': 'http://eow.alc.co.jp/%s',
+\     'keyword_encoding': 'utf-8',
+\     'cache': 1,
+\   },
+\   'weblio': {
+\     'url': 'http://ejje.weblio.jp/content/%s',
+\     'keyword_encoding': 'utf-8',
+\     'cache': 1,
+\   },
+\ }
+let g:ref_source_webdict_sites.default = 'alc'
+function! g:ref_source_webdict_sites.alc.filter(output)
+  return join(split(a:output, "\n")[29 :], "\n")
+endfunction
+function! g:ref_source_webdict_sites.weblio.filter(output)
+  return join(split(a:output, "\n")[53 :], "\n")
+endfunction

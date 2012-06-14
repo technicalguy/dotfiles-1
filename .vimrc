@@ -482,7 +482,7 @@ endif
 nnoremap <silent> <F9> :TagbarToggle<CR>
 
 " for vim-powerline
-let g:Powerline_symbols = 'compatible'
+let g:Powerline_symbols = 'fancy'
 
 " for memolist.vim
 let g:memolist_qfixgrep = 1

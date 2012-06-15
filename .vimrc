@@ -116,7 +116,7 @@ set wrap
 "タブとか改行を表示する
 set list
 "タブとか改行を示す文字列
-set listchars=tab:>-,extends:<,trail:-,eol:<
+set listchars=eol:¬,tab:▸\ ,extends:>,precedes:<,trail:-
 "タブを空白で入力する
 "set expandtab
 "標準タブは4

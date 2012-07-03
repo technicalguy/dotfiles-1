@@ -227,6 +227,9 @@ au BufNewFile,BufRead *.py setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandt
 "javascript tab
 au BufNewFile,BufRead *.js set tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 
+" for ftl syntax
+au BufRead,BufNewFile *.ftl set filetype=ftl
+
 "for skk.vim
 let skk_jisyo = "~/Library/Application\ Support/AquaSKK/skk-jisyo.utf8"
 let skk_large_jisyo = "~/Library/Application\ Support/AquaSKK/SKK-JISYO.L" 

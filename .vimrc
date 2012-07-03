@@ -179,8 +179,8 @@ cnoremap <Esc>f <S-Right>
 
 " コーディングスタイル切り替え
 let s:coding_styles = {}
-let s:coding_styles['Default'] = 'setl tabstop=4 shiftwidth=4 shiftwidth=4 softtabstop=4 noexpandtab'
-let s:coding_styles['DefaultTab'] = 'setl tabstop=4 shiftwidth=4 shiftwidth=4 softtabstop=4 expandtab'
+let s:coding_styles['DefaultTab'] = 'setl tabstop=4 shiftwidth=4 shiftwidth=4 softtabstop=4 noexpandtab'
+let s:coding_styles['Default'] = 'setl tabstop=4 shiftwidth=4 shiftwidth=4 softtabstop=4 expandtab'
 let s:coding_styles['ShortExpandStyle'] = 'setl tabstop=2 shiftwidth=2 shiftwidth=2 softtabstop=2 expandtab'
 let s:coding_styles['ShortExpandStyleTab'] = 'setl tabstop=2 shiftwidth=2 shiftwidth=2 softtabstop=2 noexpandtab'
 

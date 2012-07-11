@@ -507,7 +507,7 @@ map <Leader>mn  :MemoNew<CR>
 map <Leader>mg  :MemoGrep<CR>
 
 " for jscomplete-vim
-let g:jscomplete_use = ['dom', 'moz']
+let g:jscomplete_use = ['dom', 'moz', 'es6th']
 
 " for Gitv
 autocmd FileType git :setlocal foldlevel=99

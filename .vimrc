@@ -83,6 +83,7 @@ Bundle 'unicode.vim'
 Bundle 'unite-colorscheme'
 Bundle 'unite-font'
 Bundle 'vcscommand.vim'
+Bundle 'yuratomo/w3m.vim'
 filetype plugin indent on
 
 " PATHの設定

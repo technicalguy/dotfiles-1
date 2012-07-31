@@ -195,6 +195,9 @@ function! s:coding_style_complete(...) "{{{
   return keys(s:coding_styles)
 endfunction "}}}
 
+" JSON beautifier
+map <Leader>j !python -m json.tool<CR>
+
 " let $PERL_DLL = "/opt/local/lib/perl5/5.10.0/darwin-2level/CORE/libperl.dylib"
 " let $PYTHON_DLL = "/opt/local/lib/libpython2.6.dylib"
 " let $RUBY_DLL = "/opt/local/lib/libruby.dylib"

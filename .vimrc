@@ -542,5 +542,6 @@ endfunction
 " for vim-redmine
 if filereadable(expand('~/.redminerc'))
   source ~/.redminerc
+  let g:redmine_browser = 'open -a /Applications/Opera.app'
 endif
 

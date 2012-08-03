@@ -76,6 +76,7 @@ Bundle 'teramako/jscomplete-vim'
 Bundle 'thinca/vim-auto_source'
 Bundle 'thinca/vim-quickrun'
 Bundle 'thinca/vim-ref'
+Bundle 'toritori0318/vim-redmine'
 Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-surround'
 Bundle 'tyru/caw.vim'
@@ -537,3 +538,9 @@ endfunction
 function! g:ref_source_webdict_sites.weblio.filter(output)
   return join(split(a:output, "\n")[53 :], "\n")
 endfunction
+
+" for vim-redmine
+if filereadable(expand('~/.redminerc'))
+  source ~/.redminerc
+endif
+

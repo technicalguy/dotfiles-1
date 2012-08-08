@@ -320,7 +320,9 @@ inoremap <expr><Down>  neocomplcache#close_popup() . "\<Down>"
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=jscomplete#CompleteJS
+" for using vim-nodejs-complete, below 2line is commented out.
+" autocmd FileType javascript setlocal omnifunc=jscomplete#CompleteJS
+" autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 " Enable heavy omni completion.
@@ -547,3 +549,6 @@ if filereadable(expand('~/.redminerc'))
   let g:redmine_browser = 'open -a /Applications/Opera.app'
 endif
 
+" for vim-nodejs-complete
+" automatically open and close the popup menu / preview window
+au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif

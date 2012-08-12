@@ -320,11 +320,16 @@ inoremap <expr><Down>  neocomplcache#close_popup() . "\<Down>"
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-" for using vim-nodejs-complete, below 2line is commented out.
-" autocmd FileType javascript setlocal omnifunc=jscomplete#CompleteJS
-" autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
+" Enable javascript omnifunc pattern
+if !exists('g:neocomplcache_omni_functions')
+  let g:neocomplcache_omni_functions = {}
+endif
+let g:neocomplcache_omni_functions.javascript = ['nodejscomplete#CompleteJS', 'javascriptcomplete#CompleteJS']
+
 " Enable heavy omni completion.
 if !exists('g:neocomplcache_omni_patterns')
   let g:neocomplcache_omni_patterns = {}

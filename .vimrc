@@ -442,6 +442,7 @@ let g:vimfiler_as_default_explorer = 1
 
 " Javascript indent
 let g:SimpleJsIndenter_BriefMode = 1
+let g:SimpleJsIndenter_CaseIndentLevel = -1
 
 " for Hatena.vim
 set runtimepath+=$HOME/.vim/hatena

@@ -60,7 +60,6 @@ Bundle 'mikewest/vimroom'
 Bundle 'molokai'
 Bundle 'motemen/hatena-vim'
 Bundle 'mrtazz/simplenote.vim'
-Bundle 'myhere/vim-nodejs-complete'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'newspaper.vim'
 Bundle 'nono/vim-handlebars'
@@ -321,12 +320,6 @@ autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-
-" Enable javascript omnifunc pattern
-if !exists('g:neocomplcache_omni_functions')
-  let g:neocomplcache_omni_functions = {}
-endif
-let g:neocomplcache_omni_functions.javascript = ['nodejscomplete#CompleteJS', 'javascriptcomplete#CompleteJS']
 
 " Enable heavy omni completion.
 if !exists('g:neocomplcache_omni_patterns')

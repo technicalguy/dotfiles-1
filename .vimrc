@@ -546,3 +546,5 @@ if filereadable(expand('~/.redminerc'))
   let g:redmine_browser = 'open -a /Applications/Opera.app'
 endif
 
+" choice javascript linter for vim-syntastic
+let g:syntastic_javascript_checker = "jshint"

@@ -546,6 +546,3 @@ if filereadable(expand('~/.redminerc'))
   let g:redmine_browser = 'open -a /Applications/Opera.app'
 endif
 
-" for vim-nodejs-complete
-" automatically open and close the popup menu / preview window
-au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif

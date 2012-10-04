@@ -549,3 +549,6 @@ endif
 
 " choice javascript linter for vim-syntastic
 let g:syntastic_javascript_checker = "jshint"
+
+" for loga-vim
+let g:loga_delimiter = '(//)'

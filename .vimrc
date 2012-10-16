@@ -201,9 +201,6 @@ function! s:coding_style_complete(...) "{{{
   return keys(s:coding_styles)
 endfunction "}}}
 
-" JSON beautifier
-map <Leader>j !python -m json.tool<CR>
-
 " let $PERL_DLL = "/opt/local/lib/perl5/5.10.0/darwin-2level/CORE/libperl.dylib"
 " let $PYTHON_DLL = "/opt/local/lib/libpython2.6.dylib"
 " let $RUBY_DLL = "/opt/local/lib/libruby.dylib"
@@ -225,8 +222,20 @@ au BufNewFile,BufRead *.yml set tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 "for jquery syntax
 au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
 
+" JSON beautifier
+map <Leader>jb !python -m json.tool<CR>
+
 "for JSON syntax
-au! BufRead,BufNewFile *.json setfiletype json 
+au! BufRead,BufNewFile *.json set filetype=json 
+augroup json_autocmd 
+  autocmd! 
+  autocmd FileType json set autoindent 
+  autocmd FileType json set formatoptions=tcq2l 
+  autocmd FileType json set textwidth=78 shiftwidth=2 
+  autocmd FileType json set softtabstop=2 tabstop=8 
+  autocmd FileType json set expandtab 
+  autocmd FileType json set foldmethod=syntax 
+augroup END
 
 "for Markdown
 autocmd BufNewFile,BufRead *.{md,mkd,mkdn,mark*} set filetype=markdown

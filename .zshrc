@@ -13,9 +13,10 @@ case ${UID} in
 esac
 
 #export
-export PATH=/usr/local/Cellar/ruby/1.9.3-p286/bin:/usr/local/sbin:/usr/local/bin:/usr/local/share/npm/bin:$PATH
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/local/share/npm/bin:$PATH
 export MANPATH=/usr/local/share/man:/usr/local/man:$MANPATH
 export NODE_PATH=/usr/local/lib/node_modules
+export GEM_HOME='/usr/local'
 #MacVim-kaoriyaで、Terminal上でsyntax colorが付かないのを修正
 export TERMINFO=/usr/share/terminfo
 #alias

@@ -557,6 +557,7 @@ let g:NERDTreeHijackNetrw = 0
 "for vim-coffee-script
 au BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
 au BufWritePost *.coffee silent CoffeeMake!
+let coffee_make_options = '--bare'
 
 " for quickrun.vim
 let g:quickrun_config = {}

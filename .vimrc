@@ -626,3 +626,6 @@ let g:syntastic_javascript_checker = "jshint"
 
 " for loga-vim
 let g:loga_delimiter = '(//)'
+
+" for qfixgrep
+set runtimepath+=$HOME/.vim/bundle/qfixgrep

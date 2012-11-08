@@ -59,7 +59,6 @@ Bundle 'mattn/webapi-vim'
 Bundle 'mikewest/vimroom'
 Bundle 'mklabs/grunt.vim'
 Bundle 'molokai'
-Bundle 'motemen/hatena-vim'
 Bundle 'mrtazz/simplenote.vim'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'newspaper.vim'
@@ -509,10 +508,6 @@ let g:vimfiler_as_default_explorer = 1
 " Javascript indent
 let g:SimpleJsIndenter_BriefMode = 1
 let g:SimpleJsIndenter_CaseIndentLevel = -1
-
-" for Hatena.vim
-set runtimepath+=$HOME/.vim/hatena
-let g:hatena_user='Layzie'
 
 " for indent-guideline
 let g:indent_guides_enable_on_vim_startup = 1

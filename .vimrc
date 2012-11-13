@@ -49,6 +49,7 @@ Bundle 'jpo/vim-railscasts-theme'
 Bundle 'juvenn/mustache.vim'
 Bundle 'kakkyz81/evervim'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'kien/ctrlp.vim'
 Bundle 'leafgarland/typescript-vim'
 Bundle 'majutsushi/tagbar'
 Bundle 'malclocke/vim-buster'
@@ -624,3 +625,6 @@ let g:loga_delimiter = '(//)'
 
 " for qfixgrep
 set runtimepath+=$HOME/.vim/bundle/qfixgrep
+
+" for ctrlp.vim
+set runtimepath^=~/.vim/bundle/ctrlp.vim

@@ -173,6 +173,11 @@ set title
 " highlightサーチをEsc2回で消去
 nnoremap <Esc><Esc> :nohlsearch<CR>
 
+" macvimでoptionを使用
+if has("gui_macvim")
+    set macmeta
+endif
+
 "バックアップの場所
 set backupdir=~/Documents/vimbackup
 "swpファイルの場所
@@ -262,6 +267,9 @@ vmap <silent> sh :Str2HexLiteral<CR>
 " yankring_historyのディレクトリ設定
 let g:yankring_history_dir = expand('$HOME')
 let g:yankring_history_file = '.yankring_history'
+let g:yankring_replace_n_pkey = '<M-p>'
+let g:yankring_replace_n_nkey = '<M-n>'
+nnoremap <silent> <F8> :YRShow<CR>
 
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0

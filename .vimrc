@@ -111,7 +111,9 @@ set cmdheight=1            " コマンドラインの高さ
 "とりあえずscheme指定でザックリ指定
 set t_Co=256
 set background=dark
-colorscheme jellybeans
+colorscheme solarized
+let g:solarized_termcolors=256
+
 syntax on
 "vi互換の動きにしない
 set nocompatible
@@ -579,6 +581,7 @@ let g:tagbar_ctags_bin = '/Applications/MacVim.app/Contents/MacOS/ctags'
 
 " for vim-powerline
 let g:Powerline_symbols = 'fancy'
+let g:Powerline_colorscheme = 'solarized256'
 
 " for memolist.vim
 let g:memolist_qfixgrep = 1

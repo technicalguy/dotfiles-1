@@ -21,12 +21,12 @@ Bundle 'Shougo/vimfiler'
 Bundle 'Shougo/vimproc' 
 Bundle 'Shougo/vimshell' 
 Bundle 'Simple-Javascript-Indenter'
+Bundle 'altercation/vim-colors-solarized'
 Bundle 'The-NERD-tree'
 Bundle 'Wombat'
 Bundle 'YankRing.vim'
 Bundle 'ZenCoding.vim'
 Bundle 'ack.vim'
-Bundle 'altercation/vim-colors-solarized'
 Bundle 'basyura/unite-yarm'
 Bundle 'chaquotay/ftl-vim-syntax'
 Bundle 'css_color.vim'
@@ -66,6 +66,7 @@ Bundle 'newspaper.vim'
 Bundle 'nono/vim-handlebars'
 Bundle 'othree/html5.vim'
 Bundle 'pekepeke/titanium-vim'
+Bundle 'pep8'
 Bundle 'proton'
 Bundle 'pyte'
 Bundle 'rainbow.zip'
@@ -114,6 +115,7 @@ colorscheme solarized
 
 " for solarized colorscheme
 let g:solarized_termcolors=256
+call togglebg#map("<F6>")
 
 syntax on
 "vi互換の動きにしない

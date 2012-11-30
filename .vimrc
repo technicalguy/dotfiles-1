@@ -21,7 +21,7 @@ Bundle 'Shougo/vimfiler'
 Bundle 'Shougo/vimproc' 
 Bundle 'Shougo/vimshell' 
 Bundle 'Simple-Javascript-Indenter'
-Bundle 'Solarized'
+Bundle 'altercation/vim-colors-solarized'
 Bundle 'The-NERD-tree'
 Bundle 'Wombat'
 Bundle 'YankRing.vim'
@@ -112,7 +112,10 @@ set cmdheight=1            " コマンドラインの高さ
 set t_Co=256
 set background=dark
 colorscheme solarized
+
+" for solarized colorscheme
 let g:solarized_termcolors=256
+call togglebg#map("<F6>")
 
 syntax on
 "vi互換の動きにしない

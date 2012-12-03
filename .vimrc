@@ -594,6 +594,16 @@ else
   let g:Powerline_colorscheme = 'solarized256'
 endif
 
+" map to <F6> toggle powerline colorscheme
+function! TogglePowerlineColorscheme()
+  if exists(':ToggleBG') && exists(':PowerlineReloadColorscheme')
+    let g:Powerline_colorscheme = &background == 'light' ? 'solarized' : 'solarized256'
+    PowerlineReloadColorscheme
+  endif
+endfunction
+nnoremap <F6> :call TogglePowerlineColorscheme()<CR>
+inoremap <F6> :call TogglePowerlineColorscheme()<CR>
+vnoremap <F6> :call TogglePowerlineColorscheme()<CR>
 
 " for memolist.vim
 let g:memolist_qfixgrep = 1

@@ -109,11 +109,16 @@ set cmdheight=1            " コマンドラインの高さ
 "色系の指定=======================================
 "とりあえずscheme指定でザックリ指定
 set t_Co=256
-set background=dark
+if has('gui_running')
+  set background=light
+else
+  set background=dark
+endif
 colorscheme solarized
 
 " for solarized colorscheme
 let g:solarized_termcolors=256
+let g:solarized_termtrans = 1
 call togglebg#map("<F5>")
 
 syntax on
@@ -583,7 +588,12 @@ let g:tagbar_ctags_bin = '/Applications/MacVim.app/Contents/MacOS/ctags'
 
 " for vim-powerline
 let g:Powerline_symbols = 'fancy'
-let g:Powerline_colorscheme = 'solarized256'
+if has('gui_running')
+  let g:Powerline_colorscheme = 'solarized'
+else
+  let g:Powerline_colorscheme = 'solarized256'
+endif
+
 
 " for memolist.vim
 let g:memolist_qfixgrep = 1

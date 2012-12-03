@@ -9,7 +9,7 @@ set showcmd
 set fuopt+=maxhorz
 "色系の指定=======================================
 "とりあえずscheme指定でザックリ指定
-set background=dark
+set background=light
 colorscheme solarized
 syntax on
 "透明度の設定

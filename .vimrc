@@ -72,6 +72,7 @@ Bundle 'rainbow.zip'
 Bundle 'scrooloose/syntastic'
 Bundle 'str2numchar.vim'
 Bundle 'sudo.vim'
+Bundle 't9md/vim-unite-ack'
 Bundle 'tacahiroy/vim-logaling'
 Bundle 'teramako/jscomplete-vim'
 Bundle 'thinca/vim-auto_source'
@@ -511,6 +512,9 @@ if executable('ack-grep')
   let g:unite_source_grep_recursive_opt = ''
 endif
 
+" for unite-ack
+let g:unite_source_ack_command = 'ack --nocolor --nogroup'
+let g:unite_source_ack_ignore_case = 1
 " for vimfiler
 call vimfiler#set_execute_file('vim', 'vim')
 call vimfiler#set_execute_file('txt', 'notepad')

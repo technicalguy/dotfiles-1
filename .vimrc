@@ -5,7 +5,7 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 " let Vundle manage Vundle
-" required! 
+" required!
 Bundle 'gmarik/vundle'
 Bundle 'Align'
 Bundle 'AndrewRadev/vim-coffee-script'
@@ -15,12 +15,12 @@ Bundle 'JSON.vim'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'RubySinatra'
-Bundle 'Shougo/neocomplcache' 
+Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet'
 Bundle 'Shougo/unite.vim'
-Bundle 'Shougo/vimfiler' 
-Bundle 'Shougo/vimproc' 
-Bundle 'Shougo/vimshell' 
+Bundle 'Shougo/vimfiler'
+Bundle 'Shougo/vimproc'
+Bundle 'Shougo/vimshell'
 Bundle 'Simple-Javascript-Indenter'
 Bundle 'The-NERD-tree'
 Bundle 'Wombat'

@@ -590,6 +590,9 @@ endif
 " for tagbar.vim
 nnoremap <silent> <F9> :TagbarToggle<CR>
 let g:tagbar_ctags_bin = '/Applications/MacVim.app/Contents/MacOS/ctags'
+let g:tagbar_type_javascript = {
+    \ 'ctagsbin' : '/usr/local/share/npm/bin/jsctags'
+\ }
 
 " for vim-powerline
 let g:Powerline_symbols = 'fancy'

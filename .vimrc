@@ -95,7 +95,7 @@ filetype plugin indent on
 
 " PATHの設定
 if has('gui_running')
-  let $PATH = '/usr/local/sbin:/usr/local/bin:/usr/local/share/npm/bin:' . $PATH
+  let $PATH = '/usr/local/sbin:/usr/local/bin:/usr/local/share/npm/bin:/usr/local/share/python:' . $PATH
 endif
 set sessionoptions+=resize,tabpages " 行・列を設定する
 " ステータスライン

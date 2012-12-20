@@ -302,3 +302,7 @@ fi
 ## load user .zshrc configuration file
 #
 [ -f ${HOME}/.zshrc.mine ] && source ${HOME}/.zshrc.mine
+alias git=hub
+if type compdef >/dev/null; then
+   compdef hub=git
+fi

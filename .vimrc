@@ -194,6 +194,9 @@ set backupdir=~/Documents/vimbackup
 "swpファイルの場所
 set directory=~/Documents/vimbackup
 
+" tagファイル検索
+set tags+=tags;
+
 "コマンドラインをtcshスタイルに
 cnoremap <C-A> <Home>
 cnoremap <C-F> <Right>

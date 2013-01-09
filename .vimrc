@@ -711,3 +711,12 @@ set runtimepath+=$HOME/.vim/bundle/qfixgrep
 
 " for ctrlp.vim
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'dir', 'rtscript',
+                          \ 'undo', 'line', 'changes', 'mixed', 'bookmarkdir']
+let g:ctrlp_buftag_types = {
+  \ 'erlang'     : '--language-force=erlang --erlang-types=drmf',
+  \ 'javascript' : {
+    \ 'bin': 'jsctags',
+    \ 'args': '-f -',
+    \ },
+\ }

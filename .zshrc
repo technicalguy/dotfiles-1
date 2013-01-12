@@ -24,6 +24,7 @@ alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
 alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 alias gvim='env LANG=ja_JP.UTF-8 open -a /Applications/MacVim.app "$@"'
 alias ctags='/Applications/MacVim.app/Contents/MacOS/ctags "$@"'
+alias mark='/Applications/Marked.app/Contents/Resources/mark'
 alias javac='javac -encoding UTF-8'
 alias java='java -Dfile.encoding=UTF-8'
 export EDITOR=vi

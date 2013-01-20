@@ -135,7 +135,9 @@ autoload zed
 #
 # expand aliases before completing
 #
-setopt complete_aliases     # aliased ls needs if file/dir completions work
+# comment out for using z
+# see https://github.com/rupa/z/issues/72
+# setopt complete_aliases     # aliased ls needs if file/dir completions work
 
 alias where="command -v"
 alias j="jobs -l"

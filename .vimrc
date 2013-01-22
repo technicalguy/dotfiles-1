@@ -387,10 +387,10 @@ let g:neocomplcache_snippets_dir = $HOME.'/.vim/bundle/snipmate-snippets/snippet
 
 "for Vimshell.vim
 let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
-let g:vimshell_right_prompt = 'vimshell#vcs#info("(%s)-[%b]", "(%s)-[%b|%a]")'
+" let g:vimshell_right_prompt = 'vcs#info("(%s)-[%b]", "(%s)-[%b|%a]")'
 let g:vimshell_enable_smart_case = 1
 
-if has('win32') || has('win64') 
+if has('win32') || has('win64')
   " Display user name on Windows.
   let g:vimshell_prompt = $USERNAME."% "
 else
@@ -404,29 +404,27 @@ else
   call vimshell#set_execute_file('tbz,bz2', 'bzcat')
 endif
 
+" Initialize execute file list.
+let g:vimshell_execute_file_list = {}
+call vimshell#set_execute_file('txt,vim,c,h,cpp,d,xml,java', 'vim')
+let g:vimshell_execute_file_list['rb'] = 'ruby'
+let g:vimshell_execute_file_list['pl'] = 'perl'
+let g:vimshell_execute_file_list['py'] = 'python'
+call vimshell#set_execute_file('html,xhtml', 'gexe firefox')
+
 autocmd FileType vimshell
-\ call vimshell#altercmd#define('g', 'git')
-\| call vimshell#altercmd#define('i', 'iexe')
-\| call vimshell#altercmd#define('l', 'll')
-\| call vimshell#altercmd#define('ll', 'ls -l')
-\| call vimshell#hook#set('chpwd', ['g:my_chpwd'])
-\| call vimshell#hook#set('emptycmd', ['g:my_emptycmd'])
-" \| call vimshell#hook#set('preprompt', ['g:my_preprompt('])
-\| call vimshell#hook#set('preexec', ['g:my_preexec'])
+  \ call vimshell#altercmd#define('g', 'git')
+  \| call vimshell#altercmd#define('i', 'iexe')
+  \| call vimshell#altercmd#define('l', 'll')
+  \| call vimshell#altercmd#define('ll', 'ls -l')
+  \| call vimshell#hook#add('chpwd', 'my_chpwd', 'g:my_chpwd')
 
 function! g:my_chpwd(args, context)
-  call vimshell#execute('echo "chpwd"')
+  call vimshell#execute('ls')
 endfunction
-function! g:my_emptycmd(cmdline, context)
-  call vimshell#execute('echo "emptycmd"')
-  return a:cmdline
-endfunction
-" function! g:my_preprompt(args, context)
-  " call vimshell#execute('echo "preprompt"')
-" endfunction
-function! g:my_preexec(cmdline, context)
-  call vimshell#execute('echo "preexec"')
-  return a:cmdline
+
+autocmd FileType int-* call s:interactive_settings()
+function! s:interactive_settings()
 endfunction
 
 "unite.vim

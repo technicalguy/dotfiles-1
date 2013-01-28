@@ -311,3 +311,6 @@ fi
 
 # z
 . `brew --prefix`/etc/profile.d/z.sh
+
+# tmuxinator
+[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator

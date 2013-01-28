@@ -18,6 +18,7 @@ export MANPATH=/usr/local/share/man:/usr/local/man:$MANPATH
 export NODE_PATH=/usr/local/lib/node_modules
 export GEM_HOME='/usr/local'
 #MacVim-kaoriyaで、Terminal上でsyntax colorが付かないのを修正
+export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
 export TERMINFO=/usr/share/terminfo
 #alias
 alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
@@ -26,7 +27,6 @@ alias gvim='env LANG=ja_JP.UTF-8 open -a /Applications/MacVim.app "$@"'
 alias ctags='/Applications/MacVim.app/Contents/MacOS/ctags "$@"'
 alias javac='javac -encoding UTF-8'
 alias java='java -Dfile.encoding=UTF-8'
-export EDITOR=vi
 
 #lsに色付け
 export LSCOLORS=gxfxcxdxbxegedabagacad

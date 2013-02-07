@@ -709,7 +709,7 @@ endfunction
 " for vim-redmine
 if filereadable(expand('~/.redminerc'))
   source ~/.redminerc
-  let g:redmine_browser = 'open -a /Applications/Opera.app'
+  let g:redmine_browser = 'open -a /Applications/Google\ Chrome.app'
 endif
 
 " choice javascript linter for vim-syntastic

@@ -27,6 +27,7 @@ Bundle 'Wombat'
 Bundle 'YankRing.vim'
 Bundle 'ZenCoding.vim'
 Bundle 'ack.vim'
+Bundle 'airblade/vim-gitgutter'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'basyura/unite-yarm'
 Bundle 'cakebaker/scss-syntax.vim'
@@ -745,3 +746,10 @@ function! s:dash(...)
   call system(printf("open dash://'%s'", word))
 endfunction
 command! -nargs=* Dash call <SID>dash(<f-args>)
+
+" for vim-gitgutter
+" turn off by default
+let g:gitgutter_enabled = 0
+noremap ,gg :GitGutterToggle<CR>
+noremap ,gn :GitGutterNextHunk<CR>
+noremap ,gp :GitGutterPrevHunk<CR>

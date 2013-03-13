@@ -44,6 +44,7 @@ Bundle 'h1mesuke/unite-outline'
 Bundle 'hail2u/vim-css-syntax'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'hallison/vim-markdown'
+Bundle 'heavenshell/vim-jsdoc'
 Bundle 'hokaccha/vim-html5validator'
 Bundle 'honza/snipmate-snippets'
 Bundle 'jQuery'
@@ -753,3 +754,6 @@ let g:gitgutter_enabled = 0
 noremap ,gg :GitGutterToggle<CR>
 noremap ,gn :GitGutterNextHunk<CR>
 noremap ,gp :GitGutterPrevHunk<CR>
+
+" for vim-jsdoc
+let g:jsdoc_additional_descriptions = 1

@@ -757,3 +757,6 @@ noremap ,gp :GitGutterPrevHunk<CR>
 
 " for vim-jsdoc
 let g:jsdoc_additional_descriptions = 1
+if !hasmapto('<Plug>(jsdoc)')
+  nmap <silent> ,d <Plug>(jsdoc)
+endif

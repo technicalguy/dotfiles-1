@@ -99,6 +99,7 @@ Bundle 'vcscommand.vim'
 Bundle 'wavded/vim-stylus'
 Bundle 'yuratomo/w3m.vim'
 Bundle 'rizzatti/dash.vim'
+Bundle 'rizzatti/funcoo.vim'
 filetype plugin indent on
 
 " PATHの設定
@@ -738,7 +739,7 @@ let g:ctrlp_buftag_types = {
 \ }
 
 " for dash.vim
-nmap <silent> <leader>d <Plug>DashDocset
+nmap <silent> <leader>d <Plug>DashSearch
 
 " for vim-gitgutter
 " turn off by default

@@ -160,6 +160,8 @@ alias df="df -h"
 
 alias su="su -l"
 
+# ignore case
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
 ## terminal configuration
 #

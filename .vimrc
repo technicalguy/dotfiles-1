@@ -718,7 +718,7 @@ if filereadable(expand('~/.redminerc'))
 endif
 
 " choice javascript linter for vim-syntastic
-let g:syntastic_javascript_checker = "jshint"
+let g:syntastic_javascript_checkers = ['jshint', 'jslint']
 
 " for loga-vim
 let g:loga_delimiter = '(//)'

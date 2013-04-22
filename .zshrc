@@ -317,3 +317,4 @@ fi
 
 # tmuxinator
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
+fpath=(/usr/local/share/zsh-completions $fpath)

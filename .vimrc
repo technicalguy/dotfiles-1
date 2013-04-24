@@ -754,6 +754,3 @@ let g:jsdoc_additional_descriptions = 1
 if !hasmapto('<Plug>(jsdoc)')
   nmap <silent> ,d <Plug>(jsdoc)
 endif
-
-" for tern
-so ~/dotfiles/tern/vim/tern.vim

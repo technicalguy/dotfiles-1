@@ -1,6 +1,3 @@
 [submodule "/Users/Satoru/dotfiles/.vim/bundle/vundle"]
 	path = /Users/Satoru/dotfiles/.vim/bundle/vundle
 	url = http://github.com/gmarik/vundle.git
-[submodule "tern"]
-	path = tern
-	url = git@github.com:marijnh/tern.git

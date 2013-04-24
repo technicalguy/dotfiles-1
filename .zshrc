@@ -113,6 +113,9 @@ setopt hist_ignore_dups     # ignore duplication command history list
 setopt share_history        # share command history data
 
 
+# add zsh-completions path to $fpath
+fpath=(/usr/local/share/zsh-completions $fpath)
+
 ## Completion configuration
 #
 fpath=(${HOME}/.zsh/functions/Completion ${fpath})
@@ -317,4 +320,3 @@ fi
 
 # tmuxinator
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
-fpath=(/usr/local/share/zsh-completions $fpath)

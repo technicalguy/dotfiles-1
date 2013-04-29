@@ -16,7 +16,7 @@ esac
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/local/share/npm/bin:/usr/local/share/python:/usr/local/opt/ruby/bin:$PATH
 export MANPATH=/usr/local/share/man:/usr/local/man:$MANPATH
 export NODE_PATH=/usr/local/lib/node_modules
-export GEM_HOME='/usr/local/opt/ruby/bin'
+export GEM_HOME='/usr/local'
 #MacVim-kaoriyaで、Terminal上でsyntax colorが付かないのを修正
 export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
 export TERMINFO=/usr/share/terminfo

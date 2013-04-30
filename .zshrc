@@ -306,14 +306,12 @@ elif type compctl &>/dev/null; then
 fi
 ###-end-npm-completion-###
 
+# hub
+eval "$(hub alias -s)"
 
 ## load user .zshrc configuration file
 #
 [ -f ${HOME}/.zshrc.mine ] && source ${HOME}/.zshrc.mine
-alias git=hub
-if type compdef >/dev/null; then
-   compdef hub=git
-fi
 
 # z
 . `brew --prefix`/etc/profile.d/z.sh

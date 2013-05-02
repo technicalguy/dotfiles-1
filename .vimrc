@@ -267,7 +267,7 @@ augroup json_autocmd
 augroup END
 
 "for Markdown
-autocmd BufNewFile,BufRead *.{md,mkd,mkdn,mark*} set filetype=markdown
+autocmd BufNewFile,BufRead *.{md,mkd,mkdn,mark*} set filetype=markdown tabstop=4 shiftwidth=4 softtabstop=4 expandtab
 
 " .pyでタブ幅を変更・スペースでインデントに変更
 au BufNewFile,BufRead *.py setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab

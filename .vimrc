@@ -663,6 +663,7 @@ endif
 
 " map to <F6> toggle powerline colorscheme
 function! TogglePowerlineColorscheme()
+  :ToggleBG
   if exists(':ToggleBG') && exists(':PowerlineReloadColorscheme')
     let g:Powerline_colorscheme = &background == 'light' ? 'solarized' : 'solarized256'
     PowerlineReloadColorscheme

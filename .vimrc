@@ -611,9 +611,6 @@ endif
 " for tagbar.vim
 nnoremap <silent> <F9> :TagbarToggle<CR>
 let g:tagbar_ctags_bin = '/Applications/MacVim.app/Contents/MacOS/ctags'
-let g:tagbar_type_javascript = {
-    \ 'ctagsbin' : '/usr/local/share/npm/bin/jsctags'
-\ }
 let g:tagbar_type_coffee = {
     \ 'ctagstype' : 'coffee',
     \ 'kinds'     : [
@@ -732,13 +729,7 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'dir', 'rtscript',
                           \ 'undo', 'line', 'changes', 'mixed', 'bookmarkdir']
-let g:ctrlp_buftag_types = {
-  \ 'erlang'     : '--language-force=erlang --erlang-types=drmf',
-  \ 'javascript' : {
-    \ 'bin': 'jsctags',
-    \ 'args': '-f -',
-    \ },
-\ }
+let g:ctrlp_buftag_types = {'erlang'     : '--language-force=erlang --erlang-types=drmf' }
 
 " for dash.vim
 nmap <silent> <leader>d <Plug>DashSearch

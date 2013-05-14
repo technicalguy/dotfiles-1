@@ -611,6 +611,14 @@ endif
 " for tagbar.vim
 nnoremap <silent> <F9> :TagbarToggle<CR>
 let g:tagbar_ctags_bin = '/Applications/MacVim.app/Contents/MacOS/ctags'
+let g:tagbar_type_markdown = {
+  \ 'ctagstype' : 'markdown',
+  \ 'kinds' : [
+    \ 'h:Heading_L1',
+    \ 'i:Heading_L2',
+    \ 'k:Heading_L3'
+  \ ]
+  \ }
 let g:tagbar_type_coffee = {
     \ 'ctagstype' : 'coffee',
     \ 'kinds'     : [

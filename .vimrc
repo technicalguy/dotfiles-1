@@ -552,9 +552,9 @@ let g:DrChipTopLvlMenu = '' "remove 'DrChip' menu
 
 " for Gist.vim
 let g:gist_clip_command = 'pbcopy'
-let gist_show_privates = 1
-let gist_detect_filetype = 1
-let g:gist_browser_command = 'opera %URL% &'
+let g:gist_show_privates = 1
+let g:gist_detect_filetype = 1
+let g:gist_open_browser_after_post = 1
 let g:gist_get_multiplefile = 1
 
 " for ZenCoding.vim

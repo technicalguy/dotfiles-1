@@ -57,6 +57,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'leafgarland/typescript-vim'
 Bundle 'majutsushi/tagbar'
 Bundle 'malclocke/vim-buster'
+Bundle 'marijnh/tern_for_vim'
 Bundle 'matchit.zip'
 Bundle 'mattn/gist-vim'
 Bundle 'mattn/learn-vimscript'
@@ -754,3 +755,10 @@ let g:jsdoc_additional_descriptions = 1
 if !hasmapto('<Plug>(jsdoc)')
   nmap <silent> ,d <Plug>(jsdoc)
 endif
+
+" for tern_for_vim
+nnoremap ,td :TernDef<CR>
+nnoremap ,tr :TernRefs<CR>
+nnoremap ,tdo :TernDoc<CR>
+nnoremap ,tre :TernRename<CR>
+nnoremap ,tt :TernType<CR>

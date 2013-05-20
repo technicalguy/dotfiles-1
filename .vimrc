@@ -758,6 +758,7 @@ endif
 
 " for tern_for_vim
 nnoremap ,td :TernDef<CR>
+nnoremap ,tdp :TernDefPreview<CR>
 nnoremap ,tr :TernRefs<CR>
 nnoremap ,tdo :TernDoc<CR>
 nnoremap ,tre :TernRename<CR>

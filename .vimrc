@@ -11,7 +11,6 @@ Bundle 'Align'
 Bundle 'AndrewRadev/vim-coffee-script'
 Bundle 'AutoClose'
 Bundle 'Indent-Guides'
-Bundle 'JSON.vim'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'RubySinatra'
@@ -34,6 +33,7 @@ Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'chaquotay/ftl-vim-syntax'
 Bundle 'css_color.vim'
 Bundle 'derekwyatt/vim-scala'
+Bundle 'elzr/vim-json'
 Bundle 'express.vim'
 Bundle 'fuenor/qfixgrep.git'
 Bundle 'fugitive.vim'
@@ -254,18 +254,6 @@ au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
 
 " JSON beautifier
 map <Leader>jb !python -m json.tool<CR>
-
-"for JSON syntax
-au! BufRead,BufNewFile *.json set filetype=json 
-augroup json_autocmd 
-  autocmd! 
-  autocmd FileType json setlocal autoindent 
-  autocmd FileType json setlocal formatoptions=tcq2l 
-  autocmd FileType json setlocal textwidth=78 shiftwidth=2 
-  autocmd FileType json setlocal softtabstop=2 tabstop=8 
-  autocmd FileType json setlocal expandtab 
-  autocmd FileType json setlocal foldmethod=syntax 
-augroup END
 
 "for Markdown
 autocmd BufNewFile,BufRead *.{md,mkd,mkdn,mark*} set filetype=markdown tabstop=4 shiftwidth=4 softtabstop=4 expandtab

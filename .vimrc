@@ -752,3 +752,39 @@ nnoremap ,tr :TernRefs<CR>
 nnoremap ,tdo :TernDoc<CR>
 nnoremap ,tre :TernRename<CR>
 nnoremap ,tt :TernType<CR>
+
+" for tmux-powerline connect
+" via: http://yonchu.hatenablog.com/entry/2013/05/05/171925
+if exists('$TMUX')
+  autocmd BufEnter * call <SID>set_vim_cwd_to_tmux()
+  autocmd VimLeave * call <SID>del_vim_cwd_from_tmux()
+endif
+
+function! s:set_vim_cwd_to_tmux()
+  if !exists('$TMUX')
+    return
+  endif
+
+  let pain_id = system('tmux display -p "#D" | tr -d "%" | tr -d $"\n"')
+  call system('tmux setenv ' . "TMUX_VIM_CWD_" . pain_id . ' ' . getcwd())
+
+  let bt = &buftype
+  let ft = &filetype
+  " let bn = bufname('%')
+  if bt ==# 'nofile' || ft ==# 'qf' || ft ==# 'quickrun'
+    let pwd = getcwd()
+  else
+    let pwd = expand('%:p:h')
+  endif
+
+  let var_name = system('tmux display -p "TMUXPWD_#D" | tr -d "%" | tr -d $"\n"')
+  call system('tmux setenv ' . var_name . ' ' . shellescape(pwd))
+endfunction
+
+function! s:del_vim_cwd_from_tmux()
+  if !exists('$TMUX')
+    return
+  endif
+  let var_name = system('tmux display -p "TMUX_VIM_CWD_#D" | tr -d "%" | tr -d $"\n"')
+  call system('tmux setenv -u ' . var_name)
+endfunction

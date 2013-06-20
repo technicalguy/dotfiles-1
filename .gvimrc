@@ -4,6 +4,10 @@ set columns=115
 set cmdheight=1            " コマンドラインの高さ
 set previewheight=5        " プレビューウィンドウの高さ
 set guioptions-=T	"ツールバーを非表示
+
+" hide menu
+source $VIMRUNTIME/delmenu.vim
+
 " コマンドをステータスラインに表示する
 set showcmd
 set fuopt+=maxhorz

@@ -235,7 +235,7 @@ endfunction "}}}
 
 " let $PERL_DLL = "/opt/local/lib/perl5/5.10.0/darwin-2level/CORE/libperl.dylib"
 " let $PYTHON_DLL = "/opt/local/lib/libpython2.6.dylib"
-" let $RUBY_DLL = "/opt/local/lib/libruby.dylib"
+let $RUBY_DLL = "/usr/local/lib/libruby.dylib"
 
 augroup BufferAu
   autocmd!

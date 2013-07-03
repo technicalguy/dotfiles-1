@@ -576,7 +576,7 @@ nmap <Space>T :NERDTree<CR>
 let g:NERDTreeHijackNetrw = 0
 "for vim-coffee-script
 au BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
-au BufWritePost *.coffee silent CoffeeMake!
+au BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw!
 let coffee_make_options = '--bare'
 
 " for quickrun.vim

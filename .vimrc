@@ -773,7 +773,11 @@ function! s:set_vim_cwd_to_tmux()
   let bt = &buftype
   let ft = &filetype
   " let bn = bufname('%')
-  if bt ==# 'nofile' || ft ==# 'qf' || ft ==# 'quickrun'
+  if bt ==# 'nofile'
+        \ || ft ==# 'gitcommit' || ft ==# 'git-status' || ft ==# 'git-log'
+        \ || ft ==# 'qf' || ft ==# 'gitcommit' || ft ==# 'quickrun'
+        \ || ft ==# 'qfreplace' || ft ==# 'ref' || ft ==# 'vcs-commit'
+        \ || ft ==# 'vcs-status'
     let pwd = getcwd()
   else
     let pwd = expand('%:p:h')

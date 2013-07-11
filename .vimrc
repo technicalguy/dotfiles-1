@@ -37,7 +37,6 @@ Bundle 'derekwyatt/vim-scala'
 Bundle 'elzr/vim-json'
 Bundle 'express.vim'
 Bundle 'fuenor/qfixgrep.git'
-Bundle 'tpope/vim-fugitive'
 Bundle 'glidenote/memolist.vim'
 Bundle 'gregsexton/gitv'
 Bundle 'groenewege/vim-less'
@@ -67,6 +66,7 @@ Bundle 'mikewest/vimroom'
 Bundle 'mklabs/grunt.vim'
 Bundle 'mojako/ref-sources.vim'
 Bundle 'molokai'
+Bundle 'moznion/unite-git-conflict.vim'
 Bundle 'mrtazz/simplenote.vim'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'newspaper.vim'
@@ -92,6 +92,7 @@ Bundle 'thinca/vim-qfreplace'
 Bundle 'thinca/vim-quickrun'
 Bundle 'thinca/vim-ref'
 Bundle 'toritori0318/vim-redmine'
+Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-surround'
 Bundle 'tyru/caw.vim'
@@ -451,6 +452,9 @@ nnoremap <silent> [unite]s
       \ :<C-u>Unite -buffer-name=files -no-split
       \ jump_point file_point buffer_tab
       \ file_rec:! file file/new file_mru<CR>
+
+" for unite-git-conflict
+noremap <silent>[unite]gc :<C-u>Unite git-conflict<CR>
 
 " Start insert.
 let g:unite_enable_start_insert = 1

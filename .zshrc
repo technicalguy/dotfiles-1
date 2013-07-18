@@ -28,7 +28,7 @@ alias gvim='env LANG=ja_JP.UTF-8 open -a /Applications/MacVim.app "$@"'
 alias ctags='/Applications/MacVim.app/Contents/MacOS/ctags "$@"'
 alias javac='javac -encoding UTF-8'
 alias java='java -Dfile.encoding=UTF-8'
-alias chrometrace='/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary --enable-threaded-compositing --force-compositing-mode --enable-impl-side-painting --enable-skia-benchmarking --allow-webui-compositing'
+alias chrometrace='open -a /Applications/Google\ Chrome\ Canary.app --args --enable-threaded-compositing --force-compositing-mode --enable-impl-side-painting --enable-skia-benchmarking --allow-webui-compositing'
 
 #lsに色付け
 export LSCOLORS=gxfxcxdxbxegedabagacad

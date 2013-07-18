@@ -12,4 +12,5 @@ ln -s $HOME/dotfiles/.vimperatorrc $HOME/.vimperatorrc
 ln -s $HOME/dotfiles/.vimrc $HOME/.vimrc
 ln -s $HOME/dotfiles/.zshrc $HOME/.zshrc
 ln -s $HOME/dotfiles/.zsh $HOME/.zsh
+ln -s $HOME/dotfiles/.ackrc $HOME/.ackrc
 

@@ -99,6 +99,7 @@ Bundle 'tyru/caw.vim'
 Bundle 'tyru/open-browser-github.vim'
 Bundle 'tyru/open-browser.vim'
 Bundle 'tyru/skk.vim'
+Bundle 'ujihisa/neco-look'
 Bundle 'unicode.vim'
 Bundle 'unite-colorscheme'
 Bundle 'unite-font'
@@ -750,6 +751,22 @@ let g:jsdoc_additional_descriptions = 1
 if !hasmapto('<Plug>(jsdoc)')
   nmap <silent> ,d <Plug>(jsdoc)
 endif
+
+" for neco-look
+if !exists('g:neocomplete#text_mode_filetypes')
+    let g:neocomplete#text_mode_filetypes = {}
+endif
+let g:neocomplete#text_mode_filetypes = {
+  \ 'rst': 1,
+  \ 'markdown': 1,
+  \ 'gitrebase': 1,
+  \ 'gitcommit': 1,
+  \ 'vcs-commit': 1,
+  \ 'hybrid': 1,
+  \ 'text': 1,
+  \ 'help': 1,
+  \ 'tex': 1,
+\ }
 
 " for tern_for_vim
 nnoremap ,td :TernDef<CR>

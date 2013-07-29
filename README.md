@@ -3,6 +3,6 @@
 ## Usage
 
 ```sh
-git clone git@github.com:Layzie/dotfiles.git
+git clone --recursive git@github.com:Layzie/dotfiles.git
 sh setup.sh
 ```

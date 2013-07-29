@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cd $HOME/
+cd $HOME
 ln -s $HOME/dotfiles/.ctags $HOME/.ctags
 ln -s $HOME/dotfiles/.emacs.d $HOME/.emacs.d
 ln -s $HOME/dotfiles/.gvimrc $HOME/.gvimrc

@@ -13,7 +13,7 @@ case ${UID} in
 esac
 
 #export
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/local/share/npm/bin:/usr/local/share/python:/usr/local/opt/ruby/bin:$PATH
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/local/share/npm/bin:/usr/local/opt/ruby/bin:$PATH
 export MANPATH=/usr/local/share/man:/usr/local/man:$MANPATH
 export NODE_PATH=/usr/local/lib/node_modules
 export GEM_HOME='/usr/local'

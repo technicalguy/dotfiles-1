@@ -171,6 +171,11 @@ set smartindent
 "バックスペースでインデントや改行を削除できるようにする
 set backspace=2
 
+" for non-ascii string
+if &ambiwidth !=# 'auto'
+  set ambiwidth=double
+endif
+
 " 全角スペースをハイライト
 if has("syntax")
   syntax on

@@ -57,11 +57,11 @@ Bundle 'majutsushi/tagbar'
 Bundle 'malclocke/vim-buster'
 Bundle 'marijnh/tern_for_vim'
 Bundle 'matchit.zip'
+Bundle 'mattn/emmet-vim'
 Bundle 'mattn/gist-vim'
 Bundle 'mattn/learn-vimscript'
 Bundle 'mattn/qiita-vim'
 Bundle 'mattn/webapi-vim'
-Bundle 'mattn/zencoding-vim'
 Bundle 'mikewest/vimroom'
 Bundle 'mklabs/grunt.vim'
 Bundle 'mojako/ref-sources.vim'
@@ -563,7 +563,7 @@ let g:gist_detect_filetype = 1
 let g:gist_get_multiplefile = 1
 
 " for ZenCoding.vim
-let g:user_zen_settings = {
+let g:user_emmet_settings = {
 \ 'lang': 'ja',
 \ 'html': {
 \       'indentation' : '  ',
@@ -582,7 +582,7 @@ let g:user_zen_settings = {
 \   'filters': 'html,c',
 \ },
 \}
-let g:use_zen_complete_tag = 1
+let g:use_emmet_complete_tag = 1
 
 " for Nerd-Tree
 nmap <Space>t :NERDTreeToggle<CR>

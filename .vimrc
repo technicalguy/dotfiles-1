@@ -168,6 +168,12 @@ set softtabstop=4
 set autoindent
 set smartindent
 
+" for scroll perfomance, set lazyredraw & ttyfast when using in terminal
+if !has('gui_running')
+  set lazyredraw
+  set ttyfast
+endif
+
 "バックスペースでインデントや改行を削除できるようにする
 set backspace=2
 

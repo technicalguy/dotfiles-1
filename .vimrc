@@ -287,14 +287,14 @@ au BufRead,BufNewFile *.ftl set filetype=ftl
 
 "for skk.vim
 let skk_jisyo = "~/Library/Application\ Support/AquaSKK/skk-jisyo.utf8"
-let skk_large_jisyo = "~/Library/Application\ Support/AquaSKK/SKK-JISYO.L" 
+let skk_large_jisyo = "~/Library/Application\ Support/AquaSKK/SKK-JISYO.L"
 let g:skk_auto_save_jisyo = 1
 let g:skk_remap_lang_mode = 1
 let g:skk_kutouten_type = "en"
 
 " str2numcharキーマップ設定
-vmap <silent> sn :Str2NumChar<CR> 
-vmap <silent> sh :Str2HexLiteral<CR> 
+vmap <silent> sn :Str2NumChar<CR>
+vmap <silent> sh :Str2HexLiteral<CR>
 
 " yankring_historyのディレクトリ設定
 let g:yankring_history_dir = expand('$HOME')

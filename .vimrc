@@ -28,6 +28,7 @@ Bundle 'ack.vim'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'basyura/unite-yarm'
+Bundle 'bling/vim-airline'
 Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'chaquotay/ftl-vim-syntax'
 Bundle 'css_color.vim'
@@ -808,3 +809,14 @@ function! s:del_vim_cwd_from_tmux()
   let var_name = system('tmux display -p "TMUX_VIM_CWD_#D" | tr -d "%" | tr -d $"\n"')
   call system('tmux setenv -u ' . var_name)
 endfunction
+
+" for vim-airline
+let g:airline_powerline_fonts=1
+" powerline symbols
+let g:airline_left_sep = '⮀'
+let g:airline_left_alt_sep = '⮁'
+let g:airline_right_sep = '⮂'
+let g:airline_right_alt_sep = '⮃'
+let g:airline#extensions#branch#symbol = '⭠'
+let g:airline_readonly_symbol = '⭤'
+let g:airline_linecolumn_prefix = '⭡'

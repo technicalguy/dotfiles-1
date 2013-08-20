@@ -12,7 +12,6 @@ Bundle 'AndrewRadev/vim-coffee-script'
 Bundle 'AutoClose'
 Bundle 'Indent-Guides'
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'Lokaltog/vim-powerline'
 Bundle 'RubySinatra'
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet'
@@ -668,26 +667,6 @@ let s:ctags_opts = '
   \ --regex-coffee=/(constructor:[[:space:]]\()@[A-Za-z.]+(,[[:space:]]@([A-Za-z.]+)){9}/\3/f,field/'
 
 let $CTAGS = substitute(s:ctags_opts, '\v\([nst]\)', '\\', 'g')
-
-" for vim-powerline
-let g:Powerline_symbols = 'fancy'
-if has('gui_running')
-  let g:Powerline_colorscheme = 'solarized'
-else
-  let g:Powerline_colorscheme = 'solarized256'
-endif
-
-" map to <F6> toggle powerline colorscheme
-function! TogglePowerlineColorscheme()
-  :ToggleBG
-  if exists(':ToggleBG') && exists(':PowerlineReloadColorscheme')
-    let g:Powerline_colorscheme = &background == 'light' ? 'solarized' : 'solarized256'
-    PowerlineReloadColorscheme
-  endif
-endfunction
-nnoremap <F6> :call TogglePowerlineColorscheme()<CR>
-inoremap <F6> :call TogglePowerlineColorscheme()<CR>
-vnoremap <F6> :call TogglePowerlineColorscheme()<CR>
 
 " for memolist.vim
 let g:memolist_qfixgrep = 1

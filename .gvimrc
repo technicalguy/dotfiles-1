@@ -26,5 +26,5 @@ set number
 set matchtime=3
 
 " font settings for vim-powerline
-set guifont=Ricty_for_Powerline:h14
-set guifontwide=Ricty:h14
+set guifont=Ricty_Regular_for_Powerline:h14
+set guifontwide=Ricty_Regular_for_Powerline:h14

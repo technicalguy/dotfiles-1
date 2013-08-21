@@ -249,9 +249,12 @@ function! s:coding_style_complete(...) "{{{
   return keys(s:coding_styles)
 endfunction "}}}
 
-" let $PERL_DLL = "/opt/local/lib/perl5/5.10.0/darwin-2level/CORE/libperl.dylib"
-" let $PYTHON_DLL = "/opt/local/lib/libpython2.6.dylib"
+" let $PERL_DLL = "/usr/local/lib/perl5/5.12.0/darwin-2level/CORE/libperl.dylib"
+let $PYTHON_DLL = "/usr/local/lib/libpython2.7.dylib"
+let $PYTHON3_DLL="/usr/local/Cellar/python3/3.3.0/Frameworks/Python.framework/Versions/3.3/Python"
 let $RUBY_DLL = "/usr/local/lib/libruby.dylib"
+" let $RUBY_DLL = "/usr/local/lib/libruby.1.8.dylib"
+" let $LUA_DLL="/usr/local/Cellar/lua52/5.2.1/lib/liblua.dylib"
 
 augroup BufferAu
   autocmd!

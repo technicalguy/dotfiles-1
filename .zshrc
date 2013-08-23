@@ -188,8 +188,7 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 ## Completion configuration
 #
 fpath=(${HOME}/.zsh/functions/Completion ${fpath})
-autoload -U compinit
-compinit
+autoload -U compinit && compinit
 
 
 ## zsh editor

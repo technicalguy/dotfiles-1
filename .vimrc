@@ -302,8 +302,8 @@ vmap <silent> sh :Str2HexLiteral<CR>
 " yankring_historyのディレクトリ設定
 let g:yankring_history_dir = expand('$HOME')
 let g:yankring_history_file = '.yankring_history'
-let g:yankring_replace_n_pkey = '<M-p>'
-let g:yankring_replace_n_nkey = '<M-n>'
+let g:yankring_replace_n_pkey = ',p'
+let g:yankring_replace_n_nkey = ',n'
 nnoremap <silent> <F8> :YRShow<CR>
 
 " for neocomplete.vim

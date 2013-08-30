@@ -264,7 +264,7 @@ augroup BufferAu
 augroup END
 
 "タブ幅をリセット
-au BufNewFile,BufRead * set tabstop=4 shiftwidth=4 softtabstop=4 expandtab
+au BufNewFile,BufRead * set tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 
 ".rhtmlと.rbと.ymlでタブ幅を変更
 au BufNewFile,BufRead *.rhtml set tabstop=2 shiftwidth=2 softtabstop=2 expandtab

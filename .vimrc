@@ -859,6 +859,7 @@ let g:SrcExpl_gobackKey = "<SPACE>"
 let g:SrcExpl_pluginList = [
         \ "__TagBar__",
         \ "NERD_tree_",
+        \ "ControlP",
         \ "Source_Explorer"
     \ ]
 

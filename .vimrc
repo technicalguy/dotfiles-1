@@ -7,6 +7,7 @@ call vundle#rc()
 " let Vundle manage Vundle
 " required!
 Bundle 'gmarik/vundle'
+Bundle 'JulesWang/css.vim'
 Bundle 'Align'
 Bundle 'AndrewRadev/vim-coffee-script'
 Bundle 'AutoClose'
@@ -39,7 +40,6 @@ Bundle 'fuenor/qfixgrep.git'
 Bundle 'glidenote/memolist.vim'
 Bundle 'gregsexton/gitv'
 Bundle 'groenewege/vim-less'
-Bundle 'hail2u/vim-css-syntax'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'hallison/vim-markdown'
 Bundle 'heavenshell/vim-jsdoc'

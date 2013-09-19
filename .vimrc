@@ -72,6 +72,7 @@ Bundle 'mrtazz/simplenote.vim'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'newspaper.vim'
 Bundle 'nono/vim-handlebars'
+Bundle 'osyo-manga/vim-anzu'
 Bundle 'othree/html5.vim'
 Bundle 'pekepeke/titanium-vim'
 Bundle 'proton'
@@ -123,6 +124,7 @@ set statusline=%<%F\ %r%h%w%y%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%{fugitiv
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+" set statusline+=%{anzu#search_status()}
 
 " コマンドをステータスラインに表示する
 set showcmd
@@ -841,3 +843,12 @@ let g:airline#extensions#branch#symbol = '⭠'
 let g:airline_readonly_symbol = '⭤'
 let g:airline_linecolumn_prefix = '⭡'
 
+" for vim-anzu
+" mapping
+nmap n <Plug>(anzu-n-with-echo)
+nmap N <Plug>(anzu-N-with-echo)
+nmap * <Plug>(anzu-star-with-echo)
+nmap # <Plug>(anzu-sharp-with-echo)
+" clear status
+nmap <silent> <ESC><ESC> :<C-u>nohlsearch<CR><Plug>(anzu-clear-search-status)
+let g:anzu_status_format = "%p(%i/%l)"

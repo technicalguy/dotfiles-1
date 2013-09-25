@@ -849,6 +849,7 @@ nmap n <Plug>(anzu-n-with-echo)
 nmap N <Plug>(anzu-N-with-echo)
 nmap * <Plug>(anzu-star-with-echo)
 nmap # <Plug>(anzu-sharp-with-echo)
+nmap <Leader>j <Plug>(anzu-jump)<Plug>(anzu-echo-search-status)
 " clear status
 nmap <silent> <ESC><ESC> :<C-u>nohlsearch<CR><Plug>(anzu-clear-search-status)
 let g:anzu_status_format = "%p(%i/%l)"

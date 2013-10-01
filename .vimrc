@@ -624,7 +624,7 @@ let coffee_make_options = '--bare'
 " for quickrun.vim
 let g:quickrun_config = {}
 let g:quickrun_config['coffee'] = {'command' : 'coffee', 'exec' : ['%c -cbp %s']}
-if executable('mark')
+" if executable('mark')
   let g:quickrun_config['markdown'] = {
   \ 'outputter' : 'null',
   \ 'command'   : 'open',
@@ -632,9 +632,9 @@ if executable('mark')
   \ 'args'      : 'Marked',
   \ 'exec'      : '%c %o %a %s',
   \ }
-else
-  let g:quickrun_config['markdown'] = {'command' : 'bluecloth', 'exec' : ['%c -f %s']}
-endif
+" else
+"   let g:quickrun_config['markdown'] = {'command' : 'bluecloth', 'exec' : ['%c -f %s']}
+" endif
 
 " for simplenote.vim
 if filereadable(expand('~/.simplenoterc'))

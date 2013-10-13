@@ -13,11 +13,13 @@ case ${UID} in
 esac
 
 #export
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/local/share/npm/bin:$(brew --prefix ruby)/bin:$PATH
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/local/share/npm/bin:$HOME/.rbenv/shims:$PATH
 export MANPATH=/usr/local/share/man:/usr/local/man:$MANPATH
 export NODE_PATH=/usr/local/lib/node_modules
 export GEM_HOME='/usr/local'
-#MacVim-kaoriyaで、Terminal上でsyntax colorが付かないのを修正
+export RBENV_ROOT=/usr/local/var/rbenv
+
+# MacVim-kaoriyaで、Terminal上でsyntax colorが付かないのを修正
 export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
 export TERMINFO=/usr/share/terminfo
 export VMAIL_VIM='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
@@ -421,3 +423,5 @@ fi
 
 # add pwd command in tmux-powerline
 PROMPT+='$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
+
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi

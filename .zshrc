@@ -13,11 +13,11 @@ case ${UID} in
 esac
 
 #export
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/local/share/npm/bin:$HOME/.rbenv/shims:$PATH
+export PATH=$HOME/.rbenv/shims/bin:/usr/local/sbin:/usr/local/bin:/usr/local/share/npm/bin:$PATH
 export MANPATH=/usr/local/share/man:/usr/local/man:$MANPATH
+export RBENV_ROOT=$HOME/.rbenv
+export GEM_HOME=$HOME/.rbenv/shims
 export NODE_PATH=/usr/local/lib/node_modules
-export GEM_HOME='/usr/local'
-export RBENV_ROOT=/usr/local/var/rbenv
 
 # MacVim-kaoriyaで、Terminal上でsyntax colorが付かないのを修正
 export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim

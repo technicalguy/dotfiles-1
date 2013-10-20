@@ -286,8 +286,8 @@ esac
 # source pure
 # https://github.com/sindresorhus/pure
 #
-. ${HOME}/dotfiles/pure/pure.zsh
-DEFAULT_USERNAME='Layzie'
+autoload -U promptinit && promptinit
+prompt pure
 
 # source git flow completion
 source /usr/local/share/zsh/site-functions/git-flow-completion.zsh

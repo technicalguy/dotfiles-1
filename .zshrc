@@ -425,3 +425,6 @@ fi
 PROMPT+='$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+# for virtualenvwrapper
+source /usr/local/bin/virtualenvwrapper.sh

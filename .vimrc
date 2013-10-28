@@ -33,6 +33,7 @@ Bundle 'bling/vim-airline'
 Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'chaquotay/ftl-vim-syntax'
 Bundle 'css_color.vim'
+Bundle 'davidhalter/jedi-vim'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'elzr/vim-json'
 Bundle 'express.vim'
@@ -46,12 +47,14 @@ Bundle 'hallison/vim-markdown'
 Bundle 'heavenshell/vim-jsdoc'
 Bundle 'hokaccha/vim-html5validator'
 Bundle 'honza/vim-snippets'
+Bundle 'hynek/vim-python-pep8-indent'
 Bundle 'jQuery'
 Bundle 'jade.vim'
 Bundle 'jelera/vim-javascript-syntax'
 Bundle 'jpo/vim-railscasts-theme'
 Bundle 'juvenn/mustache.vim'
 Bundle 'kakkyz81/evervim'
+Bundle 'kevinw/pyflakes-vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'leafgarland/typescript-vim'
 Bundle 'majutsushi/tagbar'
@@ -285,7 +288,7 @@ map <Leader>jb !python -m json.tool<CR>
 autocmd BufNewFile,BufRead *.{md,mkd,mkdn,mark*} set filetype=markdown tabstop=4 shiftwidth=4 softtabstop=4 expandtab
 
 " .pyでタブ幅を変更・スペースでインデントに変更
-au BufNewFile,BufRead *.py setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
+au BufNewFile,BufRead *.py setlocal tabstop=8 shiftwidth=4 softtabstop=4 et si cinwords=if,elif,else,for,while,try,except,finally,def,class
 
 "javascript tab
 au BufNewFile,BufRead *.js set tabstop=4 shiftwidth=4 softtabstop=4 expandtab
@@ -381,7 +384,8 @@ inoremap <expr><C-e>  neocomplete#cancel_popup()
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 " autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+" autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType python setlocal omnifunc=jedi#completions
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 " Enable heavy omni completion.
@@ -397,6 +401,7 @@ let g:neocomplete#sources#omni#input_patterns.c =
       \ '[^.[:digit:] *\t]\%(\.\|->\)\%(\h\w*\)\?'
 let g:neocomplete#sources#omni#input_patterns.cpp =
       \ '[^.[:digit:] *\t]\%(\.\|->\)\%(\h\w*\)\?\|\h\w*::\%(\h\w*\)\?'
+let g:neocomplete#force_omni_input_patterns.python = '\h\w*\|[^. \t]\.\w*'
 
 " For perlomni.vim setting.
 " https://github.com/c9s/perlomni.vim
@@ -411,6 +416,8 @@ let g:neocomplete#sources#omni#input_patterns.perl =
 "    let col = col('.') - 1
 "    return !col || getline('.')[col - 1]  =~ '\s'
 "  endfunction"}}}
+
+
 
 " for neosnippet
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
@@ -735,8 +742,9 @@ if filereadable(expand('~/.redminerc'))
   let g:redmine_browser = 'open -a /Applications/Google\ Chrome.app'
 endif
 
-" choice javascript linter for vim-syntastic
+" for vim-syntastic
 let g:syntastic_javascript_checkers = ['jshint', 'jslint']
+let g:syntastic_python_checker = 'flake8'
 
 " for loga-vim
 let g:loga_delimiter = '(//)'
@@ -855,3 +863,7 @@ nmap <Leader>j <Plug>(anzu-jump)<Plug>(anzu-echo-search-status)
 " clear status
 nmap <silent> <ESC><ESC> :<C-u>nohlsearch<CR><Plug>(anzu-clear-search-status)
 let g:anzu_status_format = "%p(%i/%l)"
+
+" for jedi-vim
+let g:jedi#auto_vim_configuration = 0
+let g:jedi#rename_command = '<Leader>R'

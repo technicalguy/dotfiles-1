@@ -61,7 +61,6 @@ Bundle 'matchit.zip'
 Bundle 'mattn/emmet-vim'
 Bundle 'mattn/excitetranslate-vim'
 Bundle 'mattn/gist-vim'
-Bundle 'mattn/jscomplete-vim'
 Bundle 'mattn/learn-vimscript'
 Bundle 'mattn/qiita-vim'
 Bundle 'mattn/webapi-vim'
@@ -381,7 +380,7 @@ inoremap <expr><C-e>  neocomplete#cancel_popup()
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+" autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
@@ -705,9 +704,6 @@ let g:memolist_prompt_categories = 1
 map <Leader>ml  :MemoList<CR>
 map <Leader>mn  :MemoNew<CR>
 map <Leader>mg  :MemoGrep<CR>
-
-" for jscomplete-vim
-let g:jscomplete_use = ['dom', 'moz', 'es6th']
 
 " for Gitv
 autocmd FileType git :setlocal foldlevel=99

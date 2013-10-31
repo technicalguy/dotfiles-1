@@ -30,7 +30,6 @@ Bundle 'ack.vim'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'basyura/unite-yarm'
-Bundle 'bigfish/vim-js-context-coloring'
 Bundle 'bling/vim-airline'
 Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'chaquotay/ftl-vim-syntax'
@@ -870,5 +869,3 @@ let g:anzu_status_format = "%p(%i/%l)"
 let g:jedi#auto_vim_configuration = 0
 let g:jedi#rename_command = '<Leader>R'
 
-" vim-js-context-coloring
-let g:js_context_colors_enabled = 0

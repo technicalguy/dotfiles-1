@@ -76,9 +76,9 @@ Bundle 'moll/vim-node'
 Bundle 'molokai'
 Bundle 'moznion/unite-git-conflict.vim'
 Bundle 'mrtazz/simplenote.vim'
+Bundle 'mustache/vim-mode'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'newspaper.vim'
-Bundle 'nono/vim-handlebars'
 Bundle 'osyo-manga/vim-anzu'
 Bundle 'othree/html5.vim'
 Bundle 'pekepeke/titanium-vim'
@@ -870,3 +870,5 @@ let g:anzu_status_format = "%p(%i/%l)"
 let g:jedi#auto_vim_configuration = 0
 let g:jedi#rename_command = '<Leader>R'
 
+" for vim-mode(mustache/handlebars)
+let g:mustache_abbreviations = 1

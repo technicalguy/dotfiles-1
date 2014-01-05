@@ -13,6 +13,7 @@ Bundle 'AutoClose'
 Bundle 'Glench/Vim-Jinja2-Syntax'
 Bundle 'Indent-Guides'
 Bundle 'JulesWang/css.vim'
+Bundle 'LeafCage/yankround.vim'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'RubySinatra'
 Bundle 'Shougo/neocomplete.vim'
@@ -25,7 +26,6 @@ Bundle 'Shougo/vimshell'
 Bundle 'Simple-Javascript-Indenter'
 Bundle 'The-NERD-tree'
 Bundle 'Wombat'
-Bundle 'YankRing.vim'
 Bundle 'ack.vim'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'altercation/vim-colors-solarized'
@@ -308,12 +308,14 @@ let g:skk_remap_lang_mode = 1
 vmap <silent> sn :Str2NumChar<CR>
 vmap <silent> sh :Str2HexLiteral<CR>
 
-" yankring_historyのディレクトリ設定
-let g:yankring_history_dir = expand('$HOME')
-let g:yankring_history_file = '.yankring_history'
-let g:yankring_replace_n_pkey = ',p'
-let g:yankring_replace_n_nkey = ',n'
-nnoremap <silent> <F8> :YRShow<CR>
+" for yankround
+nmap p <Plug>(yankround-p)
+nmap P <Plug>(yankround-P)
+nmap gp <Plug>(yankround-gp)
+nmap gP <Plug>(yankround-gP)
+nnoremap <silent><SID>(ctrlp) :<C-u>CtrlP<CR>
+nmap <expr><C-p> yankround#is_active() ? "\<Plug>(yankround-prev)" : "<SID>(ctrlp)"
+nmap <C-n> <Plug>(yankround-next)
 
 " for neocomplete.vim
 " Disable AutoComplPop.
@@ -761,7 +763,7 @@ set runtimepath+=$HOME/.vim/bundle/qfixgrep
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'dir', 'rtscript',
-                          \ 'undo', 'line', 'changes', 'mixed', 'bookmarkdir']
+                          \ 'undo', 'line', 'changes', 'mixed', 'bookmarkdir', 'yankround']
 let g:ctrlp_buftag_types = {'erlang'     : '--language-force=erlang --erlang-types=drmf' }
 
 " for dash.vim

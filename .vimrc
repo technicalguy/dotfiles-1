@@ -762,10 +762,6 @@ set runtimepath+=$HOME/.vim/bundle/qfixgrep
 " for ctrlp.vim
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_show_hidden = 1
-let g:ctrlp_custom_ignore = {
-        \ 'dir':  'node_modules$\|\.git$\|\.meteor$\|\.svn$\|\.hg$\|dist$',
-        \ 'file': '\.DS_Store$\|\.jpg$\|\.png$\|\.jpeg$\|\.gif$\|\.svg$'
-        \ }
 let g:ctrlp_mruf_exclude = '/private/.*\|/var/.*\|/tmp/.*\|/temp/.*'
 let g:ctrlp_mruf_relative = 1
 let g:ctrlp_prompt_mappings = { 'ToggleMRURelative()': ['<F8>'] }

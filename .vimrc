@@ -27,7 +27,7 @@ Bundle 'Simple-Javascript-Indenter'
 Bundle 'The-NERD-tree'
 Bundle 'Wombat'
 Bundle 'ack.vim'
-" Bundle 'airblade/vim-gitgutter'
+Bundle 'airblade/vim-gitgutter'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'basyura/unite-yarm'
 Bundle 'bling/vim-airline'
@@ -774,10 +774,10 @@ nmap <silent> <leader>d <Plug>DashSearch
 
 " for vim-gitgutter
 " turn off by default
-" let g:gitgutter_enabled = 0
-" noremap ,gg :GitGutterToggle<CR>
-" noremap ,gn :GitGutterNextHunk<CR>
-" noremap ,gp :GitGutterPrevHunk<CR>
+let g:gitgutter_enabled = 0
+noremap ,gg :GitGutterToggle<CR>
+noremap ,gn :GitGutterNextHunk<CR>
+noremap ,gp :GitGutterPrevHunk<CR>
 
 " for vim-jsdoc
 let g:jsdoc_additional_descriptions = 1

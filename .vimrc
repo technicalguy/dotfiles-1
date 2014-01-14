@@ -92,6 +92,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'str2numchar.vim'
 Bundle 'sudo.vim'
 Bundle 'supermomonga/vimshell-pure.vim'
+Bundle 't9md/vim-choosewin'
 Bundle 't9md/vim-unite-ack'
 Bundle 'tacahiroy/vim-logaling'
 Bundle 'thinca/vim-auto_source'
@@ -192,21 +193,21 @@ if &ambiwidth !=# 'auto'
 endif
 
 " 全角スペースをハイライト
-if has("syntax")
-  syntax on
-  function! ActivateInvisibleIndicator()
-    syntax match InvisibleJISX0208Space "　" display containedin=ALL
-    highlight InvisibleJISX0208Space term=underline ctermbg=Cyan guibg=Cyan
-    syntax match InvisibleTrailedSpace "[ \t]\+$" display containedin=ALL
-    highlight InvisibleTrailedSpace term=underline ctermbg=Red guibg=Red
-    syntax match InvisibleTab "\t" display containedin=ALL
-    highlight InvisibleTab term=underline ctermbg=Cyan guibg=Cyan
-  endf
-  augroup invisible
-    autocmd! invisible
-    autocmd BufNew,BufRead * call ActivateInvisibleIndicator()
-  augroup END
-endif
+" if has("syntax")
+"   syntax on
+"   function! ActivateInvisibleIndicator()
+"     syntax match InvisibleJISX0208Space "　" display containedin=ALL
+"     highlight InvisibleJISX0208Space term=underline ctermbg=Cyan guibg=Cyan
+"     syntax match InvisibleTrailedSpace "[ \t]\+$" display containedin=ALL
+"     highlight InvisibleTrailedSpace term=underline ctermbg=Red guibg=Red
+"     syntax match InvisibleTab "\t" display containedin=ALL
+"     highlight InvisibleTab term=underline ctermbg=Cyan guibg=Cyan
+"   endf
+"   augroup invisible
+"     autocmd! invisible
+"     autocmd BufNew,BufRead * call ActivateInvisibleIndicator()
+"   augroup END
+" endif
 
 " やんくをクリップボードへ送り込む
 set clipboard=unnamed
@@ -880,3 +881,20 @@ let g:jedi#rename_command = '<Leader>R'
 
 " for vim-mode(mustache/handlebars)
 let g:mustache_abbreviations = 1
+
+" for vim-choosewin
+" mapping
+nmap  -  <Plug>(choosewin)
+" use overlay
+let g:choosewin_overlay_enable = 1
+" clear overlay multibyte
+let g:choosewin_overlay_clear_multibyte = 1
+" color looks like tmux
+let g:choosewin_color_overlay = {
+      \ 'gui': ['DodgerBlue3', 'DodgerBlue3' ],
+      \ 'cterm': [ 25, 25 ]
+      \ }
+let g:choosewin_color_overlay_current = {
+      \ 'gui': ['firebrick1', 'firebrick1' ],
+      \ 'cterm': [ 124, 124 ]
+      \ }

@@ -30,7 +30,6 @@ Bundle 'Wombat'
 Bundle 'ack.vim'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'basyura/unite-yarm'
 Bundle 'bling/vim-airline'
 Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'chaquotay/ftl-vim-syntax'
@@ -102,7 +101,6 @@ Bundle 'thinca/vim-portal'
 Bundle 'thinca/vim-qfreplace'
 Bundle 'thinca/vim-quickrun'
 Bundle 'thinca/vim-ref'
-Bundle 'toritori0318/vim-redmine'
 Bundle 'toyamarinyon/hatenablog-vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-haml'
@@ -744,12 +742,6 @@ endfunction
 function! g:ref_source_webdict_sites.weblio.filter(output)
   return join(split(a:output, "\n")[53 :], "\n")
 endfunction
-
-" for vim-redmine
-if filereadable(expand('~/.redminerc'))
-  source ~/.redminerc
-  let g:redmine_browser = 'open -a /Applications/Google\ Chrome.app'
-endif
 
 " for vim-syntastic
 let g:syntastic_javascript_checkers = ['jshint', 'jslint']

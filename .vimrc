@@ -665,16 +665,32 @@ let g:tagbar_type_markdown = {
     \ 'k:Heading_L3'
   \ ]
   \ }
-let g:tagbar_type_coffee = {
-    \ 'ctagstype' : 'coffee',
-    \ 'kinds'     : [
-        \ 'c:classes',
-        \ 'm:methods',
-        \ 'f:functions',
-        \ 'v:variables',
-        \ 'f:fields',
-    \ ]
-\ }
+if executable('coffeetags')
+  let g:tagbar_type_coffee = {
+        \ 'ctagsbin' : 'coffeetags',
+        \ 'ctagsargs' : '--include-vars',
+        \ 'kinds' : [
+          \ 'f:functions',
+          \ 'o:object',
+        \ ],
+        \ 'sro' : ".",
+        \ 'kind2scope' : {
+          \ 'f' : 'object',
+          \ 'o' : 'object',
+        \ }
+      \ }
+else
+  let g:tagbar_type_coffee = {
+      \ 'ctagstype' : 'coffee',
+      \ 'kinds'     : [
+          \ 'c:classes',
+          \ 'm:methods',
+          \ 'f:functions',
+          \ 'v:variables',
+          \ 'f:fields',
+      \ ]
+  \ }
+endif
 
 " for memolist.vim
 let g:memolist_qfixgrep = 1

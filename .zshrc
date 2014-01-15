@@ -428,3 +428,36 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # for virtualenvwrapper
 source /usr/local/bin/virtualenvwrapper.sh
+
+# for zaw
+
+autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
+add-zsh-hook chpwd chpwd_recent_dirs
+zstyle ':chpwd:*' recent-dirs-max 5000
+zstyle ':chpwd:*' recent-dirs-default yes
+zstyle ':completion:*' recent-dirs-insert both
+
+# call zaw
+source /Users/A13003/dotfiles/zaw/zaw.zsh
+
+# via: http://qiita.com/scalper/items/4728afaac9962bf91bfa
+bindkey '^[d' zaw-cdr
+bindkey '^[g' zaw-git-branches
+bindkey '^[@' zaw-gitdir
+
+function zaw-src-gitdir () {
+  _dir=$(git rev-parse --show-cdup 2>/dev/null)
+  if [ $? -eq 0 ]
+  then
+    candidates=( $(git ls-files ${_dir} | perl -MFile::Basename -nle \
+                                               '$a{dirname $_}++; END{delete $a{"."}; print for sort keys %a}') )
+  fi
+  actions=("zaw-src-gitdir-cd")
+  act_descriptions=("change directory in git repos")
+}
+
+function zaw-src-gitdir-cd () {
+  BUFFER="cd $1"
+  zle accept-line
+}
+zaw-register-src -n gitdir zaw-src-gitdir

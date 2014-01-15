@@ -438,7 +438,7 @@ zstyle ':chpwd:*' recent-dirs-default yes
 zstyle ':completion:*' recent-dirs-insert both
 
 # call zaw
-source /Users/A13003/dotfiles/zaw/zaw.zsh
+source $HOME/dotfiles/zaw/zaw.zsh
 
 # via: http://qiita.com/scalper/items/4728afaac9962bf91bfa
 bindkey '^[d' zaw-cdr

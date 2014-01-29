@@ -30,7 +30,7 @@ NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/unite-outline', { 'depends' : [ 'Shougo/unite.vim' ] }
 NeoBundle 'Shougo/unite.vim', { 'depends' : [ 'Shougo/vimproc.vim' ] }
 NeoBundle 'Shougo/vimfiler', { 'depends': [ 'Shougo/unite.vim' ] }
-NeoBundle 'Shougo/vimproc', {
+NeoBundle 'Shougo/vimproc.vim', {
       \ 'build' : {
       \     'windows' : 'mingw32-make -f make_mingw32.mak',
       \     'cygwin'  : 'make -f make_cygwin.mak',
@@ -117,7 +117,7 @@ NeoBundle 'thinca/vim-auto_source'
 NeoBundle 'thinca/vim-github'
 NeoBundle 'thinca/vim-portal'
 NeoBundle 'thinca/vim-qfreplace'
-NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'thinca/vim-quickrun', { 'depends' : [ 'Shougo/vimproc.vim' ] }
 NeoBundle 'thinca/vim-ref'
 NeoBundle 'toyamarinyon/hatenablog-vim'
 NeoBundle 'tpope/vim-fugitive'

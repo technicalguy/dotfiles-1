@@ -13,7 +13,7 @@ case ${UID} in
 esac
 
 #export
-export PATH=$HOME/.cabal/bin:$HOME/.rbenv/shims/bin:/usr/local/sbin:/usr/local/bin:/usr/local/share/npm/bin:$PATH
+export PATH=$HOME/.cabal/bin:$HOME/.rbenv/shims/bin:/usr/local/sbin:/usr/local/bin:/usr/local/share/npm/bin:/usr/local/share/python:$PATH
 export MANPATH=/usr/local/share/man:/usr/local/man:$MANPATH
 export RBENV_ROOT=$HOME/.rbenv
 export GEM_HOME=$HOME/.rbenv/shims

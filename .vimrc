@@ -668,9 +668,9 @@ let g:quickrun_config['coffee'] = {'command' : 'coffee', 'exec' : ['%c -cbp %s']
 "   let g:quickrun_config['markdown'] = {'command' : 'bluecloth', 'exec' : ['%c -f %s']}
 " endif
 
-" for simplenote.vim
-if filereadable(expand('~/.simplenoterc'))
-  source ~/.simplenoterc
+" for evervim
+if filereadable(expand('~/Dropbox/.evervim.vim'))
+  source ~/Dropbox/.evervim.vim
 endif
 
 " for tagbar.vim

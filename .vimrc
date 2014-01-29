@@ -1,123 +1,143 @@
-" Vundleの設定
-set nocompatible
+" Setting for NeoBunndle
 filetype off
+if has('vim_starting')
+  set nocompatible
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-" let Vundle manage Vundle
-" required!
-Bundle 'gmarik/vundle'
-Bundle 'Align'
-Bundle 'AndrewRadev/vim-coffee-script'
-Bundle 'AutoClose'
-Bundle 'Glench/Vim-Jinja2-Syntax'
-Bundle 'Indent-Guides'
-Bundle 'JulesWang/css.vim'
-Bundle 'LeafCage/yankround.vim'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'RubySinatra'
-Bundle 'Shougo/neocomplete.vim'
-Bundle 'Shougo/neosnippet'
-Bundle 'Shougo/neosnippet-snippets'
-Bundle 'Shougo/unite-outline'
-Bundle 'Shougo/unite.vim'
-Bundle 'Shougo/vimfiler'
-Bundle 'Shougo/vimproc'
-Bundle 'Shougo/vimshell'
-Bundle 'Simple-Javascript-Indenter'
-Bundle 'The-NERD-tree'
-Bundle 'Wombat'
-Bundle 'ack.vim'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'bling/vim-airline'
-Bundle 'cakebaker/scss-syntax.vim'
-Bundle 'chaquotay/ftl-vim-syntax'
-Bundle 'css_color.vim'
-Bundle 'csscomb/csscomb-for-vim'
-Bundle 'daisuzu/translategoogle.vim'
-Bundle 'davidhalter/jedi-vim'
-Bundle 'derekwyatt/vim-scala'
-Bundle 'elzr/vim-json'
-Bundle 'express.vim'
-Bundle 'fuenor/qfixgrep'
-Bundle 'glidenote/memolist.vim'
-Bundle 'gregsexton/gitv'
-Bundle 'groenewege/vim-less'
-Bundle 'hail2u/vim-css3-syntax'
-Bundle 'hallison/vim-markdown'
-Bundle 'heavenshell/vim-jsdoc'
-Bundle 'hokaccha/vim-html5validator'
-Bundle 'honza/vim-snippets'
-Bundle 'hynek/vim-python-pep8-indent'
-Bundle 'jQuery'
-Bundle 'jade.vim'
-Bundle 'jelera/vim-javascript-syntax'
-Bundle 'jpo/vim-railscasts-theme'
-Bundle 'juvenn/mustache.vim'
-Bundle 'kakkyz81/evervim'
-Bundle 'kevinw/pyflakes-vim'
-Bundle 'kien/ctrlp.vim'
-Bundle 'leafgarland/typescript-vim'
-Bundle 'majutsushi/tagbar'
-Bundle 'malclocke/vim-buster'
-Bundle 'marijnh/tern_for_vim'
-Bundle 'matchit.zip'
-Bundle 'mattn/emmet-vim'
-Bundle 'mattn/excitetranslate-vim'
-Bundle 'mattn/gist-vim'
-Bundle 'mattn/learn-vimscript'
-Bundle 'mattn/qiita-vim'
-Bundle 'mattn/webapi-vim'
-Bundle 'mfumi/ref-dicts-en'
-Bundle 'mikewest/vimroom'
-Bundle 'mklabs/grunt.vim'
-Bundle 'mojako/ref-sources.vim'
-Bundle 'moll/vim-node'
-Bundle 'molokai'
-Bundle 'moznion/unite-git-conflict.vim'
-Bundle 'mustache/vim-mode'
-Bundle 'nanotech/jellybeans.vim'
-Bundle 'newspaper.vim'
-Bundle 'osyo-manga/vim-anzu'
-Bundle 'othree/html5.vim'
-Bundle 'pekepeke/titanium-vim'
-Bundle 'proton'
-Bundle 'pyte'
-Bundle 'rainbow.zip'
-Bundle 'rizzatti/dash.vim'
-Bundle 'rizzatti/funcoo.vim'
-Bundle 'ropez/jasmine.vim'
-Bundle 'scrooloose/syntastic'
-Bundle 'str2numchar.vim'
-Bundle 'sudo.vim'
-Bundle 'supermomonga/vimshell-pure.vim'
-Bundle 't9md/vim-choosewin'
-Bundle 't9md/vim-unite-ack'
-Bundle 'tacahiroy/vim-logaling'
-Bundle 'thinca/vim-auto_source'
-Bundle 'thinca/vim-github'
-Bundle 'thinca/vim-portal'
-Bundle 'thinca/vim-qfreplace'
-Bundle 'thinca/vim-quickrun'
-Bundle 'thinca/vim-ref'
-Bundle 'toyamarinyon/hatenablog-vim'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-haml'
-Bundle 'tpope/vim-surround'
-Bundle 'tsukkee/unite-tag'
-Bundle 'tyru/caw.vim'
-Bundle 'tyru/open-browser-github.vim'
-Bundle 'tyru/open-browser.vim'
-Bundle 'tyru/skk.vim'
-Bundle 'ujihisa/neco-look'
-Bundle 'unicode.vim'
-Bundle 'unite-colorscheme'
-Bundle 'unite-font'
-Bundle 'vcscommand.vim'
-Bundle 'wavded/vim-stylus'
-Bundle 'yuratomo/w3m.vim'
+  " required:
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+" required:
+call neobundle#rc(expand('~/.vim/bundle/'))
+
+" Let NeoBundle manage NeoBundle
+" required:
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" install bundles
+NeoBundle 'Align'
+NeoBundle 'AndrewRadev/vim-coffee-script'
+NeoBundle 'AutoClose'
+NeoBundle 'Glench/Vim-Jinja2-Syntax'
+NeoBundle 'Indent-Guides'
+NeoBundle 'JulesWang/css.vim'
+NeoBundle 'LeafCage/yankround.vim'
+NeoBundle 'Lokaltog/vim-easymotion'
+NeoBundle 'RubySinatra'
+NeoBundle 'Shougo/neocomplete.vim'
+NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet-snippets'
+NeoBundle 'Shougo/unite-outline', { 'depends' : [ 'Shougo/unite.vim' ] }
+NeoBundle 'Shougo/unite.vim', { 'depends' : [ 'Shougo/vimproc.vim' ] }
+NeoBundle 'Shougo/vimfiler', { 'depends': [ 'Shougo/unite.vim' ] }
+NeoBundle 'Shougo/vimproc', {
+      \ 'build' : {
+      \     'windows' : 'mingw32-make -f make_mingw32.mak',
+      \     'cygwin'  : 'make -f make_cygwin.mak',
+      \     'mac'     : 'make -f make_mac.mak',
+      \     'unix'    : 'make -f make_unix.mak',
+      \    },
+      \ }
+NeoBundle 'Shougo/vimshell'
+NeoBundle 'Simple-Javascript-Indenter'
+NeoBundle 'The-NERD-tree'
+NeoBundle 'Wombat'
+NeoBundle 'ack.vim'
+NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'bling/vim-airline'
+NeoBundle 'cakebaker/scss-syntax.vim'
+NeoBundle 'chaquotay/ftl-vim-syntax'
+NeoBundle 'css_color.vim'
+NeoBundle 'csscomb/csscomb-for-vim'
+NeoBundle 'daisuzu/translategoogle.vim'
+NeoBundle 'davidhalter/jedi-vim'
+NeoBundle 'derekwyatt/vim-scala'
+NeoBundle 'elzr/vim-json'
+NeoBundle 'express.vim'
+NeoBundle 'fuenor/qfixgrep'
+NeoBundle 'glidenote/memolist.vim'
+NeoBundle 'gregsexton/gitv'
+NeoBundle 'groenewege/vim-less'
+NeoBundle 'hail2u/vim-css3-syntax'
+NeoBundle 'hallison/vim-markdown'
+NeoBundle 'heavenshell/vim-jsdoc'
+NeoBundle 'hokaccha/vim-html5validator'
+NeoBundle 'honza/vim-snippets'
+NeoBundle 'hynek/vim-python-pep8-indent'
+NeoBundle 'jQuery'
+NeoBundle 'jade.vim'
+NeoBundle 'jelera/vim-javascript-syntax'
+NeoBundle 'jpo/vim-railscasts-theme'
+NeoBundle 'juvenn/mustache.vim'
+NeoBundle 'kakkyz81/evervim'
+NeoBundle 'kevinw/pyflakes-vim'
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'leafgarland/typescript-vim'
+NeoBundle 'majutsushi/tagbar'
+NeoBundle 'malclocke/vim-buster'
+NeoBundle 'marijnh/tern_for_vim'
+NeoBundle 'matchit.zip'
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'mattn/excitetranslate-vim'
+NeoBundle 'mattn/gist-vim', { 'depends' : [ 'mattn/webapi-vim' ] }
+NeoBundle 'mattn/learn-vimscript'
+NeoBundle 'mattn/qiita-vim', { 'depends' : [ 'mattn/webapi-vim' ] }
+NeoBundle 'mattn/webapi-vim'
+NeoBundle 'mfumi/ref-dicts-en'
+NeoBundle 'mikewest/vimroom'
+NeoBundle 'mklabs/grunt.vim'
+NeoBundle 'mojako/ref-sources.vim'
+NeoBundle 'moll/vim-node'
+NeoBundle 'molokai'
+NeoBundle 'moznion/unite-git-conflict.vim', { 'depends' : [ 'Shougo/unite.vim' ] }
+NeoBundle 'mustache/vim-mode'
+NeoBundle 'nanotech/jellybeans.vim'
+NeoBundle 'newspaper.vim'
+NeoBundle 'osyo-manga/vim-anzu'
+NeoBundle 'othree/html5.vim'
+NeoBundle 'pekepeke/titanium-vim'
+NeoBundle 'proton'
+NeoBundle 'pyte'
+NeoBundle 'rainbow.zip'
+NeoBundle 'rizzatti/dash.vim'
+NeoBundle 'rizzatti/funcoo.vim'
+NeoBundle 'ropez/jasmine.vim'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'str2numchar.vim'
+NeoBundle 'sudo.vim'
+NeoBundle 'supermomonga/vimshell-pure.vim', {
+      \ 'depends' : [ 'Shougo/vimshell.vim' ]
+      \ }
+NeoBundle 't9md/vim-choosewin'
+NeoBundle 't9md/vim-unite-ack', { 'depends' : [ 'Shougo/vimproc.vim' ] }
+NeoBundle 'tacahiroy/vim-logaling'
+NeoBundle 'thinca/vim-auto_source'
+NeoBundle 'thinca/vim-github'
+NeoBundle 'thinca/vim-portal'
+NeoBundle 'thinca/vim-qfreplace'
+NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'thinca/vim-ref'
+NeoBundle 'toyamarinyon/hatenablog-vim'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-haml'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'tsukkee/unite-tag', { 'depends' : [ 'Shougo/vimproc.vim' ] }
+NeoBundle 'tyru/caw.vim'
+NeoBundle 'tyru/open-browser-github.vim', { 'depends' : [ 'tyru/open-browser.vim' ] }
+NeoBundle 'tyru/open-browser.vim'
+NeoBundle 'tyru/skk.vim'
+NeoBundle 'ujihisa/neco-look', { 'depends' : [ 'Shougo/neocomplete.vim' ] }
+NeoBundle 'unicode.vim'
+NeoBundle 'unite-colorscheme', { 'depends' : [ 'Shougo/vimproc.vim' ] }
+NeoBundle 'unite-font', { 'depends' : [ 'Shougo/vimproc.vim' ] }
+NeoBundle 'vcscommand.vim'
+NeoBundle 'wavded/vim-stylus'
+NeoBundle 'yuratomo/w3m.vim'
 filetype plugin indent on
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
 
 " PATHの設定
 if has('gui_running')

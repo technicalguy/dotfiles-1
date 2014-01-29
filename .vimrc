@@ -25,11 +25,11 @@ NeoBundle 'LeafCage/yankround.vim'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'RubySinatra'
 NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/unite-outline', { 'depends' : [ 'Shougo/unite.vim' ] }
 NeoBundle 'Shougo/unite.vim', { 'depends' : [ 'Shougo/vimproc.vim' ] }
-NeoBundle 'Shougo/vimfiler', { 'depends': [ 'Shougo/unite.vim' ] }
+NeoBundle 'Shougo/vimfiler.vim', { 'depends': [ 'Shougo/unite.vim' ] }
 NeoBundle 'Shougo/vimproc.vim', {
       \ 'build' : {
       \     'windows' : 'mingw32-make -f make_mingw32.mak',
@@ -38,7 +38,7 @@ NeoBundle 'Shougo/vimproc.vim', {
       \     'unix'    : 'make -f make_unix.mak',
       \    },
       \ }
-NeoBundle 'Shougo/vimshell'
+NeoBundle 'Shougo/vimshell.vim'
 NeoBundle 'Simple-Javascript-Indenter'
 NeoBundle 'The-NERD-tree'
 NeoBundle 'Wombat'
@@ -107,9 +107,7 @@ NeoBundle 'ropez/jasmine.vim'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'str2numchar.vim'
 NeoBundle 'sudo.vim'
-NeoBundle 'supermomonga/vimshell-pure.vim', {
-      \ 'depends' : [ 'Shougo/vimshell.vim' ]
-      \ }
+NeoBundle 'supermomonga/vimshell-pure.vim', { 'depends' : [ 'Shougo/vimshell.vim' ] }
 NeoBundle 't9md/vim-choosewin'
 NeoBundle 't9md/vim-unite-ack', { 'depends' : [ 'Shougo/vimproc.vim' ] }
 NeoBundle 'tacahiroy/vim-logaling'

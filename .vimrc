@@ -114,6 +114,7 @@ NeoBundle 'sudo.vim'
 NeoBundle 'supermomonga/vimshell-pure.vim', { 'depends' : [ 'Shougo/vimshell.vim' ] }
 NeoBundle 't9md/vim-choosewin'
 NeoBundle 't9md/vim-unite-ack', { 'depends' : [ 'Shougo/vimproc.vim' ] }
+NeoBundle 'tacahiroy/ctrlp-funky', { 'depends' : [ 'kien/ctrlp.vim'] }
 NeoBundle 'tacahiroy/vim-logaling'
 NeoBundle 'thinca/vim-auto_source'
 NeoBundle 'thinca/vim-github'
@@ -770,8 +771,9 @@ let g:ctrlp_show_hidden = 1
 let g:ctrlp_mruf_exclude = '/private/.*\|/var/.*\|/tmp/.*\|/temp/.*'
 let g:ctrlp_mruf_relative = 1
 let g:ctrlp_prompt_mappings = { 'ToggleMRURelative()': ['<F8>'] }
-let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'dir', 'rtscript',
-                          \ 'undo', 'line', 'changes', 'mixed', 'bookmarkdir', 'yankround']
+let g:ctrlp_extensions = [ 'tag', 'buffertag', 'quickfix', 'dir', 'rtscript',
+                          \ 'undo', 'line', 'changes', 'mixed', 'bookmarkdir',
+                          \ 'yankround', 'funky' ]
 let g:ctrlp_buftag_types = {'erlang'     : '--language-force=erlang --erlang-types=drmf' }
 
 " for dash.vim

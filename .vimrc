@@ -95,7 +95,9 @@ NeoBundle 'mklabs/grunt.vim'
 NeoBundle 'mojako/ref-sources.vim'
 NeoBundle 'moll/vim-node'
 NeoBundle 'molokai'
-NeoBundle 'moznion/hateblo.vim', { 'depends': [ 'Shougo/unite.vim', 'mattn/webapi-vim' ] }
+NeoBundle 'moznion/hateblo.vim', {
+      \ 'depends': ['mattn/webapi-vim', 'Shougo/unite.vim']
+      \ }
 NeoBundle 'moznion/unite-git-conflict.vim', { 'depends' : [ 'Shougo/unite.vim' ] }
 NeoBundle 'mustache/vim-mode'
 NeoBundle 'nanotech/jellybeans.vim'
@@ -904,9 +906,4 @@ let g:choosewin_color_overlay_current = {
       \ 'gui': ['firebrick1', 'firebrick1' ],
       \ 'cterm': [ 124, 124 ]
       \ }
-
-" for hateblo.vim
-if filereadable(expand('~/Dropbox/.hateblo.vim'))
-  source ~/Dropbox/.hateblo.vim
-endif
 

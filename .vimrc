@@ -77,7 +77,11 @@ NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'leafgarland/typescript-vim'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'malclocke/vim-buster'
-NeoBundle 'marijnh/tern_for_vim', { 'build' : { 'npm' : [ 'npm update' ] } }
+NeoBundle 'marijnh/tern_for_vim', {
+      \   'build': {
+      \     'others': 'npm install'
+      \   }
+      \ }
 NeoBundle 'matchit.zip'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'mattn/excitetranslate-vim'

@@ -450,7 +450,7 @@ xmap <C-l>     <Plug>(neosnippet_start_unite_snippet_target)
 let g:neosnippet#snippets_directory =
       \ $HOME.'/.vim/bundle/vim-snippets/snippets/'.', '.
       \ $HOME.'/.vim/bundle/vim-markdown/snippets/'.', '.
-      \ $HOME.'/.vim/bundle/neosnippet/autoload/neosnippet/'
+      \ $HOME.'/.vim/bundle/neosnippet-snippets/neosnippets/'
 
 "for Vimshell.vim
 let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'

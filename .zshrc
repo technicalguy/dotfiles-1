@@ -362,7 +362,7 @@ eval "$(hub alias -s)"
 # gi (via: http://gitignore.io/cli)
 # gi lang..
 # gi list
-function gi() { curl http://gitignore.io/api/$@ ;}
+function gi() { curl http://www.gitignore.io/api/$@ ;}
 
 
 # Credits to npm's. Awesome completion utility.

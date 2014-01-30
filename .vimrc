@@ -56,7 +56,7 @@ NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'elzr/vim-json'
 NeoBundle 'express.vim'
 NeoBundle 'fuenor/qfixgrep'
-NeoBundle 'glidenote/memolist.vim'
+NeoBundle 'glidenote/memolist.vim', { 'depends': [ 'Shougo/unite.vim' ] }
 NeoBundle 'gregsexton/gitv'
 NeoBundle 'groenewege/vim-less'
 NeoBundle 'hail2u/vim-css3-syntax'
@@ -720,7 +720,7 @@ endif
 let g:memolist_qfixgrep = 1
 let g:memolist_memo_suffix = "md"
 let g:memolist_template_dir_path = "~/.vim/template/memolist"
-let g:memolist_path = "~/Documents/memo"
+let g:memolist_path = "~/Dropbox/memo"
 let g:memolist_vimfiler = 0
 let g:memolist_prompt_tags = 1
 let g:memolist_prompt_categories = 1

@@ -95,9 +95,7 @@ NeoBundle 'mklabs/grunt.vim'
 NeoBundle 'mojako/ref-sources.vim'
 NeoBundle 'moll/vim-node'
 NeoBundle 'molokai'
-NeoBundle 'moznion/hateblo.vim', {
-      \ 'depends': ['mattn/webapi-vim', 'Shougo/unite.vim']
-      \ }
+NeoBundle 'moznion/hateblo.vim', { 'depends': ['mattn/webapi-vim', 'Shougo/unite.vim'] }
 NeoBundle 'moznion/unite-git-conflict.vim', { 'depends' : [ 'Shougo/unite.vim' ] }
 NeoBundle 'mustache/vim-mode'
 NeoBundle 'nanotech/jellybeans.vim'

@@ -118,7 +118,6 @@ NeoBundle 't9md/vim-unite-ack', { 'depends' : [ 'Shougo/vimproc.vim' ] }
 NeoBundle 'tacahiroy/ctrlp-funky', { 'depends' : [ 'kien/ctrlp.vim'] }
 NeoBundle 'tacahiroy/vim-logaling'
 NeoBundle 'thinca/vim-auto_source'
-NeoBundle 'thinca/vim-github'
 NeoBundle 'thinca/vim-portal'
 NeoBundle 'thinca/vim-qfreplace'
 NeoBundle 'thinca/vim-quickrun', { 'depends' : [ 'Shougo/vimproc.vim' ] }

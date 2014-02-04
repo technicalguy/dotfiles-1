@@ -648,8 +648,8 @@ let g:user_emmet_settings = {
 let g:use_emmet_complete_tag = 1
 
 " for Nerd-Tree
-nmap <Space>t :NERDTreeToggle<CR>
-nmap <Space>T :NERDTree<CR>
+nmap <Leader>t :NERDTreeToggle<CR>
+nmap <Leader>T :NERDTree<CR>
 let g:NERDTreeHijackNetrw = 0
 "for vim-coffee-script
 au BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
@@ -781,14 +781,14 @@ nmap <silent> <leader>d <Plug>DashSearch
 " for vim-gitgutter
 " turn off by default
 let g:gitgutter_enabled = 0
-noremap ,gg :GitGutterToggle<CR>
-noremap ,gn :GitGutterNextHunk<CR>
-noremap ,gp :GitGutterPrevHunk<CR>
+noremap <Leader>gg :GitGutterToggle<CR>
+noremap <Leader>gn :GitGutterNextHunk<CR>
+noremap <Leader>gp :GitGutterPrevHunk<CR>
 
 " for vim-jsdoc
 let g:jsdoc_additional_descriptions = 1
 if !hasmapto('<Plug>(jsdoc)')
-  nmap <silent> ,d <Plug>(jsdoc)
+  nmap <silent> <Space>jd <Plug>(jsdoc)
 endif
 
 " for neco-look
@@ -808,12 +808,12 @@ let g:neocomplete#text_mode_filetypes = {
 \ }
 
 " for tern_for_vim
-nnoremap ,td :TernDef<CR>
-nnoremap ,tdp :TernDefPreview<CR>
-nnoremap ,tr :TernRefs<CR>
-nnoremap ,tdo :TernDoc<CR>
-nnoremap ,tre :TernRename<CR>
-nnoremap ,tt :TernType<CR>
+nnoremap <Space>td :TernDef<CR>
+nnoremap <Space>tdp :TernDefPreview<CR>
+nnoremap <Space>tr :TernRefs<CR>
+nnoremap <Space>tdo :TernDoc<CR>
+nnoremap <Space>tre :TernRename<CR>
+nnoremap <Space>tt :TernType<CR>
 
 " for tmux-powerline connect
 " via: http://yonchu.hatenablog.com/entry/2013/05/05/171925

@@ -501,7 +501,7 @@ endfunction
 "unite.vim
 " The prefix key.
 nnoremap    [unite]   <Nop>
-nmap    <Space>f [unite]
+nmap    <Leader>f [unite]
 
 nnoremap <silent> [unite]c  :<C-u>UniteWithCurrentDir
       \ -buffer-name=files buffer file_mru bookmark file file/new<CR>

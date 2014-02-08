@@ -144,8 +144,9 @@ NeoBundleCheck
 
 " PATHの設定
 if has('gui_running')
-  let $PATH = '/usr/local/sbin:/usr/local/bin:/usr/local/share/npm/bin:/usr/local/share/python:' . $PATH
+  let $PATH = '$HOME/.cabal/bin:$HOME/.rbenv/shims/bin:/usr/local/sbin:/usr/local/bin:/usr/local/share/npm/bin:' . $PATH
 endif
+
 set sessionoptions+=resize,tabpages " 行・列を設定する
 " ステータスライン
 set laststatus=2 " 常にステータスラインを表示

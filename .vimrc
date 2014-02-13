@@ -310,7 +310,7 @@ au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
 map <Leader>jb !python -m json.tool<CR>
 
 "for Markdown
-autocmd BufNewFile,BufRead *.{md,mkd,mkdn,mark*} set filetype=markdown tabstop=4 shiftwidth=4 softtabstop=4 expandtab
+autocmd BufNewFile,BufRead *.{md,mkd,mkdn,mark*} set tabstop=4 shiftwidth=4 softtabstop=4 expandtab
 
 " .pyでタブ幅を変更・スペースでインデントに変更
 au BufNewFile,BufRead *.py setlocal tabstop=8 shiftwidth=4 softtabstop=4 et si cinwords=if,elif,else,for,while,try,except,finally,def,class
@@ -409,7 +409,7 @@ inoremap <expr><C-e>  neocomplete#cancel_popup()
 
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType html setlocal omnifunc=htmlcomplete#CompleteTags
 " autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 " autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType python setlocal omnifunc=jedi#completions
@@ -454,7 +454,6 @@ xmap <C-k>     <Plug>(neosnippet_expand_target)
 xmap <C-l>     <Plug>(neosnippet_start_unite_snippet_target)
 let g:neosnippet#snippets_directory =
       \ $HOME.'/.vim/bundle/vim-snippets/snippets/'.', '.
-      \ $HOME.'/.vim/bundle/vim-markdown/snippets/'.', '.
       \ $HOME.'/.vim/bundle/neosnippet-snippets/neosnippets/'
 
 "for Vimshell.vim

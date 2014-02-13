@@ -60,7 +60,6 @@ NeoBundle 'glidenote/memolist.vim', { 'depends': [ 'Shougo/unite.vim' ] }
 NeoBundle 'gregsexton/gitv'
 NeoBundle 'groenewege/vim-less'
 NeoBundle 'hail2u/vim-css3-syntax'
-NeoBundle 'hallison/vim-markdown'
 NeoBundle 'heavenshell/vim-jsdoc'
 NeoBundle 'hokaccha/vim-html5validator'
 NeoBundle 'honza/vim-snippets'
@@ -103,6 +102,7 @@ NeoBundle 'newspaper.vim'
 NeoBundle 'osyo-manga/vim-anzu'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'pekepeke/titanium-vim'
+NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'proton'
 NeoBundle 'pyte'
 NeoBundle 'rainbow.zip'
@@ -905,3 +905,5 @@ let g:choosewin_color_overlay_current = {
       \ 'cterm': [ 124, 124 ]
       \ }
 
+" for vim-markdown
+let g:vim_markdown_folding_disabled=1

@@ -661,7 +661,7 @@ let g:quickrun_config = {}
 let g:quickrun_config['*'] =  {'runner': 'vimproc', 'runner/vimproc/updatetime' : 10}
 let g:quickrun_config['coffee'] = {'command' : 'coffee', 'exec' : ['%c -cbp %s']}
 " if executable('mark')
-  let g:quickrun_config['markdown'] = {
+  let g:quickrun_config['mkd'] = {
   \ 'outputter' : 'null',
   \ 'command'   : 'open',
   \ 'cmdopt'    : '-a',

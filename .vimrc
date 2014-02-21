@@ -801,7 +801,7 @@ if !exists('g:neocomplete#text_mode_filetypes')
 endif
 let g:neocomplete#text_mode_filetypes = {
   \ 'rst': 1,
-  \ 'markdown': 1,
+  \ 'mkd': 1,
   \ 'gitrebase': 1,
   \ 'gitcommit': 1,
   \ 'vcs-commit': 1,

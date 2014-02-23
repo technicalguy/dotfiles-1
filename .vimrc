@@ -133,7 +133,7 @@ NeoBundle 'tsukkee/unite-tag', { 'depends' : [ 'Shougo/vimproc.vim' ] }
 NeoBundle 'tyru/caw.vim'
 NeoBundle 'tyru/open-browser-github.vim', { 'depends' : [ 'tyru/open-browser.vim' ] }
 NeoBundle 'tyru/open-browser.vim'
-NeoBundle 'tyru/eskk.vim'
+NeoBundle 'tyru/skk.vim'
 NeoBundle 'ujihisa/neco-look', { 'depends' : [ 'Shougo/neocomplete.vim' ] }
 NeoBundle 'unicode.vim'
 NeoBundle 'unite-colorscheme', { 'depends' : [ 'Shougo/vimproc.vim' ] }
@@ -325,17 +325,12 @@ au BufNewFile,BufRead *.js set tabstop=4 shiftwidth=4 softtabstop=4 expandtab
 " for ftl syntax
 au BufRead,BufNewFile *.ftl set filetype=ftl
 
-"for eskk.vim
-let g:eskk#dictionary = {
-\   'path': "~/Library/Application\ Support/AquaSKK/skk-jisyo.utf8",
-\   'sorted': 0,
-\   'encoding': 'utf-8',
-\}
-let g:eskk#large_dictionary = {
-\   'path': "~/Library/Application\ Support/AquaSKK/SKK-JISYO.L",
-\   'sorted': 1,
-\   'encoding': 'utf-8',
-\}
+"for skk.vim
+let skk_jisyo = "~/Library/Application\ Support/AquaSKK/skk-jisyo.utf8"
+let skk_large_jisyo = "~/Library/Application\ Support/AquaSKK/SKK-JISYO.L"
+let g:skk_auto_save_jisyo = 1
+let g:skk_remap_lang_mode = 1
+" let g:skk_kutouten_type = "en"
 
 " str2numcharキーマップ設定
 vmap <silent> sn :Str2NumChar<CR>

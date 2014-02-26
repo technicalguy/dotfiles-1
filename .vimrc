@@ -54,6 +54,7 @@ NeoBundle 'csscomb/csscomb-for-vim'
 NeoBundle 'daisuzu/translategoogle.vim'
 NeoBundle 'davidhalter/jedi-vim'
 NeoBundle 'derekwyatt/vim-scala'
+NeoBundle 'dyng/ctrlsf.vim'
 NeoBundle 'elzr/vim-json'
 NeoBundle 'express.vim'
 NeoBundle 'fuenor/qfixgrep'
@@ -911,3 +912,6 @@ let g:choosewin_color_overlay_current = {
 
 " for vim-markdown
 let g:vim_markdown_folding_disabled=1
+
+" for ctrlsf.vim
+let g:ctrlsf_ackprg = 'ack'

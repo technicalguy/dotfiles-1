@@ -129,6 +129,7 @@ NeoBundle 'thinca/vim-quickrun', { 'depends' : [ 'Shougo/vimproc.vim' ] }
 NeoBundle 'thinca/vim-ref'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-haml'
+NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tsukkee/unite-tag', { 'depends' : [ 'Shougo/vimproc.vim' ] }
 NeoBundle 'tyru/caw.vim'

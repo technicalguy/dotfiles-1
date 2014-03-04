@@ -217,7 +217,7 @@ endif
 set backspace=2
 
 " for non-ascii string
-if &ambiwidth !=# 'auto'
+if exists('&ambiwidth')
   set ambiwidth=double
 endif
 

@@ -4,7 +4,7 @@
 (setq ac-dwim t)
 (setq ac-use-menu-map t)
 (define-key ac-menu-map "\C-n" 'ac-next)
-(define-key ac-menu-map "\C-p" 'ac-precious)
+(define-key ac-menu-map "\C-p" 'ac-previous)
 (setq ac-delay 0.05)
 (setq ac-auto-show-menu 0.05)
 (setq ac-ignore-case 'smart)

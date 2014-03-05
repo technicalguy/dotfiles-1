@@ -17,6 +17,7 @@
         jaunte
         magit
         popwin
+        powerline
         quickrun
         surround
         undo-tree

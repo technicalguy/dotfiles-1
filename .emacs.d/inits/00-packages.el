@@ -9,6 +9,7 @@
         expand-region
         evil
         evil-numbers
+        evil-tabs
         flymake
         helm
         helm-c-moccur

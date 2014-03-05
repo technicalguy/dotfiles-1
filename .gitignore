@@ -1,5 +1,3 @@
 .vim/bundle/
-.emacs.d/elisp/
-!.emacs.d/elisp/init-loader.el
 .DS_Store
 .vimperator/info/default/

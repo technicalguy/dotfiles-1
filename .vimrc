@@ -72,6 +72,7 @@ NeoBundle 'jade.vim'
 NeoBundle 'jelera/vim-javascript-syntax'
 NeoBundle 'jpo/vim-railscasts-theme'
 NeoBundle 'jmcantrell/vim-virtualenv'
+NeoBundle 'kana/vim-smartchr'
 NeoBundle 'kakkyz81/evervim'
 NeoBundle 'kevinw/pyflakes-vim'
 NeoBundle 'kien/ctrlp.vim'
@@ -920,3 +921,16 @@ let g:vim_markdown_folding_disabled=1
 
 " for ctrlsf.vim
 let g:ctrlsf_ackprg = 'ack'
+
+" for smartchar.vim
+inoremap <expr> < smartchr#loop('<', ' << ', ' < ')
+inoremap <expr> > smartchr#loop('>', ' >> ', ' > ')
+inoremap <expr> + smartchr#loop(' + ', '++', '+')
+inoremap <expr> - smartchr#loop(' - ', '--', '-')
+inoremap <expr> / smartchr#loop(' / ',  '/')
+inoremap <expr> & smartchr#loop('&', ' && ', ' & ')
+inoremap <expr> % smartchr#loop(' % ', '%')
+inoremap <expr> <Bar> smartchr#loop(' <Bar> ', ' <Bar><Bar> ', '<Bar>')
+inoremap <expr> , smartchr#loop(',', ', ')
+inoremap <expr> = smartchr#loop(' = ', ' == ', '=')
+

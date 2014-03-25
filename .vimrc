@@ -69,6 +69,7 @@ NeoBundle 'honza/vim-snippets'
 NeoBundle 'hynek/vim-python-pep8-indent'
 NeoBundle 'jQuery'
 NeoBundle 'jade.vim'
+NeoBundle 'jaxbot/github-issues.vim'
 NeoBundle 'jelera/vim-javascript-syntax'
 NeoBundle 'jpo/vim-railscasts-theme'
 NeoBundle 'jmcantrell/vim-virtualenv'
@@ -915,3 +916,9 @@ let g:vim_markdown_folding_disabled=1
 
 " for ctrlsf.vim
 let g:ctrlsf_ackprg = 'ack'
+
+" for github-issues.vim
+if filereadable(expand('~/Dropbox/.github-issues.vim'))
+  source ~/Dropbox/.github-issues.vim
+endif
+

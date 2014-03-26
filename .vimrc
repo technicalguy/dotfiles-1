@@ -93,6 +93,7 @@ NeoBundle 'mattn/qiita-vim', { 'depends' : [ 'mattn/webapi-vim' ] }
 NeoBundle 'mattn/unite-gist', { 'depends': [ 'Shougo/unite.vim', 'mattn/gist-vim' ] }
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'mfumi/ref-dicts-en'
+NeoBundle 'mhinz/vim-hugefile'
 NeoBundle 'mikewest/vimroom'
 NeoBundle 'mklabs/grunt.vim'
 NeoBundle 'mojako/ref-sources.vim'

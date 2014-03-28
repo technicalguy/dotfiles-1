@@ -647,6 +647,10 @@ let g:user_emmet_settings = {
 \ 'css': {
 \   'filters': 'fc',
 \ },
+\ 'stylus': {
+\   'extends': 'css',
+\   'filters': 'fc',
+\ },
 \ 'php': {
 \   'extends': 'html',
 \   'filters': 'html,c',

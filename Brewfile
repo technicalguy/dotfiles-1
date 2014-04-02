@@ -18,7 +18,7 @@ install automake
 install bdw-gc
 install bison
 install cairo
-install casperjs
+install 'casperjs --devel'    # casperjs's master can't use phantomjs1.9
 install cloc
 install cmake
 install figlet

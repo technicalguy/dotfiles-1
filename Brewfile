@@ -10,6 +10,9 @@ tap homebrew/dupes
 # install binary
 tap homebrew/binary
 
+# install version
+tap homebrew/versions
+
 # install Formulas
 install ack
 install apple-gcc42

@@ -359,12 +359,6 @@ eval "$(hub alias -s)"
 # tmuxinator
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
-# gi (via: http://gitignore.io/cli)
-# gi lang..
-# gi list
-function gi() { curl http://www.gitignore.io/api/$@ ;}
-
-
 # Credits to npm's. Awesome completion utility.
 #
 # Bower completion script, based on npm completion script.

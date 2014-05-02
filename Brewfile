@@ -32,6 +32,7 @@ install gdbm
 install gettext
 install gflags
 install ghc
+install gibo
 install gist
 install git
 install git-extras

@@ -460,3 +460,6 @@ zaw-register-src -n gitdir zaw-src-gitdir
 # 1. This code copy to your "~/.bashrc".
 # 2. run to the "source ~/.bashrc" command at your shell.
 function up(){ cpath=./; for i in `seq 1 1 $1`; do cpath=$cpath../; done; cd $cpath;}
+
+# call gibo completion
+source $HOME/dotfiles/.zsh/functions/Completion/gibo-completion.zsh

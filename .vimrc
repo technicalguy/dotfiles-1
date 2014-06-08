@@ -262,6 +262,8 @@ endif
 set backupdir=~/Documents/vimbackup
 "swpファイルの場所
 set directory=~/Documents/vimbackup
+" undoファイルの場所
+set undodir=~/Documents/vimbackup
 
 " tagファイル検索
 set tags+=tags;

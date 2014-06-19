@@ -774,6 +774,7 @@ endfunction
 " for vim-syntastic
 let g:syntastic_javascript_checkers = ['jshint', 'jslint']
 let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_dart_checkers = ['dartanalyzer']
 
 " for loga-vim
 let g:loga_delimiter = '(//)'

@@ -538,8 +538,9 @@ nnoremap <silent> [unite]s
 noremap <silent>[unite]gc :<C-u>Unite git-conflict<CR>
 
 " Start insert.
-let g:unite_enable_start_insert = 1
-" let g:unite_enable_short_source_names = 1
+call unite#custom#profile('default', 'context', {
+\   'start_insert': 1
+\ })
 
 autocmd FileType unite call s:unite_my_settings()
 function! s:unite_my_settings()"{{{
@@ -579,7 +580,6 @@ function! s:unite_my_settings()"{{{
         \ empty(unite#mappings#get_current_filters()) ? ['sorter_reverse'] : [])
 endfunction"}}}
 
-let g:unite_source_file_mru_limit = 200
 let g:unite_cursor_line_highlight = 'TabLineSel'
 let g:unite_abbr_highlight = 'TabLine'
 let g:unite_source_history_yank_enable = 1
@@ -607,6 +607,9 @@ let g:unite_source_ack_ignore_case = 1
 " for vimfiler
 call vimfiler#set_execute_file('vim', 'vim')
 call vimfiler#set_execute_file('txt', 'notepad')
+
+" for neomru
+let g:neomru#file_mru_limit = 2000
 
 " Edit file by tabedit.
 let g:vimfiler_edit_action = 'tabopen'

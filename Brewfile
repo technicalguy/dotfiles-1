@@ -13,6 +13,9 @@ tap homebrew/binary
 # install version
 tap homebrew/versions
 
+# install peco
+tap peco/peco
+
 # install Formulas
 install ack
 install apple-gcc42
@@ -69,6 +72,7 @@ install openssl
 install optipng
 install pango
 install pcre
+install peco
 install phantomjs
 install pidof
 install pixman

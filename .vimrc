@@ -514,16 +514,14 @@ nnoremap    [unite]   <Nop>
 nmap    <Leader>f [unite]
 
 nnoremap <silent> [unite]c  :<C-u>UniteWithCurrentDir
-      \ -buffer-name=files buffer file_mru bookmark file file/new<CR>
+      \ -buffer-name=files buffer bookmark file<CR>
 nnoremap <silent> [unite]b  :<C-u>UniteWithBufferDir
-      \ -buffer-name=files -prompt=%\  buffer file_mru bookmark file file/new<CR>
+      \ -buffer-name=files -prompt=%\  buffer bookmark file<CR>
 nnoremap <silent> [unite]r  :<C-u>Unite
       \ -buffer-name=register register<CR>
 nnoremap <silent> [unite]o  :<C-u>Unite outline<CR>
 nnoremap <silent> [unite]f
       \ :<C-u>Unite -buffer-name=resume resume<CR>
-nnoremap <silent> [unite]d
-      \ :<C-u>Unite -buffer-name=files -default-action=lcd directory_mru<CR>
 nnoremap <silent> [unite]ma
       \ :<C-u>Unite mapping<CR>
 nnoremap <silent> [unite]me
@@ -533,7 +531,7 @@ nnoremap  [unite]f  :<C-u>Unite source<CR>
 nnoremap <silent> [unite]s
       \ :<C-u>Unite -buffer-name=files -no-split
       \ jump_point file_point buffer_tab
-      \ file_rec:! file file/new file_mru<CR>
+      \ file_rec:! file file/new<CR>
 
 " for unite-git-conflict
 noremap <silent>[unite]gc :<C-u>Unite git-conflict<CR>

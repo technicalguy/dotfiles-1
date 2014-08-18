@@ -491,16 +491,16 @@ call vimshell#set_execute_file('txt,vim,c,h,cpp,d,xml,java', 'vim')
 let g:vimshell_execute_file_list['rb'] = 'ruby'
 let g:vimshell_execute_file_list['pl'] = 'perl'
 let g:vimshell_execute_file_list['py'] = 'python'
-call vimshell#set_execute_file('html,xhtml', 'gexe firefox')
+call vimshell#set_execute_file('html,xhtml', 'gexe open -a /Applications/Google\ Chrome.app')
 
 autocmd FileType vimshell
   \ call vimshell#altercmd#define('g', 'git')
   \| call vimshell#altercmd#define('i', 'iexe')
   \| call vimshell#altercmd#define('l', 'll')
   \| call vimshell#altercmd#define('ll', 'ls -l')
-  \| call vimshell#hook#add('chpwd', 'my_chpwd', 'g:my_chpwd')
+  \| call vimshell#hook#add('chpwd', 'my_chpwd', 'MyChpwd')
 
-function! g:my_chpwd(args, context)
+function! MyChpwd(args, context)
   call vimshell#execute('ls')
 endfunction
 

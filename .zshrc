@@ -23,6 +23,7 @@ export NODE_PATH=$NODE_PATH:/usr/local/share/npm/lib/node_modules
 export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
 export TERMINFO=/usr/share/terminfo
 export VMAIL_VIM='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
+
 #alias
 alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
 alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
@@ -420,9 +421,6 @@ PROMPT+='$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d 
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-# for virtualenvwrapper
-source /usr/local/bin/virtualenvwrapper.sh
-
 # for zaw
 
 autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
@@ -463,3 +461,10 @@ function up(){ cpath=./; for i in `seq 1 1 $1`; do cpath=$cpath../; done; cd $cp
 
 # call gibo completion
 source $HOME/dotfiles/.zsh/functions/Completion/gibo-completion.zsh
+
+# for pyenv
+export PYENV_ROOT=$HOME/.pyenv
+export PATH=$PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH
+
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+

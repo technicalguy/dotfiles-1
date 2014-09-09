@@ -421,8 +421,9 @@ inoremap <expr><C-e>  neocomplete#cancel_popup()
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html setlocal omnifunc=htmlcomplete#CompleteTags
 " autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType javascript setlocal omnifunc=tern#Complete completeopt-=preview
 " autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType python setlocal omnifunc=jedi#completions
+autocmd FileType python setlocal omnifunc=jedi#completions completeopt-=preview
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 " Enable heavy omni completion.
@@ -833,6 +834,7 @@ nnoremap <Space>tr :TernRefs<CR>
 nnoremap <Space>tdo :TernDoc<CR>
 nnoremap <Space>tre :TernRename<CR>
 nnoremap <Space>tt :TernType<CR>
+let g:tern_show_signature_in_pum=1
 
 " for tmux-powerline connect
 " via: http://yonchu.hatenablog.com/entry/2013/05/05/171925

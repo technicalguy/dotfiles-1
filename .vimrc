@@ -15,7 +15,6 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " install bundles
-NeoBundle 'Align'
 NeoBundle 'AndrewRadev/vim-coffee-script'
 NeoBundle 'Glench/Vim-Jinja2-Syntax'
 NeoBundle 'JulesWang/css.vim'
@@ -75,6 +74,7 @@ NeoBundle 'jaxbot/github-issues.vim'
 NeoBundle 'jelera/vim-javascript-syntax'
 NeoBundle 'jpo/vim-railscasts-theme'
 NeoBundle 'jmcantrell/vim-virtualenv'
+NeoBundle 'junegunn/vim-easy-align'
 NeoBundle 'kakkyz81/evervim'
 NeoBundle 'kevinw/pyflakes-vim'
 NeoBundle 'kien/ctrlp.vim'
@@ -626,10 +626,6 @@ let g:SimpleJsIndenter_BriefMode = 1
 let g:SimpleJsIndenter_CaseIndentLevel = -1
 
 
-" for Align
-let g:Align_xstrlen = 3 "for Javanese String
-let g:DrChipTopLvlMenu = '' "remove 'DrChip' menu
-
 " for Gist.vim
 let g:gist_clip_command = 'pbcopy'
 let g:gist_show_privates = 1
@@ -937,3 +933,8 @@ endif
 " for indentLing
 let g:indentLine_faster = 1
 nmap <silent><Leader>i :<C-u>IndentLinesToggle<CR>
+
+" for vim-easy-align
+vmap <Enter> <Plug>(EasyAlign)
+nmap <Leader>a <Plug>(EasyAlign)
+

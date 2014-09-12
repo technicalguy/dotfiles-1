@@ -42,6 +42,7 @@ NeoBundle 'Simple-Javascript-Indenter'
 NeoBundle 'The-NERD-tree'
 NeoBundle 'Townk/vim-autoclose'
 NeoBundle 'Wombat'
+NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'ack.vim'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'altercation/vim-colors-solarized'
@@ -103,7 +104,6 @@ NeoBundle 'molokai'
 NeoBundle 'moznion/hateblo.vim', { 'depends': ['mattn/webapi-vim', 'Shougo/unite.vim'] }
 NeoBundle 'moznion/unite-git-conflict.vim', { 'depends' : [ 'Shougo/unite.vim' ] }
 NeoBundle 'nanotech/jellybeans.vim'
-NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'newspaper.vim'
 NeoBundle 'osyo-manga/vim-anzu'
 NeoBundle 'osyo-manga/vim-over'
@@ -625,8 +625,6 @@ let g:vimfiler_as_default_explorer = 1
 let g:SimpleJsIndenter_BriefMode = 1
 let g:SimpleJsIndenter_CaseIndentLevel = -1
 
-" for indent-guideline
-let g:indent_guides_enable_on_vim_startup = 1
 
 " for Align
 let g:Align_xstrlen = 3 "for Javanese String
@@ -932,7 +930,10 @@ let g:vim_markdown_folding_disabled=1
 let g:ctrlsf_ackprg = 'ack'
 
 " for github-issues.vim
-" if filereadable(expand('~/Dropbox/.github-issues.vim'))
-"   source ~/Dropbox/.github-issues.vim
-" endif
-"
+if filereadable(expand('~/Dropbox/.github-issues.vim'))
+  source ~/Dropbox/.github-issues.vim
+endif
+
+" for indentLing
+let g:indentLine_faster = 1
+nmap <silent><Leader>i :<C-u>IndentLinesToggle<CR>

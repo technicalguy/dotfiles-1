@@ -58,7 +58,6 @@ NeoBundle 'dyng/ctrlsf.vim'
 NeoBundle 'elzr/vim-json'
 NeoBundle 'express.vim'
 NeoBundle 'fuenor/qfixgrep'
-NeoBundle 'gcmt/wildfire.vim'
 NeoBundle 'glidenote/memolist.vim', { 'depends': [ 'Shougo/unite.vim' ] }
 NeoBundle 'gregsexton/gitv'
 NeoBundle 'groenewege/vim-less'
@@ -96,7 +95,6 @@ NeoBundle 'mattn/unite-gist', { 'depends': [ 'Shougo/unite.vim', 'mattn/gist-vim
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'mfumi/ref-dicts-en'
 NeoBundle 'mhinz/vim-hugefile'
-NeoBundle 'mikewest/vimroom'
 NeoBundle 'mklabs/grunt.vim'
 NeoBundle 'mojako/ref-sources.vim'
 NeoBundle 'moll/vim-node'
@@ -114,7 +112,6 @@ NeoBundle 'proton'
 NeoBundle 'pyte'
 NeoBundle 'rainbow.zip'
 NeoBundle 'rizzatti/dash.vim'
-NeoBundle 'rizzatti/funcoo.vim'
 NeoBundle 'ropez/jasmine.vim'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'str2numchar.vim'
@@ -937,4 +934,3 @@ nmap <silent><Leader>i :<C-u>IndentLinesToggle<CR>
 " for vim-easy-align
 vmap <Enter> <Plug>(EasyAlign)
 nmap <Leader>a <Plug>(EasyAlign)
-

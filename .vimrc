@@ -114,6 +114,7 @@ NeoBundle 'rainbow.zip'
 NeoBundle 'rizzatti/dash.vim'
 NeoBundle 'ropez/jasmine.vim'
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'sergey-vlasov/ctrlp-hibuff', { 'depends' : [ 'kien/ctrlp.vim'] }
 NeoBundle 'str2numchar.vim'
 NeoBundle 'sudo.vim'
 NeoBundle 'supermomonga/vimshell-pure.vim', { 'depends' : [ 'Shougo/vimshell.vim' ] }
@@ -785,7 +786,7 @@ let g:ctrlp_mruf_relative = 1
 let g:ctrlp_prompt_mappings = { 'ToggleMRURelative()': ['<F8>'] }
 let g:ctrlp_extensions = [ 'tag', 'buffertag', 'quickfix', 'dir', 'rtscript',
                           \ 'undo', 'line', 'changes', 'mixed', 'bookmarkdir',
-                          \ 'yankround', 'funky' ]
+                          \ 'yankround', 'funky', 'hibuff']
 let g:ctrlp_buftag_types = {'erlang'     : '--language-force=erlang --erlang-types=drmf' }
 
 " for dash.vim
@@ -937,3 +938,4 @@ nmap <silent><Leader>i :<C-u>IndentLinesToggle<CR>
 " for vim-easy-align
 vmap <Enter> <Plug>(EasyAlign)
 nmap <Leader>a <Plug>(EasyAlign)
+

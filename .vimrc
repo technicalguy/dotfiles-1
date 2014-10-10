@@ -8,7 +8,7 @@ if has('vim_starting')
 endif
 
 " required:
-call neobundle#rc(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle/'))
 
 " Let NeoBundle manage NeoBundle
 " required:
@@ -142,6 +142,9 @@ NeoBundle 'unite-font', { 'depends' : [ 'Shougo/vimproc.vim' ] }
 NeoBundle 'vcscommand.vim'
 NeoBundle 'wavded/vim-stylus'
 NeoBundle 'yuratomo/w3m.vim'
+
+call neobundle#end()
+
 filetype plugin indent on
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.

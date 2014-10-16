@@ -67,6 +67,7 @@ NeoBundle 'heavenshell/vim-jsdoc'
 NeoBundle 'hokaccha/vim-html5validator'
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'hynek/vim-python-pep8-indent'
+NeoBundle 'idanarye/vim-merginal'
 NeoBundle 'jQuery'
 NeoBundle 'jade.vim'
 NeoBundle 'jaxbot/github-issues.vim'
@@ -939,3 +940,5 @@ nmap <silent><Leader>i :<C-u>IndentLinesToggle<CR>
 vmap <Enter> <Plug>(EasyAlign)
 nmap <Leader>a <Plug>(EasyAlign)
 
+" for merginal
+nmap <Leader>m :<C-u>MerginalToggle<CR>

@@ -47,6 +47,7 @@ install grep
 install harfbuzz
 install haskell-platform
 install heroku-toolbelt
+install highlight
 install hub
 install icu4c
 install imagemagick

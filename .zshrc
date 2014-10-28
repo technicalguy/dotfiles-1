@@ -468,6 +468,8 @@ export PATH=$PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH
 
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
+# gibo command selecte by peco
+# Usage: gibopeco >> .gitignore
 gibopeco()
 {
   if type gibo &>/dev/null && type peco &>/dev/null; then

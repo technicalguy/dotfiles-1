@@ -352,6 +352,8 @@ nmap gP <Plug>(yankround-gP)
 nnoremap <silent><SID>(ctrlp) :<C-u>CtrlP<CR>
 nmap <expr><C-p> yankround#is_active() ? "\<Plug>(yankround-prev)" : "<SID>(ctrlp)"
 nmap <C-n> <Plug>(yankround-next)
+xmap p <Plug>(yankround-p)
+xmap gp <Plug>(yankround-gp)
 
 " for neocomplete.vim
 " Disable AutoComplPop.

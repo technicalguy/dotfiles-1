@@ -79,6 +79,7 @@ NeoBundle 'kakkyz81/evervim'
 NeoBundle 'kevinw/pyflakes-vim'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'leafgarland/typescript-vim'
+NeoBundle 'lukaszkorecki/CoffeeTags'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'malclocke/vim-buster'
 NeoBundle 'marijnh/tern_for_vim', {
@@ -704,32 +705,7 @@ let g:tagbar_type_markdown = {
     \ 'k:Heading_L3'
   \ ]
   \ }
-if executable('coffeetags')
-  let g:tagbar_type_coffee = {
-        \ 'ctagsbin' : 'coffeetags',
-        \ 'ctagsargs' : '--include-vars',
-        \ 'kinds' : [
-          \ 'f:functions',
-          \ 'o:object',
-        \ ],
-        \ 'sro' : ".",
-        \ 'kind2scope' : {
-          \ 'f' : 'object',
-          \ 'o' : 'object',
-        \ }
-      \ }
-else
-  let g:tagbar_type_coffee = {
-      \ 'ctagstype' : 'coffee',
-      \ 'kinds'     : [
-          \ 'c:classes',
-          \ 'm:methods',
-          \ 'f:functions',
-          \ 'v:variables',
-          \ 'f:fields',
-      \ ]
-  \ }
-endif
+
 
 " for memolist.vim
 let g:memolist_qfixgrep = 1

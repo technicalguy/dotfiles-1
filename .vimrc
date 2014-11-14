@@ -334,6 +334,16 @@ au BufNewFile,BufRead *.js set tabstop=4 shiftwidth=4 softtabstop=4 expandtab
 " for ftl syntax
 au BufRead,BufNewFile *.ftl set filetype=ftl
 
+" add execute mode if the file has shebang
+" via: http://d.hatena.ne.jp/spiritloose/20060519/1147970872
+autocmd BufWritePost * :call AddExecmod()
+function AddExecmod()
+    let line = getline(1)
+    if strpart(line, 0, 2) == "#!"
+        call system("chmod +x ". expand("%"))
+    endif
+endfunction
+
 "for skk.vim
 let skk_jisyo = "~/Library/Application\ Support/AquaSKK/skk-jisyo.utf8"
 let skk_large_jisyo = "~/Library/Application\ Support/AquaSKK/SKK-JISYO.L"

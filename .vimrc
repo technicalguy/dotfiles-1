@@ -59,6 +59,7 @@ NeoBundle 'elzr/vim-json'
 NeoBundle 'express.vim'
 NeoBundle 'fuenor/qfixgrep'
 NeoBundle 'glidenote/memolist.vim', { 'depends': [ 'Shougo/unite.vim' ] }
+NeoBundle 'godlygeek/tabular'
 NeoBundle 'gregsexton/gitv'
 NeoBundle 'groenewege/vim-less'
 NeoBundle 'mustache/vim-mustache-handlebars'

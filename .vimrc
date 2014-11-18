@@ -73,7 +73,6 @@ NeoBundle 'jQuery'
 NeoBundle 'jade.vim'
 NeoBundle 'jaxbot/github-issues.vim'
 NeoBundle 'jelera/vim-javascript-syntax'
-NeoBundle "joker1007/vim-markdown-quote-syntax"
 NeoBundle 'jpo/vim-railscasts-theme'
 NeoBundle 'jmcantrell/vim-virtualenv'
 NeoBundle 'junegunn/vim-easy-align'

@@ -52,7 +52,12 @@ NeoBundle 'css_color.vim'
 NeoBundle 'csscomb/csscomb-for-vim'
 NeoBundle 'daisuzu/translategoogle.vim'
 NeoBundle 'dart-lang/dart-vim-plugin'
-NeoBundle 'davidhalter/jedi-vim'
+NeoBundle 'davidhalter/jedi-vim', {
+      \ 'build' : {
+      \     'mac'     : 'pip install jedi',
+      \     'unix'    : 'pip install jedi',
+      \    },
+      \ }
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'dyng/ctrlsf.vim'
 NeoBundle 'elzr/vim-json'

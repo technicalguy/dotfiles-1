@@ -59,6 +59,7 @@ NeoBundle 'davidhalter/jedi-vim', {
       \    },
       \ }
 NeoBundle 'derekwyatt/vim-scala'
+NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'dyng/ctrlsf.vim'
 NeoBundle 'elzr/vim-json'
 NeoBundle 'express.vim'
@@ -75,7 +76,6 @@ NeoBundle 'honza/vim-snippets'
 NeoBundle 'hynek/vim-python-pep8-indent'
 NeoBundle 'idanarye/vim-merginal'
 NeoBundle 'jQuery'
-NeoBundle 'jade.vim'
 NeoBundle 'jaxbot/github-issues.vim'
 NeoBundle 'jelera/vim-javascript-syntax'
 NeoBundle 'jpo/vim-railscasts-theme'

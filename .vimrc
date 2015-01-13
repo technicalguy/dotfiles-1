@@ -879,6 +879,13 @@ let g:airline_right_alt_sep = '⮃'
 let g:airline#extensions#branch#symbol = '⭠'
 let g:airline_readonly_symbol = '⭤'
 let g:airline_linecolumn_prefix = '⭡'
+let g:airline#extensions#default#section_truncate_width = {
+      \ 'b': 79,
+      \ 'c': 60,
+      \ 'x': 80,
+      \ 'y': 88,
+      \ 'z': 45,
+      \ }
 
 " for vim-anzu
 " mapping

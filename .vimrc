@@ -938,6 +938,7 @@ let g:indentLine_faster = 1
 nmap <silent><Leader>i :<C-u>IndentLinesToggle<CR>
 " via: https://github.com/elzr/vim-json/issues/23#issuecomment-40293049
 let g:indentLine_noConcealCursor=""
+let g:indentLine_fileTypeExclude = ['help', 'nerdtree', 'yaml', 'jade', 'stylus']
 
 " for vim-easy-align
 vmap <Enter> <Plug>(EasyAlign)

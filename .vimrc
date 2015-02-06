@@ -41,7 +41,6 @@ NeoBundle 'Simple-Javascript-Indenter'
 NeoBundle 'The-NERD-tree'
 NeoBundle 'Townk/vim-autoclose'
 NeoBundle 'Wombat'
-NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'ack.vim'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'altercation/vim-colors-solarized'
@@ -110,6 +109,7 @@ NeoBundle 'molokai'
 NeoBundle 'moznion/hateblo.vim', { 'depends': ['mattn/webapi-vim', 'Shougo/unite.vim'] }
 NeoBundle 'moznion/unite-git-conflict.vim', { 'depends' : [ 'Shougo/unite.vim' ] }
 NeoBundle 'nanotech/jellybeans.vim'
+NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'newspaper.vim'
 NeoBundle 'osyo-manga/vim-anzu'
 NeoBundle 'osyo-manga/vim-over'
@@ -933,12 +933,10 @@ if filereadable(expand('~/Dropbox/.github-issues.vim'))
   source ~/Dropbox/.github-issues.vim
 endif
 
-" for indentLing
-let g:indentLine_faster = 1
-nmap <silent><Leader>i :<C-u>IndentLinesToggle<CR>
-" via: https://github.com/elzr/vim-json/issues/23#issuecomment-40293049
-let g:indentLine_noConcealCursor=""
-let g:indentLine_fileTypeExclude = ['help', 'nerdtree', 'yaml', 'jade', 'stylus', 'sass', 'scss']
+" for indent-guides
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
 
 " for vim-easy-align
 vmap <Enter> <Plug>(EasyAlign)

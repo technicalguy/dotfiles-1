@@ -163,7 +163,7 @@ NeoBundleCheck
 
 " PATHの設定
 if has('gui_running')
-  let $PATH = '$HOME/.cabal/bin:$HOME/.rbenv/shims/bin:/usr/local/sbin:/usr/local/bin:/usr/local/share/npm/bin:' . $PATH
+  let $PATH = '/usr/local/opt/go/libexec/bin:$GOPATH/bin:$HOME/.cabal/bin:$HOME/.rbenv/shims/bin:/usr/local/sbin:/usr/local/bin:$PATH' . $PATH
 endif
 
 set sessionoptions+=resize,tabpages " 行・列を設定する

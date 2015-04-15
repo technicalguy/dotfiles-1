@@ -64,6 +64,7 @@ NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'dyng/ctrlsf.vim'
 NeoBundle 'elzr/vim-json'
 NeoBundle 'express.vim'
+NeoBundle 'fatih/vim-go'
 NeoBundle 'fuenor/qfixgrep'
 NeoBundle 'glidenote/memolist.vim', { 'depends': [ 'Shougo/unite.vim' ] }
 NeoBundle 'godlygeek/tabular'
@@ -341,6 +342,9 @@ au BufNewFile,BufRead *.js set tabstop=4 shiftwidth=4 softtabstop=4 expandtab
 
 " for ftl syntax
 au BufRead,BufNewFile *.ftl set filetype=ftl
+
+" for GoLang
+au BufNewFile,BufRead *.go set tabstop=4 shiftwidth=4 softtabstop=4 noexpandtab
 
 " add execute mode if the file has shebang
 " via: http://d.hatena.ne.jp/spiritloose/20060519/1147970872
@@ -947,3 +951,20 @@ nmap <Leader>a <Plug>(EasyAlign)
 
 " for merginal
 nmap <Leader>m :<C-u>MerginalToggle<CR>
+
+" for vim-go
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>c <Plug>(go-coverage)
+
+au FileType go nmap <Leader>ds <Plug>(go-def-split)
+au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
+au FileType go nmap <Leader>dt <Plug>(go-def-tab)
+
+au FileType go nmap <Leader>gd <Plug>(go-doc)
+au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
+au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
+
+au FileType go nmap <Leader>i <Plug>(go-info)
+
+au FileType go nmap <Leader>e <Plug>(go-rename)

@@ -118,7 +118,7 @@ NeoBundle 'osyo-manga/vim-anzu'
 NeoBundle 'osyo-manga/vim-over'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'pekepeke/titanium-vim'
-NeoBundle 'plasticboy/vim-markdown', {'rev': '0da5ba9d719b818909d85bacdad2ce5d860c9e94'}    " fix version cause of error
+NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'proton'
 NeoBundle 'pyte'
 NeoBundle 'rainbow.zip'

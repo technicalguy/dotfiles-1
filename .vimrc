@@ -571,6 +571,9 @@ call unite#custom#profile('default', 'context', {
 \   'start_insert': 1
 \ })
 
+call unite#custom#source('file,file/new,buffer,file_rec,file_mru',
+	\ 'matchers', 'matcher_fuzzy')
+
 autocmd FileType unite call s:unite_my_settings()
 function! s:unite_my_settings()"{{{
   " Overwrite settings.

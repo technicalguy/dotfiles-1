@@ -62,6 +62,7 @@ NeoBundle 'davidhalter/jedi-vim', {
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'dyng/ctrlsf.vim'
+NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'elzr/vim-json'
 NeoBundle 'express.vim'
 NeoBundle 'fatih/vim-go'

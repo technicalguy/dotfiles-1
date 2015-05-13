@@ -50,6 +50,11 @@ NeoBundle 'bkad/vim-terraform'
 NeoBundle 'cakebaker/scss-syntax.vim'
 NeoBundle 'chase/vim-ansible-yaml'
 NeoBundle 'chaquotay/ftl-vim-syntax'
+NeoBundle 'clausreinke/typescript-tools', {
+      \ 'build': {
+      \     'others': 'npm install -g'
+      \   }
+      \ }
 NeoBundle 'csscomb/csscomb-for-vim'
 NeoBundle 'daisuzu/translategoogle.vim'
 NeoBundle 'dart-lang/dart-vim-plugin'

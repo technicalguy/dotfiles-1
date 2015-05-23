@@ -945,3 +945,6 @@ au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
 au FileType go nmap <Leader>i <Plug>(go-info)
 
 au FileType go nmap <Leader>e <Plug>(go-rename)
+
+" for vim-ctrlspace
+let g:ctrlspace_use_ruby_bindings = 1

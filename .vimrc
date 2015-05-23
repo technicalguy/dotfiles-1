@@ -90,7 +90,6 @@ NeoBundle 'jmcantrell/vim-virtualenv'
 NeoBundle 'junegunn/vim-easy-align'
 NeoBundle 'kakkyz81/evervim'
 NeoBundle 'kevinw/pyflakes-vim'
-NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'leafgarland/typescript-vim'
 NeoBundle 'lukaszkorecki/CoffeeTags'
 NeoBundle 'majutsushi/tagbar'
@@ -131,13 +130,12 @@ NeoBundle 'rainbow.zip'
 NeoBundle 'rizzatti/dash.vim'
 NeoBundle 'ropez/jasmine.vim'
 NeoBundle 'scrooloose/syntastic'
-NeoBundle 'sergey-vlasov/ctrlp-hibuff', { 'depends' : [ 'kien/ctrlp.vim'] }
 NeoBundle 'str2numchar.vim'
 NeoBundle 'sudo.vim'
 NeoBundle 'supermomonga/vimshell-pure.vim', { 'depends' : [ 'Shougo/vimshell.vim' ] }
+NeoBundle 'szw/vim-ctrlspace'
 NeoBundle 't9md/vim-choosewin'
 NeoBundle 't9md/vim-unite-ack', { 'depends' : [ 'Shougo/vimproc.vim' ] }
-NeoBundle 'tacahiroy/ctrlp-funky', { 'depends' : [ 'kien/ctrlp.vim'] }
 NeoBundle 'tacahiroy/vim-logaling'
 NeoBundle 'thinca/vim-auto_source'
 NeoBundle 'thinca/vim-portal'
@@ -378,7 +376,6 @@ nmap p <Plug>(yankround-p)
 nmap P <Plug>(yankround-P)
 nmap gp <Plug>(yankround-gp)
 nmap gP <Plug>(yankround-gP)
-nnoremap <silent><SID>(ctrlp) :<C-u>CtrlP<CR>
 nmap <expr><C-p> yankround#is_active() ? "\<Plug>(yankround-prev)" : "<SID>(ctrlp)"
 nmap <C-n> <Plug>(yankround-next)
 xmap p <Plug>(yankround-p)
@@ -787,17 +784,6 @@ let g:loga_delimiter = '(//)'
 
 " for qfixgrep
 set runtimepath+=$HOME/.vim/bundle/qfixgrep
-
-" for ctrlp.vim
-set runtimepath^=~/.vim/bundle/ctrlp.vim
-let g:ctrlp_show_hidden = 1
-let g:ctrlp_mruf_exclude = '/private/.*\|/var/.*\|/tmp/.*\|/temp/.*'
-let g:ctrlp_mruf_relative = 1
-let g:ctrlp_prompt_mappings = { 'ToggleMRURelative()': ['<F8>'] }
-let g:ctrlp_extensions = [ 'tag', 'buffertag', 'quickfix', 'dir', 'rtscript',
-                          \ 'undo', 'line', 'changes', 'mixed', 'bookmarkdir',
-                          \ 'yankround', 'funky', 'hibuff']
-let g:ctrlp_buftag_types = {'erlang'     : '--language-force=erlang --erlang-types=drmf' }
 
 " for dash.vim
 nmap <silent> <leader>d <Plug>DashSearch

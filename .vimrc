@@ -166,26 +166,27 @@ filetype plugin indent on
 " this will conveniently prompt you to install them.
 NeoBundleCheck
 
-" PATHの設定
+" PATH setting
 if has('gui_running')
   let $PATH = '/usr/local/opt/go/libexec/bin:$GOPATH/bin:$HOME/.cabal/bin:$HOME/.rbenv/shims/bin:/usr/local/sbin:/usr/local/bin:$PATH' . $PATH
 endif
 
-set sessionoptions+=resize,tabpages " 行・列を設定する
-" ステータスライン
-set laststatus=2 " 常にステータスラインを表示
-" set statusline=%<%F\ %r%h%w%y%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%{fugitive#statusline()}%=%4v(ASCII=%03.3b,HEX=%02.2B)\ %l/%L(%P)%m
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
-" set statusline+=%{anzu#search_status()}
+" column setting
+set sessionoptions+=resize,tabpages
 
-" コマンドをステータスラインに表示する
+" setatus line setting
+" always show statusline
+set laststatus=2
+
+" show command in statusline
 set showcmd
-set cmdheight=1            " コマンドラインの高さ
-"色系の指定=======================================
-"とりあえずscheme指定でザックリ指定
+
+" statusline height
+set cmdheight=1
+
+" color setting
 set t_Co=256
+" choose theme on evniroment
 if has('gui_running')
   set background=light
 else
@@ -199,29 +200,14 @@ let g:solarized_termtrans = 1
 call togglebg#map("<F5>")
 
 syntax on
-"vi互換の動きにしない
 set nocompatible
-"行番号を表示
 set number
-"対応括弧の強調は0.3秒
 set matchtime=3
-
-"折り返しあり
 set wrap
-"水平タブ系の設定==============================================
-"デフォルト設定。結局runtime/indentの設定のほうで、ファイルごとに切り替える
-
-"タブとか改行を表示する
 set list
-"タブとか改行を示す文字列
 set listchars=eol:¬,tab:▸\ ,extends:>,precedes:<,trail:-
-"タブを空白で入力する
-"set expandtab
-"標準タブは4
 set tabstop=4
 set softtabstop=4
-
-"自動的にインデントする
 set autoindent
 set smartindent
 
@@ -231,7 +217,7 @@ if !has('gui_running')
   set ttyfast
 endif
 
-"バックスペースでインデントや改行を削除できるようにする
+" enable delete indent using <BS>
 set backspace=2
 
 " for non-ascii string
@@ -239,60 +225,30 @@ if exists('&ambiwidth')
   set ambiwidth=double
 endif
 
-" 全角スペースをハイライト
-" if has("syntax")
-"   syntax on
-"   function! ActivateInvisibleIndicator()
-"     syntax match InvisibleJISX0208Space "　" display containedin=ALL
-"     highlight InvisibleJISX0208Space term=underline ctermbg=Cyan guibg=Cyan
-"     syntax match InvisibleTrailedSpace "[ \t]\+$" display containedin=ALL
-"     highlight InvisibleTrailedSpace term=underline ctermbg=Red guibg=Red
-"     syntax match InvisibleTab "\t" display containedin=ALL
-"     highlight InvisibleTab term=underline ctermbg=Cyan guibg=Cyan
-"   endf
-"   augroup invisible
-"     autocmd! invisible
-"     autocmd BufNew,BufRead * call ActivateInvisibleIndicator()
-"   augroup END
-" endif
-
-" やんくをクリップボードへ送り込む
+" send yank register to clipboard
 set clipboard=unnamed
-
-"バッファ関連
-"編集中でもバッファを切り替えれるようにしておく
 set hidden
-
-"ルーラーを表示
 set ruler
 set title
-
-" highlightサーチをEsc2回で消去
 nnoremap <Esc><Esc> :nohlsearch<CR>
 
-" macvimでoptionを使用
 if has("gui_macvim")
     set macmeta
 endif
 
-"バックアップの場所
 set backupdir=~/Documents/vimbackup
-"swpファイルの場所
 set directory=~/Documents/vimbackup
-" undoファイルの場所
 set undodir=~/Documents/vimbackup
-
-" tagファイル検索
 set tags+=tags;
 
-"コマンドラインをtcshスタイルに
+" mapping for command mode
 cnoremap <C-A> <Home>
 cnoremap <C-F> <Right>
 cnoremap <C-B> <Left>
 cnoremap <Esc>b <S-Left>
 cnoremap <Esc>f <S-Right>
 
-" コーディングスタイル切り替え
+" change coding style
 let s:coding_styles = {}
 let s:coding_styles['DefaultTab'] = 'setl tabstop=4 shiftwidth=4 shiftwidth=4 softtabstop=4 noexpandtab'
 let s:coding_styles['Default'] = 'setl tabstop=4 shiftwidth=4 shiftwidth=4 softtabstop=4 expandtab'
@@ -317,14 +273,13 @@ let $RUBY_DLL = "/usr/local/lib/libruby.dylib"
 
 augroup BufferAu
   autocmd!
-  "カレントディレクトリを自動的に移動
+  " auto move to current dir
   autocmd BufNewFile,BufRead,BufEnter * if isdirectory(expand("%:p:h")) && bufname("%") !~ "NERD_tree" | cd %:p:h | endif
 augroup END
 
-"タブ幅をリセット
 au BufNewFile,BufRead * set tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 
-".rhtmlと.rbと.ymlでタブ幅を変更
+" for ruby
 au BufNewFile,BufRead *.rhtml set tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 au BufNewFile,BufRead *.rb set tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 au BufNewFile,BufRead *.yml set tabstop=2 shiftwidth=2 softtabstop=2 expandtab
@@ -338,7 +293,7 @@ map <Leader>jb !python -m json.tool<CR>
 "for Markdown
 autocmd BufNewFile,BufRead *.{md,mkd,mkdn,mark*} set tabstop=4 shiftwidth=4 softtabstop=4 expandtab
 
-" .pyでタブ幅を変更・スペースでインデントに変更
+" for python
 au BufNewFile,BufRead *.py setlocal tabstop=8 shiftwidth=4 softtabstop=4 et si cinwords=if,elif,else,for,while,try,except,finally,def,class
 
 "javascript tab
@@ -367,7 +322,7 @@ let g:skk_auto_save_jisyo = 1
 let g:skk_remap_lang_mode = 1
 " let g:skk_kutouten_type = "en"
 
-" str2numcharキーマップ設定
+" for str2numchar
 vmap <silent> sn :Str2NumChar<CR>
 vmap <silent> sh :Str2HexLiteral<CR>
 
@@ -826,46 +781,6 @@ nnoremap <Space>tdo :TernDoc<CR>
 nnoremap <Space>tre :TernRename<CR>
 nnoremap <Space>tt :TernType<CR>
 let g:tern_show_signature_in_pum=1
-
-" for tmux-powerline connect
-" via: http://yonchu.hatenablog.com/entry/2013/05/05/171925
-if exists('$TMUX')
-  autocmd BufEnter * call <SID>set_vim_cwd_to_tmux()
-  autocmd VimLeave * call <SID>del_vim_cwd_from_tmux()
-endif
-
-function! s:set_vim_cwd_to_tmux()
-  if !exists('$TMUX')
-    return
-  endif
-
-  let pain_id = system('tmux display -p "#D" | tr -d "%" | tr -d $"\n"')
-  call system('tmux setenv ' . "TMUX_VIM_CWD_" . pain_id . ' ' . getcwd())
-
-  let bt = &buftype
-  let ft = &filetype
-  " let bn = bufname('%')
-  if bt ==# 'nofile'
-        \ || ft ==# 'gitcommit' || ft ==# 'git-status' || ft ==# 'git-log'
-        \ || ft ==# 'qf' || ft ==# 'gitcommit' || ft ==# 'quickrun'
-        \ || ft ==# 'qfreplace' || ft ==# 'ref' || ft ==# 'vcs-commit'
-        \ || ft ==# 'vcs-status'
-    let pwd = getcwd()
-  else
-    let pwd = expand('%:p:h')
-  endif
-
-  let var_name = system('tmux display -p "TMUXPWD_#D" | tr -d "%" | tr -d $"\n"')
-  call system('tmux setenv ' . var_name . ' ' . shellescape(pwd))
-endfunction
-
-function! s:del_vim_cwd_from_tmux()
-  if !exists('$TMUX')
-    return
-  endif
-  let var_name = system('tmux display -p "TMUX_VIM_CWD_#D" | tr -d "%" | tr -d $"\n"')
-  call system('tmux setenv -u ' . var_name)
-endfunction
 
 " for vim-airline
 let g:airline_powerline_fonts=1

@@ -41,7 +41,6 @@ NeoBundle 'Simple-Javascript-Indenter'
 NeoBundle 'The-NERD-tree'
 NeoBundle 'Townk/vim-autoclose'
 NeoBundle 'Wombat'
-NeoBundle 'ack.vim'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'ap/vim-css-color'
@@ -128,6 +127,7 @@ NeoBundle 'proton'
 NeoBundle 'pyte'
 NeoBundle 'rainbow.zip'
 NeoBundle 'rizzatti/dash.vim'
+NeoBundle 'rking/ag.vim'
 NeoBundle 'ropez/jasmine.vim'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'str2numchar.vim'
@@ -585,14 +585,29 @@ if executable('jvgrep')
 endif
 
 " For ack.
-if executable('ack-grep')
+if executable('ag')
+  " Use ag in unite grep source.
+  let g:unite_source_grep_command = 'ag'
+  let g:unite_source_grep_default_opts =
+        \ '-i --line-numbers --nocolor --nogroup --hidden --ignore ' .
+        \  '''.hg'' --ignore ''.svn'' --ignore ''.git'' --ignore ''.bzr'''
+  let g:unite_source_grep_recursive_opt = ''
+elseif executable('pt')
+  " Use pt in unite grep source.
+  " https://github.com/monochromegane/the_platinum_searcher
+  let g:unite_source_grep_command = 'pt'
+  let g:unite_source_grep_default_opts = '--nogroup --nocolor'
+  let g:unite_source_grep_recursive_opt = ''
+elseif executable('ack-grep')
+  " Use ack in unite grep source.
   let g:unite_source_grep_command = 'ack-grep'
-  let g:unite_source_grep_default_opts = '--no-heading --no-color -a'
+  let g:unite_source_grep_default_opts =
+        \ '-i --no-heading --no-color -k -H'
   let g:unite_source_grep_recursive_opt = ''
 endif
 
 " for unite-ack
-let g:unite_source_ack_command = 'ack --nocolor --nogroup'
+let g:unite_source_ack_command = 'ag --vimgrep'
 let g:unite_source_ack_ignore_case = 1
 " for vimfiler
 call vimfiler#set_execute_file('vim', 'vim')
@@ -824,7 +839,10 @@ let g:choosewin_color_overlay_current = {
 let g:vim_markdown_folding_disabled=1
 
 " for ctrlsf.vim
-let g:ctrlsf_ackprg = 'ack'
+let g:ctrlsf_ackprg = 'ag'
+
+" for Ag.vim
+let g:ackprg = 'ag --vimgrep'
 
 " for github-issues.vim
 if filereadable(expand('~/Dropbox/.github-issues.vim'))

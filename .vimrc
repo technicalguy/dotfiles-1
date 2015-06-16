@@ -118,6 +118,7 @@ NeoBundle 'moznion/unite-git-conflict.vim', { 'depends' : [ 'Shougo/unite.vim' ]
 NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'newspaper.vim'
+NeoBundle 'nixprime/cpsm', { 'build': { 'others': './install.sh' } }
 NeoBundle 'osyo-manga/vim-anzu'
 NeoBundle 'osyo-manga/vim-over'
 NeoBundle 'othree/html5.vim'
@@ -768,6 +769,7 @@ let g:ctrlp_extensions = [ 'tag', 'buffertag', 'quickfix', 'dir', 'rtscript',
                           \ 'undo', 'line', 'changes', 'mixed', 'bookmarkdir',
                           \ 'yankround', 'funky', 'hibuff']
 let g:ctrlp_buftag_types = {'erlang'     : '--language-force=erlang --erlang-types=drmf' }
+let g:ctrlp_match_func = {'match': 'cpsm#CtrlPMatch'}
 
 " for dash.vim
 nmap <silent> <leader>d <Plug>DashSearch

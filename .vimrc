@@ -770,9 +770,7 @@ let g:ctrlp_extensions = [ 'tag', 'buffertag', 'quickfix', 'dir', 'rtscript',
                           \ 'yankround', 'funky', 'hibuff']
 let g:ctrlp_buftag_types = {'erlang'     : '--language-force=erlang --erlang-types=drmf' }
 let g:ctrlp_match_func = {'match': 'cpsm#CtrlPMatch'}
-" use https://github.com/mattn/files
-" go get github.com/mattn/files
-let g:ctrlp_user_command = 'files -p %s'
+let g:ctrlp_user_command = 'find %s -type f'
 
 " for dash.vim
 nmap <silent> <leader>d <Plug>DashSearch

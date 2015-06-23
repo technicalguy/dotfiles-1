@@ -881,24 +881,24 @@ nmap <Leader>a <Plug>(EasyAlign)
 nmap <Leader>m :<C-u>MerginalToggle<CR>
 
 " for vim-go
-au FileType go nmap <leader>b <Plug>(go-build)
-au FileType go nmap <leader>t <Plug>(go-test)
-au FileType go nmap <leader>c <Plug>(go-coverage)
+au FileType go nmap <Space>b <Plug>(go-build)
+au FileType go nmap <Space>t <Plug>(go-test)
+au FileType go nmap <Space>c <Plug>(go-coverage)
 
-au FileType go nmap <Leader>ds <Plug>(go-def-split)
-au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
-au FileType go nmap <Leader>dt <Plug>(go-def-tab)
+au FileType go nmap <Space>ds <Plug>(go-def-split)
+au FileType go nmap <Space>dv <Plug>(go-def-vertical)
+au FileType go nmap <Space>dt <Plug>(go-def-tab)
 
-au FileType go nmap <Leader>gd <Plug>(go-doc)
-au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
-au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
+au FileType go nmap <Space>gd <Plug>(go-doc)
+au FileType go nmap <Space>gv <Plug>(go-doc-vertical)
+au FileType go nmap <Space>gb <Plug>(go-doc-browser)
 
-au FileType go nmap <Leader>i <Plug>(go-info)
+au FileType go nmap <Space>i <Plug>(go-info)
 
-au FileType go nmap <Leader>e <Plug>(go-rename)
+au FileType go nmap <Space>e <Plug>(go-rename)
 
 " for nebula
-nnoremap <silent>,bl    :<C-u>NebulaPutLazy<CR>
-nnoremap <silent>,bc    :<C-u>NebulaPutConfig<CR>
-nnoremap <silent>,by    :<C-u>NebulaYankOptions<CR>
-nnoremap <silent>,bp    :<C-u>NebulaPutFromClipboard<CR>
+nnoremap <silent><Space>bl    :<C-u>NebulaPutLazy<CR>
+nnoremap <silent><Space>bc    :<C-u>NebulaPutConfig<CR>
+nnoremap <silent><Space>by    :<C-u>NebulaYankOptions<CR>
+nnoremap <silent><Space>bp    :<C-u>NebulaPutFromClipboard<CR>

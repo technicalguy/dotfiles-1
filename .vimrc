@@ -19,6 +19,7 @@ NeoBundle 'AndrewRadev/vim-coffee-script'
 NeoBundle 'Glench/Vim-Jinja2-Syntax'
 NeoBundle 'JulesWang/css.vim'
 NeoBundle 'LeafCage/yankround.vim'
+NeoBundle 'LeafCage/nebula.vim'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'RubySinatra'
 NeoBundle 'Shougo/neocomplete.vim'
@@ -26,7 +27,7 @@ NeoBundle 'Shougo/neomru.vim', { 'depends': [ 'Shougo/unite.vim' ] }
 NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/unite-outline', { 'depends' : [ 'Shougo/unite.vim' ] }
-NeoBundle 'Shougo/unite.vim', { 'depends' : [ 'Shougo/vimproc.vim' ] }
+NeoBundleLazy 'Shougo/unite.vim', {'autoload': {'unite_sources': ['action', 'alias', 'bookmark', 'buffer', 'change', 'command', 'directory', 'file', 'file_list', 'file_point', 'find', 'function', 'grep', 'history_input', 'history_unite', 'history_yank', 'interactive', 'jump', 'jump_point', 'launcher', 'line', 'mapping', 'menu', 'output', 'process', 'rec', 'register', 'resume', 'runtimepath', 'script', 'source', 'tab', 'vimgrep', 'window', 'window_gui'], 'commands': [{'complete': 'customlist,unite#complete#source', 'name': 'UniteWithInput'}, {'complete': 'customlist,unite#complete#source', 'name': 'UniteWithCurrentDir'}, {'complete': 'customlist,unite#complete#buffer_name', 'name': 'UniteNext'}, {'complete': 'customlist,unite#complete#source', 'name': 'Unite'}, {'complete': 'customlist,unite#complete#source', 'name': 'UniteWithInputDirectory'}, {'complete': 'customlist,unite#complete#source', 'name': 'UniteWithProjectDir'}, {'complete': 'file', 'name': 'UniteBookmarkAdd'}, {'complete': 'customlist,unite#complete#buffer_name', 'name': 'UniteFirst'}, {'complete': 'customlist,unite#complete#source', 'name': 'UniteWithBufferDir'}, {'complete': 'customlist,unite#complete#source', 'name': 'UniteWithCursorWord'}, {'complete': 'customlist,unite#complete#buffer_name', 'name': 'UniteClose'}, {'complete': 'customlist,unite#complete#buffer_name', 'name': 'UniteResume'}, {'complete': 'customlist,unite#complete#buffer_name', 'name': 'UnitePrevious'}, {'complete': 'customlist,unite#complete#buffer_name', 'name': 'UniteLast'}]}}
 NeoBundle 'Shougo/vimfiler.vim', { 'depends': [ 'Shougo/unite.vim' ] }
 NeoBundle 'Shougo/vimproc.vim', {
       \ 'build' : {
@@ -36,12 +37,12 @@ NeoBundle 'Shougo/vimproc.vim', {
       \     'unix'    : 'make -f make_unix.mak',
       \    },
       \ }
-NeoBundle 'Shougo/vimshell.vim'
+NeoBundleLazy 'Shougo/vimshell.vim', {'autoload': {'unite_sources': ['vimshell_external_history', 'vimshell_history', 'vimshell_zsh_complete'], 'mappings': [['n', '<Plug>(vimshell_']], 'commands': [{'complete': 'customlist,vimshell#complete', 'name': 'VimShell'}, {'complete': 'customlist,vimshell#complete', 'name': 'VimShellPop'}, {'complete': 'customlist,vimshell#complete', 'name': 'VimShellCreate'}, {'complete': 'customlist,vimshell#complete', 'name': 'VimShellCurrentDir'}, {'complete': 'customlist,vimshell#helpers#vimshell_execute_complete', 'name': 'VimShellExecute'}, {'complete': 'customlist,vimshell#complete', 'name': 'VimShellBufferDir'}, 'VimShellSendString', {'complete': 'customlist,vimshell#complete', 'name': 'VimShellTab'}, {'complete': 'buffer', 'name': 'VimShellSendBuffer'}, 'VimShellClose', {'complete': 'customlist,vimshell#helpers#vimshell_execute_complete', 'name': 'VimShellInteractive'}]}}
 NeoBundle 'Simple-Javascript-Indenter'
-NeoBundle 'The-NERD-tree'
+NeoBundleLazy 'The-NERD-tree', {'augroup': 'NERDTree', 'autoload': {'commands': ['NERDTreeMirror', 'WriteBookmarks', 'NERDTreeClose', {'complete': 'customlist,s:completeBookmarks', 'name': 'RevealBookmark'}, {'complete': 'dir', 'name': 'NERDTree'}, 'NERDTreeFind', {'complete': 'customlist,s:completeBookmarks', 'name': 'BookmarkToRoot'}, {'complete': 'customlist,s:completeBookmarks', 'name': 'ClearBookmarks'}, 'ReadBookmarks', {'complete': 'customlist,s:completeBookmarks', 'name': 'NERDTreeFromBookmark'}, {'complete': 'dir', 'name': 'NERDTreeToggle'}, 'ClearAllBookmarks', 'Bookmark', {'complete': 'customlist,s:completeBookmarks', 'name': 'OpenBookmark'}]}}
 NeoBundle 'Townk/vim-autoclose'
 NeoBundle 'Wombat'
-NeoBundle 'airblade/vim-gitgutter'
+NeoBundleLazy 'airblade/vim-gitgutter', {'autoload': {'mappings': [['n', '<Plug>GitGutter']], 'commands': ['GitGutterToggle', 'GitGutterPrevHunk', 'GitGutter', 'GitGutterLineHighlightsToggle', 'GitGutterRevertHunk', 'GitGutterPreviewHunk', 'GitGutterSignsEnable', 'GitGutterNextHunk', 'GitGutterDisable', 'GitGutterStageHunk', 'GitGutterEnable', 'GitGutterSignsToggle', 'GitGutterAll', 'GitGutterLineHighlightsEnable', 'GitGutterLineHighlightsDisable', 'GitGutterDebug', 'GitGutterSignsDisable']}}
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'ap/vim-css-color'
 NeoBundle 'bling/vim-airline'
@@ -54,8 +55,8 @@ NeoBundle 'clausreinke/typescript-tools', {
       \     'others': 'npm install -g'
       \   }
       \ }
-NeoBundle 'csscomb/csscomb-for-vim'
-NeoBundle 'daisuzu/translategoogle.vim'
+NeoBundleLazy 'csscomb/csscomb-for-vim', {'autoload': {'commands': ['CSScomb']}}
+NeoBundleLazy 'daisuzu/translategoogle.vim', {'autoload': {'commands': ['TranslateGoogle', {'complete': 'customlist,translategoogle#complete_command', 'name': 'TranslateGoogleCmd'}, 'TranslateGoogleCmdReverse']}}
 NeoBundle 'dart-lang/dart-vim-plugin'
 NeoBundle 'davidhalter/jedi-vim', {
       \ 'build' : {
@@ -70,29 +71,29 @@ NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'elzr/vim-json'
 NeoBundle 'express.vim'
 NeoBundle 'fatih/vim-go'
-NeoBundle 'fuenor/qfixgrep'
-NeoBundle 'glidenote/memolist.vim', { 'depends': [ 'Shougo/unite.vim' ] }
-NeoBundle 'godlygeek/tabular'
-NeoBundle 'gregsexton/gitv'
+NeoBundleLazy 'fuenor/qfixgrep', {'autoload': {'commands': ['ToggleGrepRecursiveMode', 'REGrepadd', 'OpenQFixWin', 'RFGrep', 'BGrepadd', 'ToggleGrepCurrentDirMode', 'VGrepadd', 'RFGrepadd', 'MyGrepWriteResult', 'MyGrepReadResult', 'Vimgrep', 'BGrep', 'RGrepadd', 'Vimgrepadd', 'FGrep', 'MoveToAltQFixWin', 'ToggleMultiEncodingGrep', 'QFixAltWincmd', 'REGrep', 'QFdo', 'QFixCclose', 'RGrep', 'CloseQFixWin', 'EGrep', 'ToggleDamemoji', 'Grepadd', 'EGrepadd', 'MoveToQFixWin', 'Grep', 'ToggleLocationListMode', 'VGrep', 'ToggleQFixWin', 'FList', 'FGrepadd', 'QFixCopen']}}
+NeoBundleLazy 'glidenote/memolist.vim', {'autoload': {'commands': ['MemoList', 'MemoGrep', 'MemoNew']}, 'depends': [ 'Shougo/unite.vim' ] }
+NeoBundleLazy 'godlygeek/tabular', {'autoload': {'commands': ['AddTabularPipeline', {'complete': 'customlist,<SID>CompleteTabularizeCommand', 'name': 'Tabularize'}, {'complete': 'customlist,<SID>CompleteTabularizeCommand', 'name': 'GTabularize'}, 'AddTabularPattern']}}
+NeoBundleLazy 'gregsexton/gitv', {'autoload': {'commands': [{'complete': 'custom,s:CompleteGitv', 'name': 'Gitv'}]}}
 NeoBundle 'groenewege/vim-less'
 NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'heavenshell/vim-jsdoc'
-NeoBundle 'hokaccha/vim-html5validator'
+NeoBundleLazy 'hokaccha/vim-html5validator', {'autoload': {'commands': [{'complete': 'file', 'name': 'HTML5Validate'}]}}
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'hynek/vim-python-pep8-indent'
 NeoBundle 'idanarye/vim-merginal'
 NeoBundle 'jQuery'
-NeoBundle 'jaxbot/github-issues.vim'
+NeoBundleLazy 'jaxbot/github-issues.vim', {'autoload': {'commands': ['Gissues', 'Giedit', 'Giadd', 'Giupdate', 'Gishow', 'Gmiles']}}
 NeoBundle 'jpo/vim-railscasts-theme'
-NeoBundle 'jmcantrell/vim-virtualenv'
-NeoBundle 'junegunn/vim-easy-align'
-NeoBundle 'kakkyz81/evervim'
+NeoBundleLazy 'jmcantrell/vim-virtualenv', {'autoload': {'commands': ['VirtualEnvDeactivate', 'VirtualEnvList', {'complete': 'customlist,s:CompleteVirtualEnv', 'name': 'VirtualEnvActivate'}]}}
+NeoBundleLazy 'junegunn/vim-easy-align', {'autoload': {'mappings': ['<Plug>(EasyAlignOperator)', ['sxn', '<Plug>(EasyAlign)'], ['sxn', '<Plug>(LiveEasyAlign)'], ['sxn', '<Plug>(EasyAlignRepeat)']], 'commands': ['EasyAlign', 'LiveEasyAlign']}}
+NeoBundleLazy 'kakkyz81/evervim', {'autoload': {'commands': ['EvervimOpenBrowser', 'EvervimSetup', 'EvervimCreateNote', 'EvervimSearchByQuery', 'EvervimReloadPref', 'EvervimNotebookList', 'EvervimPageNext', 'EvervimOpenClient', 'EvervimPagePrev', 'EvervimListTags']}}
 NeoBundle 'kevinw/pyflakes-vim'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'leafgarland/typescript-vim'
 NeoBundle 'lukaszkorecki/CoffeeTags'
-NeoBundle 'majutsushi/tagbar'
+NeoBundleLazy 'majutsushi/tagbar', {'augroup': 'TagbarAutoCmds', 'autoload': {'commands': ['TagbarGetTypeConfig', 'TagbarSetFoldlevel', 'TagbarOpen', 'TagbarDebug', 'Tagbar', 'TagbarClose', 'TagbarTogglePause', 'TagbarOpenAutoClose', 'TagbarDebugEnd', 'TagbarCurrentTag', 'TagbarShowTag', 'TagbarToggle']}}
 NeoBundle 'malclocke/vim-buster'
 NeoBundle 'marijnh/tern_for_vim', {
       \   'build': {
@@ -108,7 +109,7 @@ NeoBundle 'mattn/qiita-vim', { 'depends' : [ 'mattn/webapi-vim' ] }
 NeoBundle 'mattn/unite-gist', { 'depends': [ 'Shougo/unite.vim', 'mattn/gist-vim' ] }
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'mfumi/ref-dicts-en'
-NeoBundle 'mhinz/vim-hugefile'
+NeoBundleLazy 'mhinz/vim-hugefile', {'autoload': {'commands': ['HugefileToggle']}}
 NeoBundle 'mklabs/grunt.vim'
 NeoBundle 'mojako/ref-sources.vim'
 NeoBundle 'moll/vim-node'
@@ -116,11 +117,11 @@ NeoBundle 'molokai'
 NeoBundle 'moznion/hateblo.vim', { 'depends': ['mattn/webapi-vim', 'Shougo/unite.vim'] }
 NeoBundle 'moznion/unite-git-conflict.vim', { 'depends' : [ 'Shougo/unite.vim' ] }
 NeoBundle 'nanotech/jellybeans.vim'
-NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundleLazy 'nathanaelkane/vim-indent-guides', {'augroup': 'indent_guides', 'autoload': {'mappings': [['n', '<Plug>IndentGuides']], 'commands': ['IndentGuidesEnable', 'IndentGuidesToggle', 'IndentGuidesDisable']}}
 NeoBundle 'newspaper.vim'
 NeoBundle 'nixprime/cpsm', { 'build': { 'others': './install.sh' } }
-NeoBundle 'osyo-manga/vim-anzu'
-NeoBundle 'osyo-manga/vim-over'
+NeoBundleLazy 'osyo-manga/vim-anzu', {'autoload': {'unite_sources': ['anzu'], 'mappings': [['sxno', '<Plug>(anzu-']], 'commands': ['AnzuUpdateSearchStatus', 'AnzuClearSearchCache', 'AnzuUpdateSearchStatusOutput', 'AnzuClearSearchStatus', 'AnzuSignMatchLine', 'AnzuClearSignMatchLine']}}
+NeoBundleLazy 'osyo-manga/vim-over', {'autoload': {'mappings': [['n', '<Plug>(over-restore-']], 'commands': ['OverCommandLineNoremap', 'OverCommandLineMap', 'OverCommandLine', 'OverCommandLineUnmap']}}
 NeoBundle 'othree/html5.vim'
 NeoBundle 'othree/yajs.vim'
 NeoBundle 'pekepeke/titanium-vim'
@@ -128,21 +129,21 @@ NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'proton'
 NeoBundle 'pyte'
 NeoBundle 'rainbow.zip'
-NeoBundle 'rizzatti/dash.vim'
-NeoBundle 'rking/ag.vim'
+NeoBundleLazy 'rizzatti/dash.vim', {'autoload': {'mappings': [['sxno', '<Plug>Dash']], 'commands': [{'complete': 'customlist,dash#complete', 'name': 'DashKeywords'}, {'complete': 'customlist,dash#complete', 'name': 'Dash'}]}}
+NeoBundleLazy 'rking/ag.vim', {'autoload': {'commands': [{'complete': 'file', 'name': 'AgFromSearch'}, {'complete': 'file', 'name': 'LAgBuffer'}, {'complete': 'file', 'name': 'LAgAdd'}, {'complete': 'file', 'name': 'LAg'}, {'complete': 'help', 'name': 'LAgHelp'}, {'complete': 'file', 'name': 'AgBuffer'}, {'complete': 'file', 'name': 'AgFile'}, {'complete': 'file', 'name': 'AgAdd'}, {'complete': 'file', 'name': 'Ag'}, {'complete': 'help', 'name': 'AgHelp'}]}}
 NeoBundle 'ropez/jasmine.vim'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'sergey-vlasov/ctrlp-hibuff', { 'depends' : [ 'kien/ctrlp.vim'] }
-NeoBundle 'str2numchar.vim'
-NeoBundle 'sudo.vim'
+NeoBundleLazy 'str2numchar.vim', {'autoload': {'commands': ['Str2HexLiteral', 'Str2NumChar']}}
+NeoBundleLazy 'sudo.vim', {'autoload': {'commands': ['SudoRead', 'SudoWrite']}}
 NeoBundle 'supermomonga/vimshell-pure.vim', { 'depends' : [ 'Shougo/vimshell.vim' ] }
 NeoBundle 't9md/vim-choosewin'
 NeoBundle 't9md/vim-unite-ack', { 'depends' : [ 'Shougo/vimproc.vim' ] }
 NeoBundle 'tacahiroy/ctrlp-funky', { 'depends' : [ 'kien/ctrlp.vim'] }
 NeoBundle 'tacahiroy/vim-logaling'
 NeoBundle 'thinca/vim-auto_source'
-NeoBundle 'thinca/vim-portal'
-NeoBundle 'thinca/vim-qfreplace'
+NeoBundleLazy 'thinca/vim-portal', {'autoload': {'mappings': [['n', '<Plug>(portal-gun-']], 'commands': ['PortalReset', {'complete': 'customlist,portal#_complete', 'name': 'PortalShoot'}]}}
+NeoBundleLazy 'thinca/vim-qfreplace', {'autoload': {'commands': ['Qfreplace']}}
 NeoBundle 'thinca/vim-quickrun', { 'depends' : [ 'Shougo/vimproc.vim' ] }
 NeoBundle 'thinca/vim-ref'
 NeoBundle 'tpope/vim-fugitive'
@@ -158,9 +159,9 @@ NeoBundle 'ujihisa/neco-look', { 'depends' : [ 'Shougo/neocomplete.vim' ] }
 NeoBundle 'unicode.vim'
 NeoBundle 'unite-colorscheme', { 'depends' : [ 'Shougo/vimproc.vim' ] }
 NeoBundle 'unite-font', { 'depends' : [ 'Shougo/vimproc.vim' ] }
-NeoBundle 'vcscommand.vim'
+NeoBundleLazy 'vcscommand.vim', {'autoload': {'mappings': [['n', '<Plug>VCS']], 'commands': ['VCSDiff', 'CVSEdit', 'VCSBlame', 'VCSUpdate', 'CVSUnedit', 'VCSGotoOriginal', 'CVSWatchOn', 'CVSWatchAdd', 'VCSInfo', 'VCSDelete', 'VCSLock', 'VCSStatus', 'VCSRemove', 'VCSCommandDisableBufferSetup', 'VCSAnnotate', 'VCSCommit', 'VCSRevert', 'VCSVimDiff', 'VCSLog', 'VCSReview', 'CVSWatchers', 'CVSWatch', 'VCSReload', 'CVSWatchRemove', 'VCSAdd', 'CVSWatchOff', 'VCSUnlock', 'CVSEditors', 'VCSCommandEnableBufferSetup']}}
 NeoBundle 'wavded/vim-stylus'
-NeoBundle 'yuratomo/w3m.vim'
+NeoBundleLazy 'yuratomo/w3m.vim', {'autoload': {'commands': [{'complete': 'customlist,w3m#search_engine#List', 'name': 'W3mVSplit'}, {'complete': 'file', 'name': 'W3mLocal'}, 'W3mHistory', {'complete': 'customlist,w3m#search_engine#List', 'name': 'W3mSplit'}, {'complete': 'customlist,w3m#search_engine#List', 'name': 'W3mTab'}, {'complete': 'customlist,w3m#search_engine#List', 'name': 'W3m'}, 'W3mHistoryClear']}}
 
 call neobundle#end()
 
@@ -895,3 +896,9 @@ au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
 au FileType go nmap <Leader>i <Plug>(go-info)
 
 au FileType go nmap <Leader>e <Plug>(go-rename)
+
+" for nebula
+nnoremap <silent>,bl    :<C-u>NebulaPutLazy<CR>
+nnoremap <silent>,bc    :<C-u>NebulaPutConfig<CR>
+nnoremap <silent>,by    :<C-u>NebulaYankOptions<CR>
+nnoremap <silent>,bp    :<C-u>NebulaPutFromClipboard<CR>

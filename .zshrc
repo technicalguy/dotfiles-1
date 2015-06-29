@@ -475,6 +475,10 @@ export PATH=$PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH
 
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
+# for nvm
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
 # gibo command selecte by peco
 # Usage: gibopeco >> .gitignore
 gibopeco()

@@ -14,7 +14,7 @@ case ${UID} in
 esac
 
 #export
-export PATH=/usr/local/opt/go/libexec/bin:$GOPATH/bin:$HOME/.cabal/bin:$HOME/.rbenv/shims/bin:/usr/local/sbin:/usr/local/bin:$PATH
+export PATH=${HOME}/.local/bin:/usr/local/opt/go/libexec/bin:$GOPATH/bin:$HOME/.cabal/bin:$HOME/.rbenv/shims/bin:/usr/local/sbin:/usr/local/bin:$PATH
 export MANPATH=/usr/local/share/man:/usr/local/man:$MANPATH
 export RBENV_ROOT=$HOME/.rbenv
 export GEM_HOME=$HOME/.rbenv/shims
@@ -470,10 +470,7 @@ function up(){ cpath=./; for i in `seq 1 1 $1`; do cpath=$cpath../; done; cd $cp
 source $HOME/dotfiles/.zsh/functions/Completion/gibo-completion.zsh
 
 # for pyenv
-export PYENV_ROOT=$HOME/.pyenv
-export PATH=$PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH
-
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+eval "$(pyenv init -)";
 
 # for nvm
 export NVM_DIR=~/.nvm

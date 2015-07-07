@@ -27,7 +27,7 @@ export TERMINFO=/usr/share/terminfo
 export VMAIL_VIM='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 
 #alias
-alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
+alias emacs="TERM=xterm-256color /usr/local//bin/emacs"
 alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 alias vimdiff='vi -d'

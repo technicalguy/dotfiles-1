@@ -48,6 +48,7 @@ NeoBundle 'ap/vim-css-color'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'bkad/vim-terraform'
 NeoBundle 'cakebaker/scss-syntax.vim'
+NeoBundle 'cespare/vim-toml'
 NeoBundle 'chase/vim-ansible-yaml'
 NeoBundle 'chaquotay/ftl-vim-syntax'
 NeoBundle 'clausreinke/typescript-tools', {

@@ -882,6 +882,7 @@ nmap <Leader>a <Plug>(EasyAlign)
 nmap <Leader>m :<C-u>MerginalToggle<CR>
 
 " for vim-go
+au FileType go nmap <Space>r <Plug>(go-run)
 au FileType go nmap <Space>b <Plug>(go-build)
 au FileType go nmap <Space>t <Plug>(go-test)
 au FileType go nmap <Space>c <Plug>(go-coverage)
@@ -897,6 +898,7 @@ au FileType go nmap <Space>gb <Plug>(go-doc-browser)
 au FileType go nmap <Space>i <Plug>(go-info)
 
 au FileType go nmap <Space>e <Plug>(go-rename)
+au FileType go nmap <Space>s <Plug>(go-implements)
 
 " for nebula
 nnoremap <silent><Space>bl    :<C-u>NebulaPutLazy<CR>

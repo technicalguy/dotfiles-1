@@ -253,6 +253,10 @@ cnoremap <C-B> <Left>
 cnoremap <Esc>b <S-Left>
 cnoremap <Esc>f <S-Right>
 
+" mapping for inc/dec in visualmode
+vnoremap <c-a> <c-a>gv
+vnoremap <c-x> <c-x>gv
+
 " change coding style
 let s:coding_styles = {}
 let s:coding_styles['DefaultTab'] = 'setl tabstop=4 shiftwidth=4 shiftwidth=4 softtabstop=4 noexpandtab'

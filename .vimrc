@@ -58,6 +58,7 @@ NeoBundle 'clausreinke/typescript-tools', {
       \   }
       \ }
 NeoBundleLazy 'csscomb/csscomb-for-vim', {'autoload': {'commands': ['CSScomb']}}
+NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundleLazy 'daisuzu/translategoogle.vim', {'autoload': {'commands': ['TranslateGoogle', {'complete': 'customlist,translategoogle#complete_command', 'name': 'TranslateGoogleCmd'}, 'TranslateGoogleCmdReverse']}}
 NeoBundle 'dart-lang/dart-vim-plugin'
 NeoBundle 'davidhalter/jedi-vim', {
@@ -92,7 +93,6 @@ NeoBundleLazy 'jmcantrell/vim-virtualenv', {'autoload': {'commands': ['VirtualEn
 NeoBundleLazy 'junegunn/vim-easy-align', {'autoload': {'mappings': ['<Plug>(EasyAlignOperator)', ['sxn', '<Plug>(EasyAlign)'], ['sxn', '<Plug>(LiveEasyAlign)'], ['sxn', '<Plug>(EasyAlignRepeat)']], 'commands': ['EasyAlign', 'LiveEasyAlign']}}
 NeoBundleLazy 'kakkyz81/evervim', {'autoload': {'commands': ['EvervimOpenBrowser', 'EvervimSetup', 'EvervimCreateNote', 'EvervimSearchByQuery', 'EvervimReloadPref', 'EvervimNotebookList', 'EvervimPageNext', 'EvervimOpenClient', 'EvervimPagePrev', 'EvervimListTags']}}
 NeoBundle 'kevinw/pyflakes-vim'
-NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'leafgarland/typescript-vim'
 NeoBundle 'lukaszkorecki/CoffeeTags'
 NeoBundleLazy 'majutsushi/tagbar', {'augroup': 'TagbarAutoCmds', 'autoload': {'commands': ['TagbarGetTypeConfig', 'TagbarSetFoldlevel', 'TagbarOpen', 'TagbarDebug', 'Tagbar', 'TagbarClose', 'TagbarTogglePause', 'TagbarOpenAutoClose', 'TagbarDebugEnd', 'TagbarCurrentTag', 'TagbarShowTag', 'TagbarToggle']}}

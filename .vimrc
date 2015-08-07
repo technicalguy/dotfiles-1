@@ -80,6 +80,7 @@ NeoBundleLazy 'glidenote/memolist.vim', {'autoload': {'commands': ['MemoList', '
 NeoBundleLazy 'godlygeek/tabular', {'autoload': {'commands': ['AddTabularPipeline', {'complete': 'customlist,<SID>CompleteTabularizeCommand', 'name': 'Tabularize'}, {'complete': 'customlist,<SID>CompleteTabularizeCommand', 'name': 'GTabularize'}, 'AddTabularPattern']}}
 NeoBundleLazy 'gregsexton/gitv', {'autoload': {'commands': [{'complete': 'custom,s:CompleteGitv', 'name': 'Gitv'}]}}
 NeoBundle 'groenewege/vim-less'
+NeoBundleLazy 'mattreduce/vim-mix', {'autoload': {'commands': ['Mclean', 'Mdeps', 'Mtest', 'Mix', 'Mcompile']}}
 NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'heavenshell/vim-jsdoc'

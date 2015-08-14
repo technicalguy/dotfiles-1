@@ -50,7 +50,6 @@ NeoBundle 'burnettk/vim-angular'
 NeoBundle 'cakebaker/scss-syntax.vim'
 NeoBundle 'cespare/vim-toml'
 NeoBundle 'chase/vim-ansible-yaml'
-NeoBundle 'chaquotay/ftl-vim-syntax'
 NeoBundle 'clausreinke/typescript-tools', {
       \ 'build': {
       \     'others': 'npm install -g'
@@ -58,7 +57,6 @@ NeoBundle 'clausreinke/typescript-tools', {
       \ }
 NeoBundleLazy 'csscomb/csscomb-for-vim', {'autoload': {'commands': ['CSScomb']}}
 NeoBundle 'ctrlpvim/ctrlp.vim'
-NeoBundleLazy 'daisuzu/translategoogle.vim', {'autoload': {'commands': ['TranslateGoogle', {'complete': 'customlist,translategoogle#complete_command', 'name': 'TranslateGoogleCmd'}, 'TranslateGoogleCmdReverse']}}
 NeoBundle 'dart-lang/dart-vim-plugin'
 NeoBundle 'davidhalter/jedi-vim', {
       \ 'build' : {
@@ -92,7 +90,6 @@ NeoBundleLazy 'jaxbot/github-issues.vim', {'autoload': {'commands': ['Gissues', 
 NeoBundle 'jpo/vim-railscasts-theme'
 NeoBundleLazy 'jmcantrell/vim-virtualenv', {'autoload': {'commands': ['VirtualEnvDeactivate', 'VirtualEnvList', {'complete': 'customlist,s:CompleteVirtualEnv', 'name': 'VirtualEnvActivate'}]}}
 NeoBundleLazy 'junegunn/vim-easy-align', {'autoload': {'mappings': ['<Plug>(EasyAlignOperator)', ['sxn', '<Plug>(EasyAlign)'], ['sxn', '<Plug>(LiveEasyAlign)'], ['sxn', '<Plug>(EasyAlignRepeat)']], 'commands': ['EasyAlign', 'LiveEasyAlign']}}
-NeoBundleLazy 'kakkyz81/evervim', {'autoload': {'commands': ['EvervimOpenBrowser', 'EvervimSetup', 'EvervimCreateNote', 'EvervimSearchByQuery', 'EvervimReloadPref', 'EvervimNotebookList', 'EvervimPageNext', 'EvervimOpenClient', 'EvervimPagePrev', 'EvervimListTags']}}
 NeoBundle 'kevinw/pyflakes-vim'
 NeoBundle 'leafgarland/typescript-vim'
 NeoBundle 'lepture/vim-jinja'
@@ -108,7 +105,6 @@ NeoBundle 'matchit.zip'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'mattn/excitetranslate-vim'
 NeoBundle 'mattn/gist-vim', { 'depends' : [ 'mattn/webapi-vim' ] }
-NeoBundle 'mattn/learn-vimscript'
 NeoBundle 'mattn/qiita-vim', { 'depends' : [ 'mattn/webapi-vim' ] }
 NeoBundle 'mattn/unite-gist', { 'depends': [ 'Shougo/unite.vim', 'mattn/gist-vim' ] }
 NeoBundle 'mattn/webapi-vim'
@@ -128,7 +124,6 @@ NeoBundleLazy 'osyo-manga/vim-anzu', {'autoload': {'unite_sources': ['anzu'], 'm
 NeoBundleLazy 'osyo-manga/vim-over', {'autoload': {'mappings': [['n', '<Plug>(over-restore-']], 'commands': ['OverCommandLineNoremap', 'OverCommandLineMap', 'OverCommandLine', 'OverCommandLineUnmap']}}
 NeoBundle 'othree/html5.vim'
 NeoBundle 'othree/yajs.vim'
-NeoBundle 'pekepeke/titanium-vim'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'proton'
 NeoBundle 'pyte'
@@ -144,9 +139,7 @@ NeoBundle 'supermomonga/vimshell-pure.vim', { 'depends' : [ 'Shougo/vimshell.vim
 NeoBundle 't9md/vim-choosewin'
 NeoBundle 't9md/vim-unite-ack', { 'depends' : [ 'Shougo/vimproc.vim' ] }
 NeoBundle 'tacahiroy/ctrlp-funky', { 'depends' : [ 'kien/ctrlp.vim'] }
-NeoBundle 'tacahiroy/vim-logaling'
 NeoBundle 'thinca/vim-auto_source'
-NeoBundleLazy 'thinca/vim-portal', {'autoload': {'mappings': [['n', '<Plug>(portal-gun-']], 'commands': ['PortalReset', {'complete': 'customlist,portal#_complete', 'name': 'PortalShoot'}]}}
 NeoBundleLazy 'thinca/vim-qfreplace', {'autoload': {'commands': ['Qfreplace']}}
 NeoBundle 'thinca/vim-quickrun', { 'depends' : [ 'Shougo/vimproc.vim' ] }
 NeoBundle 'thinca/vim-ref'
@@ -699,11 +692,6 @@ let g:quickrun_config['coffee'] = {'command' : 'coffee', 'exec' : ['%c -cbp %s']
 " else
 "   let g:quickrun_config['markdown'] = {'command' : 'bluecloth', 'exec' : ['%c -f %s']}
 " endif
-
-" for evervim
-if filereadable(expand('~/Dropbox/.evervim.vim'))
-  source ~/Dropbox/.evervim.vim
-endif
 
 " for tagbar.vim
 nnoremap <silent> <F9> :TagbarToggle<CR>

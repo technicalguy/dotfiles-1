@@ -105,6 +105,7 @@ NeoBundle 'matchit.zip'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'mattn/excitetranslate-vim'
 NeoBundle 'mattn/gist-vim', { 'depends' : [ 'mattn/webapi-vim' ] }
+NeoBundle 'mattn/learn-vimscript'
 NeoBundle 'mattn/qiita-vim', { 'depends' : [ 'mattn/webapi-vim' ] }
 NeoBundle 'mattn/unite-gist', { 'depends': [ 'Shougo/unite.vim', 'mattn/gist-vim' ] }
 NeoBundle 'mattn/webapi-vim'

@@ -16,7 +16,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " install bundles
 NeoBundle 'AndrewRadev/vim-coffee-script'
-NeoBundle 'Glench/Vim-Jinja2-Syntax'
 NeoBundle 'JulesWang/css.vim'
 NeoBundle 'LeafCage/yankround.vim'
 NeoBundle 'LeafCage/nebula.vim'
@@ -96,6 +95,7 @@ NeoBundleLazy 'junegunn/vim-easy-align', {'autoload': {'mappings': ['<Plug>(Easy
 NeoBundleLazy 'kakkyz81/evervim', {'autoload': {'commands': ['EvervimOpenBrowser', 'EvervimSetup', 'EvervimCreateNote', 'EvervimSearchByQuery', 'EvervimReloadPref', 'EvervimNotebookList', 'EvervimPageNext', 'EvervimOpenClient', 'EvervimPagePrev', 'EvervimListTags']}}
 NeoBundle 'kevinw/pyflakes-vim'
 NeoBundle 'leafgarland/typescript-vim'
+NeoBundle 'lepture/vim-jinja'
 NeoBundle 'lukaszkorecki/CoffeeTags'
 NeoBundleLazy 'majutsushi/tagbar', {'augroup': 'TagbarAutoCmds', 'autoload': {'commands': ['TagbarGetTypeConfig', 'TagbarSetFoldlevel', 'TagbarOpen', 'TagbarDebug', 'Tagbar', 'TagbarClose', 'TagbarTogglePause', 'TagbarOpenAutoClose', 'TagbarDebugEnd', 'TagbarCurrentTag', 'TagbarShowTag', 'TagbarToggle']}}
 NeoBundle 'malclocke/vim-buster'

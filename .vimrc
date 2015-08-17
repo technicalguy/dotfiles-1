@@ -334,14 +334,16 @@ vmap <silent> sh :Str2HexLiteral<CR>
 
 " for yankround
 nmap p <Plug>(yankround-p)
+xmap p <Plug>(yankround-p)
 nmap P <Plug>(yankround-P)
 nmap gp <Plug>(yankround-gp)
+xmap gp <Plug>(yankround-gp)
 nmap gP <Plug>(yankround-gP)
+nmap <C-p> <Plug>(yankround-prev)
+nmap <C-n> <Plug>(yankround-next)
+
 nnoremap <silent><SID>(ctrlp) :<C-u>CtrlP<CR>
 nmap <expr><C-p> yankround#is_active() ? "\<Plug>(yankround-prev)" : "<SID>(ctrlp)"
-nmap <C-n> <Plug>(yankround-next)
-xmap p <Plug>(yankround-p)
-xmap gp <Plug>(yankround-gp)
 
 " for neocomplete.vim
 " Disable AutoComplPop.

@@ -341,9 +341,10 @@ xmap gp <Plug>(yankround-gp)
 nmap gP <Plug>(yankround-gP)
 nmap <C-p> <Plug>(yankround-prev)
 nmap <C-n> <Plug>(yankround-next)
-
 nnoremap <silent><SID>(ctrlp) :<C-u>CtrlP<CR>
 nmap <expr><C-p> yankround#is_active() ? "\<Plug>(yankround-prev)" : "<SID>(ctrlp)"
+" show yank history in CtrlP
+nnoremap <Leader><C-p> :<C-u>CtrlPYankRound<CR>
 
 " for neocomplete.vim
 " Disable AutoComplPop.

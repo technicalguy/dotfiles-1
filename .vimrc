@@ -158,6 +158,7 @@ NeoBundle 'unicode.vim'
 NeoBundle 'unite-colorscheme', { 'depends' : [ 'Shougo/vimproc.vim' ] }
 NeoBundle 'unite-font', { 'depends' : [ 'Shougo/vimproc.vim' ] }
 NeoBundleLazy 'vcscommand.vim', {'autoload': {'mappings': [['n', '<Plug>VCS']], 'commands': ['VCSDiff', 'CVSEdit', 'VCSBlame', 'VCSUpdate', 'CVSUnedit', 'VCSGotoOriginal', 'CVSWatchOn', 'CVSWatchAdd', 'VCSInfo', 'VCSDelete', 'VCSLock', 'VCSStatus', 'VCSRemove', 'VCSCommandDisableBufferSetup', 'VCSAnnotate', 'VCSCommit', 'VCSRevert', 'VCSVimDiff', 'VCSLog', 'VCSReview', 'CVSWatchers', 'CVSWatch', 'VCSReload', 'CVSWatchRemove', 'VCSAdd', 'CVSWatchOff', 'VCSUnlock', 'CVSEditors', 'VCSCommandEnableBufferSetup']}}
+NeoBundle 'wakatime/vim-wakatime'
 NeoBundle 'wavded/vim-stylus'
 NeoBundleLazy 'yuratomo/w3m.vim', {'autoload': {'commands': [{'complete': 'customlist,w3m#search_engine#List', 'name': 'W3mVSplit'}, {'complete': 'file', 'name': 'W3mLocal'}, 'W3mHistory', {'complete': 'customlist,w3m#search_engine#List', 'name': 'W3mSplit'}, {'complete': 'customlist,w3m#search_engine#List', 'name': 'W3mTab'}, {'complete': 'customlist,w3m#search_engine#List', 'name': 'W3m'}, 'W3mHistoryClear']}}
 

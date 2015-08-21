@@ -138,7 +138,6 @@ NeoBundleLazy 'str2numchar.vim', {'autoload': {'commands': ['Str2HexLiteral', 'S
 NeoBundleLazy 'sudo.vim', {'autoload': {'commands': ['SudoRead', 'SudoWrite']}}
 NeoBundle 'supermomonga/vimshell-pure.vim', { 'depends' : [ 'Shougo/vimshell.vim' ] }
 NeoBundle 't9md/vim-choosewin'
-NeoBundle 't9md/vim-unite-ack', { 'depends' : [ 'Shougo/vimproc.vim' ] }
 NeoBundle 'tacahiroy/ctrlp-funky', { 'depends' : [ 'kien/ctrlp.vim'] }
 NeoBundle 'thinca/vim-auto_source'
 NeoBundleLazy 'thinca/vim-qfreplace', {'autoload': {'commands': ['Qfreplace']}}
@@ -616,9 +615,6 @@ elseif executable('jvgrep')
   let g:unite_source_grep_recursive_opt = '-R'
 endif
 
-" for unite-ack
-let g:unite_source_ack_command = 'ag --vimgrep'
-let g:unite_source_ack_ignore_case = 1
 " for vimfiler
 call vimfiler#set_execute_file('vim', 'vim')
 call vimfiler#set_execute_file('txt', 'notepad')

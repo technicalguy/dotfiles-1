@@ -586,8 +586,6 @@ let g:unite_source_history_yank_enable = 1
 " For optimize.
 let g:unite_source_file_mru_filename_format = ''
 
-let g:unite_source_grep_max_candidates = 200
-
 if executable('ag')
   " Use ag in unite grep source.
   let g:unite_source_grep_command = 'ag'

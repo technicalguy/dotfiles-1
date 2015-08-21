@@ -587,20 +587,14 @@ let g:unite_source_history_yank_enable = 1
 " For optimize.
 let g:unite_source_file_mru_filename_format = ''
 
-if executable('jvgrep')
-  " For jvgrep.
-  let g:unite_source_grep_command = 'jvgrep'
-  let g:unite_source_grep_default_opts = '--exclude ''\.(git|svn|hg|bzr)'''
-  let g:unite_source_grep_recursive_opt = '-R'
-endif
+let g:unite_source_grep_max_candidates = 200
 
-" For ack.
 if executable('ag')
   " Use ag in unite grep source.
   let g:unite_source_grep_command = 'ag'
   let g:unite_source_grep_default_opts =
-        \ '-i --line-numbers --nocolor --nogroup --hidden --ignore ' .
-        \  '''.hg'' --ignore ''.svn'' --ignore ''.git'' --ignore ''.bzr'''
+        \ '-i --vimgrep --hidden --ignore ' .
+        \ '''.hg'' --ignore ''.svn'' --ignore ''.git'' --ignore ''.bzr'''
   let g:unite_source_grep_recursive_opt = ''
 elseif executable('pt')
   " Use pt in unite grep source.
@@ -614,6 +608,12 @@ elseif executable('ack-grep')
   let g:unite_source_grep_default_opts =
         \ '-i --no-heading --no-color -k -H'
   let g:unite_source_grep_recursive_opt = ''
+elseif executable('jvgrep')
+  " For jvgrep.
+  let g:unite_source_grep_command = 'jvgrep'
+  let g:unite_source_grep_default_opts =
+        \ '-i --exclude ''\.(git|svn|hg|bzr)'''
+  let g:unite_source_grep_recursive_opt = '-R'
 endif
 
 " for unite-ack

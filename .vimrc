@@ -528,7 +528,7 @@ nnoremap  [unite]f  :<C-u>Unite source<CR>
 nnoremap <silent> [unite]s
       \ :<C-u>Unite -buffer-name=files -no-split
       \ jump_point file_point buffer_tab
-      \ file_rec:! file file/new file_mru<CR>
+      \ file_rec:! file file/new<CR>
 
 " for unite-git-conflict
 noremap <silent>[unite]gc :<C-u>Unite git-conflict<CR>
@@ -537,9 +537,6 @@ noremap <silent>[unite]gc :<C-u>Unite git-conflict<CR>
 call unite#custom#profile('default', 'context', {
 \   'start_insert': 1
 \ })
-
-call unite#custom#source('file,file/new,buffer,file_rec,file_mru',
-	\ 'matchers', 'matcher_fuzzy')
 
 autocmd FileType unite call s:unite_my_settings()
 function! s:unite_my_settings()"{{{

@@ -129,7 +129,7 @@ NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'proton'
 NeoBundle 'pyte'
 NeoBundle 'rainbow.zip'
-NeoBundleLazy 'rizzatti/dash.vim', {'autoload': {'mappings': [['sxno', '<Plug>Dash']], 'commands': [{'complete': 'customlist,dash#complete', 'name': 'DashKeywords'}, {'complete': 'customlist,dash#complete', 'name': 'Dash'}]}}
+NeoBundle 'rizzatti/dash.vim'
 NeoBundleLazy 'rking/ag.vim', {'autoload': {'commands': [{'complete': 'file', 'name': 'AgFromSearch'}, {'complete': 'file', 'name': 'LAgBuffer'}, {'complete': 'file', 'name': 'LAgAdd'}, {'complete': 'file', 'name': 'LAg'}, {'complete': 'help', 'name': 'LAgHelp'}, {'complete': 'file', 'name': 'AgBuffer'}, {'complete': 'file', 'name': 'AgFile'}, {'complete': 'file', 'name': 'AgAdd'}, {'complete': 'file', 'name': 'Ag'}, {'complete': 'help', 'name': 'AgHelp'}]}}
 NeoBundle 'ropez/jasmine.vim'
 NeoBundle 'scrooloose/syntastic'

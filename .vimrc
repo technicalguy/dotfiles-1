@@ -741,7 +741,7 @@ function! g:ref_source_webdict_sites.weblio.filter(output)
 endfunction
 
 " for vim-syntastic
-let g:syntastic_javascript_checkers = ['jshint', 'jslint']
+let g:syntastic_javascript_checkers = ['eslint', 'jshint', 'jslint']
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_dart_checkers = ['dartanalyzer']
 

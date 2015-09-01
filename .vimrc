@@ -253,6 +253,13 @@ cnoremap <Esc>f <S-Right>
 vnoremap <c-a> <c-a>gv
 vnoremap <c-x> <c-x>gv
 
+" enhance autoread option
+set autoread
+augroup vimrc-checktime
+  autocmd!
+  autocmd WinEnter * checktime
+augroup END
+
 " change coding style
 let s:coding_styles = {}
 let s:coding_styles['DefaultTab'] = 'setl tabstop=4 shiftwidth=4 shiftwidth=4 softtabstop=4 noexpandtab'

@@ -77,6 +77,7 @@ NeoBundleLazy 'glidenote/memolist.vim', {'autoload': {'commands': ['MemoList', '
 NeoBundleLazy 'godlygeek/tabular', {'autoload': {'commands': ['AddTabularPipeline', {'complete': 'customlist,<SID>CompleteTabularizeCommand', 'name': 'Tabularize'}, {'complete': 'customlist,<SID>CompleteTabularizeCommand', 'name': 'GTabularize'}, 'AddTabularPattern']}}
 NeoBundleLazy 'gregsexton/gitv', {'autoload': {'commands': [{'complete': 'custom,s:CompleteGitv', 'name': 'Gitv'}]}}
 NeoBundle 'groenewege/vim-less'
+NeoBundle 'gtags.vim'
 NeoBundleLazy 'mattreduce/vim-mix', {'autoload': {'commands': ['Mclean', 'Mdeps', 'Mtest', 'Mix', 'Mcompile']}}
 NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'hail2u/vim-css3-syntax'
@@ -901,3 +902,12 @@ nnoremap <silent><Space>bl    :<C-u>NebulaPutLazy<CR>
 nnoremap <silent><Space>bc    :<C-u>NebulaPutConfig<CR>
 nnoremap <silent><Space>by    :<C-u>NebulaYankOptions<CR>
 nnoremap <silent><Space>bp    :<C-u>NebulaPutFromClipboard<CR>
+
+" for gtags.vim
+nnoremap <C-g> :Gtags -g
+nnoremap <C-h> :Gtags -f %<CR>
+nnoremap <C-l> :GtagsCursor<CR>
+nnoremap <C-j> :Gtags <C-r><C-w><CR>
+nnoremap <C-k> :Gtags -r <C-r><C-w><CR>
+nnoremap <Space>n :cn<CR>
+nnoremap <Space>p :cp<CR>

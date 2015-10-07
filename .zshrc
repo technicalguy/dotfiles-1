@@ -105,6 +105,9 @@ unalias run-help
 autoload run-help
 HELPDIR=/usr/local/share/zsh/help
 
+# for opam
+eval `opam config env`
+
 # chpwd settings
 # via: http://qiita.com/yuyuchu3333/items/b10542db482c3ac8b059
 #

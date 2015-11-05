@@ -44,6 +44,7 @@ NeoBundle 'Wombat'
 NeoBundleLazy 'airblade/vim-gitgutter', {'autoload': {'mappings': [['n', '<Plug>GitGutter']], 'commands': ['GitGutterToggle', 'GitGutterPrevHunk', 'GitGutter', 'GitGutterLineHighlightsToggle', 'GitGutterRevertHunk', 'GitGutterPreviewHunk', 'GitGutterSignsEnable', 'GitGutterNextHunk', 'GitGutterDisable', 'GitGutterStageHunk', 'GitGutterEnable', 'GitGutterSignsToggle', 'GitGutterAll', 'GitGutterLineHighlightsEnable', 'GitGutterLineHighlightsDisable', 'GitGutterDebug', 'GitGutterSignsDisable']}}
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'ap/vim-css-color'
+NeoBundle 'basyura/unite-rails', { 'depends': [ 'Shougo/unite.vim' ] }
 NeoBundle 'bling/vim-airline'
 NeoBundle 'bkad/vim-terraform'
 NeoBundle 'burnettk/vim-angular'

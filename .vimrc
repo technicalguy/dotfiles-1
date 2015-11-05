@@ -21,6 +21,7 @@ NeoBundle 'LeafCage/yankround.vim'
 NeoBundle 'LeafCage/nebula.vim'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'RubySinatra'
+NeoBundle 'slim-template/vim-slim'
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'Shougo/neomru.vim', { 'depends': [ 'Shougo/unite.vim' ] }
 NeoBundle 'Shougo/neosnippet.vim'

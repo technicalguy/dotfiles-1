@@ -313,7 +313,7 @@ autocmd BufNewFile,BufRead *.{md,mkd,mkdn,mark*} set tabstop=4 shiftwidth=4 soft
 au BufNewFile,BufRead *.py setlocal tabstop=8 shiftwidth=4 softtabstop=4 et si cinwords=if,elif,else,for,while,try,except,finally,def,class
 
 "javascript tab
-au BufNewFile,BufRead *.js set tabstop=4 shiftwidth=4 softtabstop=4 expandtab
+au BufNewFile,BufRead *.js set tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 
 " for ftl syntax
 au BufRead,BufNewFile *.ftl set filetype=ftl

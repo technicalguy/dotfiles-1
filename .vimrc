@@ -772,8 +772,7 @@ let g:ctrlp_extensions = [ 'tag', 'buffertag', 'quickfix', 'dir', 'rtscript',
                           \ 'undo', 'line', 'changes', 'mixed', 'bookmarkdir',
                           \ 'yankround', 'funky', 'hibuff']
 let g:ctrlp_buftag_types = {'erlang'     : '--language-force=erlang --erlang-types=drmf' }
-" can't find file's... via: https://github.com/nixprime/cpsm/issues/11
-" let g:ctrlp_match_func = {'match': 'cpsm#CtrlPMatch'}
+let g:ctrlp_match_func = {'match': 'cpsm#CtrlPMatch'}
 
 " for dash.vim
 nmap <silent> <leader>d <Plug>DashSearch

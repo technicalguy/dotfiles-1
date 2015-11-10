@@ -60,6 +60,7 @@ NeoBundle 'clausreinke/typescript-tools', {
 NeoBundleLazy 'csscomb/csscomb-for-vim', {'autoload': {'commands': ['CSScomb']}}
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'dart-lang/dart-vim-plugin'
+NeoBundle 'darthmall/vim-vue'
 NeoBundle 'davidhalter/jedi-vim', {
       \ 'build' : {
       \     'mac'     : 'pip install jedi',

@@ -758,6 +758,7 @@ endfunction
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_dart_checkers = ['dartanalyzer']
+let g:syntastic_ruby_checkers=['rubocop', 'mri']
 
 " for loga-vim
 let g:loga_delimiter = '(//)'

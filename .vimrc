@@ -125,8 +125,8 @@ NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'newspaper.vim'
 NeoBundle 'nixprime/cpsm', { 'build': { 'others': './install.sh' } }
-NeoBundleLazy 'osyo-manga/vim-anzu', {'autoload': {'unite_sources': ['anzu'], 'mappings': [['sxno', '<Plug>(anzu-']], 'commands': ['AnzuUpdateSearchStatus', 'AnzuClearSearchCache', 'AnzuUpdateSearchStatusOutput', 'AnzuClearSearchStatus', 'AnzuSignMatchLine', 'AnzuClearSignMatchLine']}}
-NeoBundleLazy 'osyo-manga/vim-over', {'autoload': {'mappings': [['n', '<Plug>(over-restore-']], 'commands': ['OverCommandLineNoremap', 'OverCommandLineMap', 'OverCommandLine', 'OverCommandLineUnmap']}}
+NeoBundle 'osyo-manga/vim-anzu'
+NeoBundle 'osyo-manga/vim-over'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'othree/yajs.vim'
 NeoBundle 'plasticboy/vim-markdown'

@@ -14,10 +14,16 @@ case ${UID} in
 esac
 
 #export
-export PATH=${HOME}/.local/bin:/usr/local/opt/go/libexec/bin:$GOPATH/bin:$HOME/.cabal/bin:$HOME/.rbenv/shims/bin:/usr/local/sbin:/usr/local/bin:$PATH
+if which rbenv > /dev/null; then
+  export PATH=${HOME}/.local/bin:/usr/local/opt/go/libexec/bin:$GOPATH/bin:$HOME/.cabal/bin:$HOME/.rbenv/shims/bin:/usr/local/sbin:/usr/local/bin:$PATH
+  export RBENV_ROOT=$HOME/.rbenv
+  export GEM_HOME=$HOME/.rbenv/shims
+else
+  export PATH=${HOME}/.gem/bin:${HOME}/.local/bin:/usr/local/opt/go/libexec/bin:$GOPATH/bin:$HOME/.cabal/bin:/usr/local/sbin:/usr/local/bin:$PATH
+  export GEM_HOME=$HOME/.gem
+  export GEM_PATH=$HOME/.gem
+fi
 export MANPATH=/usr/local/share/man:/usr/local/man:$MANPATH
-export RBENV_ROOT=$HOME/.rbenv
-export GEM_HOME=$HOME/.rbenv/shims
 export NODE_PATH=$NODE_PATH:${NVM_PATH}_modules:/usr/local/lib/node_modules
 export GOPATH=$HOME/go
 
@@ -427,6 +433,10 @@ elif type compctl &>/dev/null; then
   }
   compctl -K _bower_completion bower
 fi
+
+# for rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
 ###-end-bower-completion-###
 
 # add pwd command in tmux-powerline

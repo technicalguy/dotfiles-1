@@ -911,10 +911,10 @@ nnoremap <silent><Space>by    :<C-u>NebulaYankOptions<CR>
 nnoremap <silent><Space>bp    :<C-u>NebulaPutFromClipboard<CR>
 
 " for gtags.vim
-nnoremap <C-g> :Gtags -g
-nnoremap <C-h> :Gtags -f %<CR>
-nnoremap <C-l> :GtagsCursor<CR>
-nnoremap <C-j> :Gtags <C-r><C-w><CR>
-nnoremap <C-k> :Gtags -r <C-r><C-w><CR>
+nnoremap <Leader><C-g> :Gtags -g
+nnoremap <Leader><C-h> :Gtags -f %<CR>
+nnoremap <Leader><C-l> :GtagsCursor<CR>
+nnoremap <Leader><C-j> :Gtags <C-r><C-w><CR>
+nnoremap <Leader><C-k> :Gtags -r <C-r><C-w><CR>
 nnoremap <Space>n :cn<CR>
 nnoremap <Space>p :cp<CR>

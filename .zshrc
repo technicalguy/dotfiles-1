@@ -190,6 +190,7 @@ bindkey "^p" history-beginning-search-backward-end
 bindkey "^n" history-beginning-search-forward-end
 bindkey "\\ep" history-beginning-search-backward-end
 bindkey "\\en" history-beginning-search-forward-end
+bindkey '^r' zaw-history
 
 # reverse menu completion binded to Shift-Tab
 #

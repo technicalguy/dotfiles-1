@@ -14,15 +14,7 @@ case ${UID} in
 esac
 
 #export
-if which rbenv > /dev/null; then
-  export PATH=${HOME}/.local/bin:/usr/local/opt/go/libexec/bin:$GOPATH/bin:$HOME/.cabal/bin:$HOME/.rbenv/shims/bin:/usr/local/sbin:/usr/local/bin:$PATH
-  export RBENV_ROOT=$HOME/.rbenv
-  export GEM_HOME=$HOME/.rbenv/shims
-else
-  export PATH=${HOME}/.gem/bin:${HOME}/.local/bin:/usr/local/opt/go/libexec/bin:$GOPATH/bin:$HOME/.cabal/bin:/usr/local/sbin:/usr/local/bin:$PATH
-  export GEM_HOME=$HOME/.gem
-  export GEM_PATH=$HOME/.gem
-fi
+export PATH=${HOME}/.local/bin:/usr/local/opt/go/libexec/bin:$GOPATH/bin:$HOME/.cabal/bin:/usr/local/sbin:/usr/local/bin:$PATH
 export MANPATH=/usr/local/share/man:/usr/local/man:$MANPATH
 export NODE_PATH=$NODE_PATH:${NVM_PATH}_modules:/usr/local/lib/node_modules
 export GOPATH=$HOME/go
@@ -435,14 +427,12 @@ elif type compctl &>/dev/null; then
   compctl -K _bower_completion bower
 fi
 
-# for rbenv
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
 ###-end-bower-completion-###
 
 # add pwd command in tmux-powerline
 PROMPT+='$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
 
+# for rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # for zaw

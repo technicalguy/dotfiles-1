@@ -83,6 +83,7 @@ NeoBundle 'groenewege/vim-less'
 NeoBundle 'gtags.vim'
 NeoBundleLazy 'mattreduce/vim-mix', {'autoload': {'commands': ['Mclean', 'Mdeps', 'Mtest', 'Mix', 'Mcompile']}}
 NeoBundle 'mustache/vim-mustache-handlebars'
+NeoBundle 'mxw/vim-jsx'
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'heavenshell/vim-jsdoc'
 NeoBundleLazy 'hokaccha/vim-html5validator', {'autoload': {'commands': [{'complete': 'file', 'name': 'HTML5Validate'}]}}

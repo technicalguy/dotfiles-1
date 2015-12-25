@@ -220,9 +220,6 @@ user code."
  This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
 
-  ;; show line number
-  (global-linum-mode)
-
   ;; for editorconfig
   (require 'editorconfig)
   (editorconfig-mode 1)

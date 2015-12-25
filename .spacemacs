@@ -49,6 +49,13 @@ values."
      common-lisp
      typescript
      yaml
+     django
+     react
+     ruby-on-rails
+     ansible
+     dockerfile
+     puppet
+     emoji
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -60,7 +67,6 @@ values."
      ddskk
      coffee-mode
      exec-path-from-shell ;; Using $PATH on GUI
-     evil-rails
      evil-org
      evil-numbers
      )
@@ -237,9 +243,6 @@ layers configuration. You are free to put any user code."
     (require 'skk-study)
     (setq skk-large-jisyo "~/Library/Application Support/AquaSKK/SKK-JISYO.L")
     )
-
-  ;; for evil-rails
-  (require 'evil-rails)
 
   ;; for evil-org
   (require 'evil-org)

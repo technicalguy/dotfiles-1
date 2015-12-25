@@ -220,6 +220,10 @@ user code."
  This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
 
+  ;; for exec-path-from-shell
+  (when (memq window-system '(mac ns))
+    (exec-path-from-shell-initialize))
+
   ;; for editorconfig
   (require 'editorconfig)
   (editorconfig-mode 1)

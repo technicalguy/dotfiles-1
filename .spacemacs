@@ -67,7 +67,6 @@ values."
      ddskk
      coffee-mode
      exec-path-from-shell ;; Using $PATH on GUI
-     evil-org
      )
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
@@ -242,9 +241,6 @@ layers configuration. You are free to put any user code."
     (require 'skk-study)
     (setq skk-large-jisyo "~/Library/Application Support/AquaSKK/SKK-JISYO.L")
     )
-
-  ;; for evil-org
-  (require 'evil-org)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will

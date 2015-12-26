@@ -68,7 +68,6 @@ values."
      coffee-mode
      exec-path-from-shell ;; Using $PATH on GUI
      evil-org
-     evil-numbers
      )
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
@@ -246,10 +245,6 @@ layers configuration. You are free to put any user code."
 
   ;; for evil-org
   (require 'evil-org)
-
-  ;; evil-numbers
-  (global-set-key (kbd "C-c +") 'evil-numbers/inc-at-pt)
-  (global-set-key (kbd "C-c -") 'evil-numbers/dec-at-pt)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will

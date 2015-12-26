@@ -65,7 +65,6 @@ values."
    '(
      editorconfig
      ddskk
-     coffee-mode
      exec-path-from-shell ;; Using $PATH on GUI
      )
    ;; A list of packages and/or extensions that will not be install and loaded.

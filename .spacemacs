@@ -49,12 +49,10 @@ values."
      common-lisp
      typescript
      yaml
-     django
      react
      ruby-on-rails
      ansible
      dockerfile
-     puppet
      emoji
      )
    ;; List of additional packages that will be installed without being

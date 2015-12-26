@@ -31,6 +31,8 @@ values."
      git
      markdown
      org
+     themes-megapack
+     gtags
      dash
      pandoc
      (shell :variables

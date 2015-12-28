@@ -240,7 +240,9 @@ layers configuration. You are free to put any user code."
     (global-set-key (kbd "C-x j") 'skk-auto-fill-mode)
     (setq default-input-method "japanese-skk")
     (require 'skk-study)
-    (setq skk-large-jisyo "~/Library/Application Support/AquaSKK/SKK-JISYO.L")
+    ;; use skkserve
+    (setq skk-server-host "localhost")
+    (setq skk-server-portnum 1178)
     )
 )
 

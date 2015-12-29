@@ -29,6 +29,7 @@ values."
      better-defaults
      emacs-lisp
      git
+     github
      markdown
      org
      themes-megapack

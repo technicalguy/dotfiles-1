@@ -233,6 +233,7 @@ user code."
  This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
 
+  (setq markdown-open-command "/Applications/Marked 2.app/Contents/MacOS/Marked 2")
   ;; for exec-path-from-shell
   (when (memq window-system '(mac ns))
     (exec-path-from-shell-initialize))

@@ -46,7 +46,7 @@ values."
      osx
      javascript
      go
-     elixir
+     ;; elixir
      ruby
      haskell
      html

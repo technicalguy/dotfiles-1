@@ -1,3 +1,4 @@
+
 ;; -*- mode: emacs-lisp -*-
 ;; This file is loaded by Spacemacs at startup.
 ;; It must be stored in your home directory.
@@ -223,6 +224,8 @@ values."
   "Initialization function for user code.
 It is called immediately after `dotspacemacs/init'.  You are free to put any
 user code."
+  ;; set ruby mode ruby-version-manager
+  (setq-default ruby-version-manager 'rbenv)
   )
 
 (defun dotspacemacs/user-config ()

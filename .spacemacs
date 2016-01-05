@@ -48,9 +48,10 @@ values."
      go
      elixir
      (ruby :variables
+           ruby-enable-ruby-on-rails-support t
            ruby-enable-enh-ruby-mode t
-           ruby-test-runner 'rspec
-           ruby-version-manager 'rbenv)
+           ruby-version-manager 'rbenv
+           ruby-test-runner 'rspec)
      haskell
      html
      ocaml

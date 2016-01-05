@@ -47,7 +47,10 @@ values."
      javascript
      go
      ;; elixir
-     ruby
+     (ruby :variables
+           ruby-enable-enh-ruby-mode t
+           ruby-test-runner 'rspec
+           ruby-version-manager 'rbenv)
      haskell
      html
      ocaml
@@ -225,7 +228,6 @@ values."
 It is called immediately after `dotspacemacs/init'.  You are free to put any
 user code."
   ;; set ruby mode ruby-version-manager
-  (setq-default ruby-version-manager 'rbenv)
   )
 
 (defun dotspacemacs/user-config ()

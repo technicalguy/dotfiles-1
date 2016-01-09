@@ -59,6 +59,7 @@ values."
      common-lisp
      typescript
      yaml
+     clojure
      react
      ruby-on-rails
      ansible

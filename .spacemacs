@@ -60,6 +60,7 @@ values."
      typescript
      yaml
      clojure
+     vimscript
      react
      ruby-on-rails
      ansible

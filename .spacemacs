@@ -32,7 +32,8 @@ values."
      git
      github
      markdown
-     org
+     (org :variables
+          org-enable-github-support t)
      themes-megapack
      gtags
      dash

@@ -77,7 +77,6 @@ values."
    '(
      editorconfig
      ddskk
-     exec-path-from-shell ;; Using $PATH on GUI
      quickrun
      )
    ;; A list of packages and/or extensions that will not be install and loaded.
@@ -247,10 +246,6 @@ layers configuration. You are free to put any user code."
 
   ;; see via https://github.com/syl20bnr/spacemacs/issues/2032
   (fset 'evil-visual-update-x-selection 'ignore)
-
-  ;; for exec-path-from-shell
-  (when (memq window-system '(mac ns))
-    (exec-path-from-shell-initialize))
 
   ;; for editorconfig
   (require 'editorconfig)

@@ -68,6 +68,7 @@ values."
      dockerfile
      emoji
      eyebrowse
+     editorconfig
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -246,10 +247,6 @@ layers configuration. You are free to put any user code."
 
   ;; see via https://github.com/syl20bnr/spacemacs/issues/2032
   (fset 'evil-visual-update-x-selection 'ignore)
-
-  ;; for editorconfig
-  (require 'editorconfig)
-  (editorconfig-mode 1)
 
   ;; for ddskk
   (when (require 'skk nil t)

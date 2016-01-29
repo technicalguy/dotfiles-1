@@ -242,7 +242,8 @@ layers configuration. You are free to put any user code."
   (global-company-mode)
 
   ;; use Marked2 for markdown open command
-  (setq markdown-open-command "open -a /Applications/Marked 2.app/Contents/MacOS/Marked 2 %")
+  ;; via: http://jblevins.org/log/marked-2-command
+  (setq markdown-open-command "/usr/local/bin/mark")
 
   ;; see via https://github.com/syl20bnr/spacemacs/issues/2032
   (fset 'evil-visual-update-x-selection 'ignore)

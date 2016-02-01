@@ -248,6 +248,9 @@ layers configuration. You are free to put any user code."
   ;; see via https://github.com/syl20bnr/spacemacs/issues/2032
   (fset 'evil-visual-update-x-selection 'ignore)
 
+  ;; editorconfig-mode enabled
+  (editorconfig-mode 1)
+
   ;; for ddskk
   (when (require 'skk nil t)
     (global-set-key (kbd "C-x j") 'skk-auto-fill-mode)

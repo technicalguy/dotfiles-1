@@ -245,6 +245,9 @@ layers configuration. You are free to put any user code."
   ;; via: http://jblevins.org/log/marked-2-command
   (setq markdown-open-command "/usr/local/bin/mark")
 
+  ;; for prevent insert ruby coding info
+  (setq ruby-insert-encoding-magic-comment nil)
+
   ;; see via https://github.com/syl20bnr/spacemacs/issues/2032
   (fset 'evil-visual-update-x-selection 'ignore)
 

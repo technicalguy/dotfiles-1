@@ -245,6 +245,11 @@ layers configuration. You are free to put any user code."
   ;; via: http://jblevins.org/log/marked-2-command
   (setq markdown-open-command "/usr/local/bin/mark")
 
+  ;; define our own super awesome hook that will remove the before-save-hook
+  (defun remove-enh-magic-comment ()
+    (remove-hook 'before-save-hook 'enh-ruby-mode-set-encoding t))
+  ;; add the hook to call our super awesome function.
+  (add-hook 'enh-ruby-mode-hook 'remove-enh-magic-comment)
   ;; for prevent insert ruby coding info
   (setq ruby-insert-encoding-magic-comment nil)
 

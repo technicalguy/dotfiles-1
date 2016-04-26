@@ -66,6 +66,7 @@ values."
      ruby-on-rails
      ansible
      dockerfile
+     swift
      emoji
      eyebrowse
      )
@@ -268,6 +269,12 @@ layers configuration. You are free to put any user code."
     (setq skk-server-host "localhost")
     (setq skk-server-portnum 1178)
     )
+
+  ;; for flycheck in swift-mode
+  (setq flycheck-swift-sdk-path
+        (replace-regexp-in-string
+         "\n+$" "" (shell-command-to-string
+                    "xcrun --show-sdk-path --sdk macosx")))
 )
 
 ;; Do not write anything past this comment. This is where Emacs will

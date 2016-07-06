@@ -239,6 +239,8 @@ user code."
   "Configuration function for user code.
  This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
+  ;; avoid `Variable binding depth exceeds max-specpdl-size` error
+  (setq max-specpdl-size 6000)
 
   ;; use company for auto-complete every mode
   (global-company-mode)

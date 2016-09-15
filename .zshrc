@@ -14,7 +14,7 @@ case ${UID} in
 esac
 
 #export
-export PATH=${HOME}/.local/bin:/usr/local/opt/go/libexec/bin:$GOPATH/bin:$HOME/.cabal/bin:/usr/local/sbin:/usr/local/bin:$PATH
+export PATH=${HOME}/local/bin:${HOME}/.composer/vendor/bin:${HOME}/.local/bin:/usr/local/opt/go/libexec/bin:$GOPATH/bin:$HOME/.cabal/bin:/usr/local/sbin:/usr/local/bin:$PATH
 export MANPATH=/usr/local/share/man:/usr/local/man:$MANPATH
 export NODE_PATH=$NODE_PATH:${NVM_PATH}_modules:/usr/local/lib/node_modules
 export GOPATH=$HOME/go

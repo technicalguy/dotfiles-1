@@ -65,10 +65,9 @@ values."
      react
      ruby-on-rails
      ansible
-     dockerfile
+     docker
      swift
      emoji
-     eyebrowse
      php
      )
    ;; List of additional packages that will be installed without being

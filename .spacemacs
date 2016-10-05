@@ -293,6 +293,10 @@ layers configuration. You are free to put any user code."
   ;; via: http://jblevins.org/log/marked-2-command
   (setq markdown-open-command "/usr/local/bin/mark")
 
+  ;; for js2-mode default settings
+  (setq-default js2-basic-offset 2)
+  (setq-default js-indent-level 2)
+
   ;; define our own super awesome hook that will remove the before-save-hook
   (defun remove-enh-magic-comment ()
     (remove-hook 'before-save-hook 'enh-ruby-mode-set-encoding t))

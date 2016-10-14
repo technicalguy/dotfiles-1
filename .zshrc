@@ -28,7 +28,7 @@ export VMAIL_VIM='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/V
 export GTAGSLABEL=pygments
 
 #alias
-alias emacs="TERM=xterm-256color /usr/local//bin/emacs"
+alias emacs="emacsclient -n"
 alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 alias vimdiff='vi -d'

@@ -2,3 +2,4 @@
 .DS_Store
 .vimperator/info/default/
 .emacs.d/url
+/.lein/repl-history

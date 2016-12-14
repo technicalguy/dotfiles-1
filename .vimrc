@@ -69,6 +69,7 @@ NeoBundle 'davidhalter/jedi-vim', {
       \ }
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'digitaltoad/vim-jade'
+NeoBundle 'dracula/vim'
 NeoBundle 'dyng/ctrlsf.vim'
 NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'elixir-lang/vim-elixir'
@@ -201,8 +202,7 @@ if has('gui_running')
 else
   set background=dark
 endif
-colorscheme solarized
-
+colorscheme dracula
 " for solarized colorscheme
 let g:solarized_termcolors=256
 let g:solarized_termtrans = 1

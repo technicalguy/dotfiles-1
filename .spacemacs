@@ -100,6 +100,7 @@ values."
      ddskk
      quickrun
      groovy-mode
+     vue-mode
      )
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '(scss-mode)
@@ -402,6 +403,12 @@ layers configuration. You are free to put any user code."
                                "~/go/src/github.com/Layzie/buccalcone/TODO.org"
                                ))
 
+  (require 'vue-mode)
+  (add-to-list 'company-backends 'company-tern)
+  (add-hook 'js-mode-hook #'tern-mode)
+  (add-to-list 'vue-mode-hook #'tern-mode smartparens-mode)
+  (setq mmm-js-mode-exit-hook (lambda () (setq tern-mode nil)))
+  (setq mmm-js-mode-enter-hook (lambda () (setq tern-mode t)))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
